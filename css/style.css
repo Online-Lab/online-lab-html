@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "ProximaNovaBold";
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ProximaNovaRegular";
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ProximaNovaBlack";
+    src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot");
+    src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff"),
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+   
+ @font-face {
+    font-family: proximanova-bold; /* Гарнитура шрифта */
+    src: url(../fonts/proximanova-bold.otf); /* Путь к файлу со шрифтом */
+   }
+ @font-face {
+    font-family: proximanovacond-regular; /* Гарнитура шрифта */
+    src: url(../fonts/proximanovacond-regular.otf); /* Путь к файлу со шрифтом */
+   }
+ @font-face {
+    font-family: proximanova-regular; /* Гарнитура шрифта */
+    src: url(../fonts/proximanova-regular.otf); /* Путь к файлу со шрифтом */
+   }   
+   
+  
+html, body { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0; 
+}
+body {
+	margin: 0 auto;
+	padding: 0;
+	font: 12px "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-webkit-overflow-scrolling: touch;
+	word-wrap: break-word;
+}
+a, span {
+	outline: none;
+}
+.project p a {
+	text-decoration: underline;
+	color: #585f5f;
+}
+a,a:hover {
+	text-decoration: none;
+}
+body>.content-wrapper>.top-space{
+height:30px;	
+}
+
+header{
+	display:block;
+}
+
+header{
+	margin: 0 auto;
+	max-width: 1190px;
+	height:70px;
+}
+header>div{
+float:left;
+height:100%;
+}
+
+header .header-right{
+float:none;
+padding:0 0 0 210px;	
+}
+header .header-right-left{
+float:left;	
+width: 60%;
+
+}
+header .header-right-right{
+float:left;	
+width: 40%;
+
+}
+header > .header-left{
+	width: 210px;
+display:table;	
+}
+html > body .container { 
+	height: auto; 
+	max-width: 1920px;
+	min-height: 100%; 
+}
+
+.header-left .logo {
+	font-family: proximanova-bold;
+	font-size:40px;
+	color: #c22c2c;
+	vertical-align:bottom;
+	display: table-cell;
+
+}
+.language-version .language{
+	display:block;
+	font-family:proximanova-regular;
+	color:#9b9b9b;
+	font-size:13px;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	border:2px solid #dcdcdc;
+	text-align:center;
+	
+}
+.top-menu{
+  margin: 16px 0 0 0;
+}
+
+.top-menu-wrap {
+	display: table;
+	width: 100%;
+}
+.top-menu-wrap .menu-items {
+  display: table-row;
+}
+
+.top-menu-wrap .menu-items li.menu-item {
+  display: table-cell;
+  width: auto;
+  padding: 0px;
+  float: inherit;
+}
+
+.menu-item a.item {
+	font-family:"ProximaNovaRegular";
+	color: #20a493;
+	display:block;
+	font-size:14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.city-menu-wrap {
+	display: table;
+	width: 100%;
+}
+.city-menu-wrap .city-items {
+  display: table-row;
+  text-align: center;
+}
+
+.city-menu-wrap .city-items li.city-item {
+  display: table-cell;
+  width: auto;
+  padding: 0px;
+  float: inherit;
+  height: 33px;
+}
+.city-item a.item {
+	font-family:"ProximaNovaRegular";
+	color: #5c5c5c;
+	display:block;
+	font-size:13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 24px;
+	
+}
+.city-item.active a.item {
+	background: #c22d2d;
+	color: #ffffff;
+	line-height: 24px;
+}
+
+.city-item.active {
+	background-image: url("../img/elements.png");
+	background-size: 10px 5px;
+	background-position:bottom center;
+	
+}
