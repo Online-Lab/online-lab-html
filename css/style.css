@@ -75,7 +75,7 @@ header{
 header{
 	margin: 0 auto;
 	max-width: 1190px;
-	height:70px;
+	height:100px;
 }
 header>div{
 float:left;
@@ -100,6 +100,34 @@ header > .header-left{
 	width: 210px;
 display:table;	
 }
+
+header .phone-number{
+float:right;	
+clear:both;
+font-family:"ProximaNovaRegular";
+color: #000000;
+font-size:24px;
+font-weight: 700;
+line-height: 24px;
+margin:10px 30px 0 0;
+}
+header .presentation {
+float:right;
+clear:both;
+font-family: MyriadPro, Arial;
+color: #c22d2d;
+font-size:13px;
+line-height: 14px;
+margin:10px 20px 0 0;	
+}
+
+header .presentation a{
+font-family: MyriadPro, Arial;
+color: #c22d2d;
+font-size:13px;
+line-height: 14px;
+}
+
 html > body .container { 
 	height: auto; 
 	max-width: 1920px;
@@ -110,8 +138,8 @@ html > body .container {
 	font-family: proximanova-bold;
 	font-size:40px;
 	color: #c22c2c;
-	vertical-align:bottom;
-	display: table-cell;
+	margin: 30px 0 0 0;
+	display: block;
 
 }
 .language-version .language{
@@ -128,6 +156,7 @@ html > body .container {
 }
 .top-menu{
   margin: 16px 0 0 0;
+  min-width:453px;
 }
 
 .top-menu-wrap {
@@ -168,7 +197,7 @@ html > body .container {
   width: auto;
   padding: 0px;
   float: inherit;
-  height: 33px;
+  height: 28px;
 }
 .city-item a.item {
 	font-family:"ProximaNovaRegular";
@@ -187,8 +216,47 @@ html > body .container {
 }
 
 .city-item.active {
-	background-image: url("../img/elements.png");
-	background-size: 10px 5px;
+	background-image: url("../img/city_active.png");
 	background-position:bottom center;
+	background-repeat:no-repeat;
+	
+}
+.content-wrapper .content-block{
+width:100%;
+float:left;
+	
+}
+.content-wrapper .container{
+	max-width: 1190px;	
+	margin:0 auto;
+}
+
+.main_banner{
+	background-image: url(../img/main_baner1.jpg);
+	height: 600px;
+	background-size: cover;
+	background-position: center center;
+}
+
+
+@media screen and (min-width:320px) and (max-width:479px) {
+	
+}
+@media screen and (min-width:480px) and (max-width:767px) {
+	
+}
+@media screen and (min-width:768px) and (max-width:979px) {
+	.header-right-right .city-menu_block{
+	min-width: 400px;
+	margin-left: -200px;
+	}
+	.header-right-right .phone-number{
+		margin: 70px 0 0 0;
+	}
+}
+@media screen and (min-width:980px) and (max-width:1200px) {
+
+}
+@media screen and (min-width:1200px){
 	
 }
