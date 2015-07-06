@@ -6,44 +6,60 @@
 		
 		<div class = "portfolio_menu"> 
 			
-			<ul>
-				<li>Все вместе</li>
-				<li>Сервисы</li>
-				<li>Интернет-магазины</li>
-				<li>Стартапы</li>
-				<li>Электроника</li>
-				<li>Мобильные приложения</li>
-			</ul>
 			
-			<div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
-  <button class="button" data-filter=".metal">metal</button>
-  <button class="button" data-filter=".transition">transition</button>
-  <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
-  <button class="button" data-filter=":not(.transition)">not transition</button>
-  <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
-  <button class="button" data-filter="numberGreaterThan50">number > 50</button>
-  <button class="button" data-filter="ium">name ends with &ndash;ium</button>
+<div id="filters" class="button-group mg_b_20 mg_t_50">  
+	<button class="button is-checked" data-filter="*">Все вместе</button>
+  <button class="button" data-filter=".services">Сервисы</button>
+  <button class="button" data-filter=".shops">Интернет-магазины</button>
+  <button class="button" data-filter=".startups">Стартапы</button>
+  <button class="button" data-filter=".electronics">Электроника</button>
+  <button class="button" data-filter=".mobile_apps">Мобильные приложения</button>
+  <span class = "activ_filter_point"></span>
 </div>
-			
+</div>		
 			<div class="isotope">
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>
-				<div class = "element-item"></div>					
+				<div class = "element-item metal" style="background-image:url(/assets/images/portfolio/portfolio_prev1.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item transition startups" style="background-image:url(/assets/images/portfolio/portfolio_prev2.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item services" style="background-image:url(/assets/images/portfolio/portfolio_prev3.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item shops mobile_apps" style="background-image:url(/assets/images/portfolio/portfolio_prev4.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item services" style="background-image:url(/assets/images/portfolio/portfolio_prev5.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item electronics startups" style="background-image:url(/assets/images/portfolio/portfolio_prev6.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item mobile_apps" style="background-image:url(/assets/images/portfolio/portfolio_prev7.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item shops" style="background-image:url(/assets/images/portfolio/portfolio_prev8.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item shops mobile_apps startups" style="background-image:url(/assets/images/portfolio/portfolio_prev9.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item shops" style="background-image:url(/assets/images/portfolio/portfolio_prev10.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item electronics" style="background-image:url(/assets/images/portfolio/portfolio_prev11.png)">
+					<div  class = "item-description"></div>
+				</div>
+				<div class = "element-item services shops mobile_apps" style="background-image:url(/assets/images/portfolio/portfolio_prev12.png)">
+					<div  class = "item-description"></div>
+				</div>					
 			</div>
 			
 			
 			
 			
-		</div>
+		
 	</div>
 	
 </div>
@@ -52,15 +68,44 @@
 <script>
 	// external js: isotope.pkgd.js
 $( document ).ready( function() {
-	$('.isotope').isotope({
-		// options...
-		itemSelector: '.element-item',
-		masonry: {
-			columnWidth: 200
-		}
-	});
-  
-	});
+	
+	button_position = $('#filters .is-checked').position().left;
+	button_width = $('#filters .is-checked').width();
+	point_width = $(".activ_filter_point").width;
+	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+	
+	$(".activ_filter_point").css({'left':point_left});
+	
+		var $container = $('.isotope');
+		$container.isotope();
+		// filter buttons
+		$('#filters button').click(function(){
+			var $this = $(this);
+			// don't proceed if already selected
+			if ( !$this.hasClass('is-checked') ) {
+				$this.parents('#filters').find('.is-checked').removeClass('is-checked');
+				$this.addClass('is-checked');
+			}
+			var selector = $this.attr('data-filter');
+			$container.isotope({  itemSelector: '.element-item', filter: selector });
+			
+			
+			button_position = $this.position().left;
+			button_width = $this.width();
+			point_width = $(".activ_filter_point").width;
+			point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+			
+			$(".activ_filter_point").css({'left':point_left});
+			return false;
+			
+			
+		});    
+		
+		
+		});
+
+
+
 	
 	
 	

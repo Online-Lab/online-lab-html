@@ -118,6 +118,7 @@ a, span {
 	text-decoration: underline;
 	color: #585f5f;
 }
+
 a,a:hover {
 	text-decoration: none;
 }
@@ -329,6 +330,7 @@ html > body .container {
 	background: #c22d2d;
 	color: #ffffff;
 	line-height: 24px;
+	text-decoration:none;
 }
 
 .city-item.active {
@@ -850,12 +852,45 @@ footer .youtube_footer{
 }
 
 
-.isotope .lement-item{
-	width: 295px;
-	height: 280px;
+.isotope .element-item{
+	width: 285px;
+	height: 270px;
 }
 
+#filters{
+ position: relative;	
+}
+#filters button{ 
+	background: none;
+	border: none;	
+	font-size:16px;
+	
+}
+#filters button:focus{ 
+	outline:none;
+	
+	
+}
+#filters button.is-checked{ 
+	background-color: #c22d2d;
+	border: none !important	;
+	color:#ffffff;
+	
+}
 
+.activ_filter_point{
+  background-image: url("/assets/images/city_active.png");
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-repeat: no-repeat;
+  display: block;
+  left: 0;
+     -webkit-transition: left 0.3s ease-out 0.1s;
+     -moz-transition: left 0.3s ease-out 0.1s;
+     -o-transition: left 0.3s ease-out 0.1s;
+     transition: left 0.3s ease-out 0.1s;
+}
 
 
 

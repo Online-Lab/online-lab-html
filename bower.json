@@ -13,7 +13,6 @@
     "lodash": "~2.4.1",
     "angular-ui-router": "~0.2.10",
     "bootstrap": "~3.3.4",
-    "angular-material": ">=0.9.6",
     "slick.js": "~1.5.5",
     "angular-breadcrumb": ">=0"
   },
