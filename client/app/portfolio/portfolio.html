@@ -1,0 +1,68 @@
+<app-header></app-header>
+
+<div class = "content-block">
+	<div class = "container" >
+		<h1>Портфолио</h1>
+		
+		<div class = "portfolio_menu"> 
+			
+			<ul>
+				<li>Все вместе</li>
+				<li>Сервисы</li>
+				<li>Интернет-магазины</li>
+				<li>Стартапы</li>
+				<li>Электроника</li>
+				<li>Мобильные приложения</li>
+			</ul>
+			
+			<div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+  <button class="button" data-filter=".metal">metal</button>
+  <button class="button" data-filter=".transition">transition</button>
+  <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
+  <button class="button" data-filter=":not(.transition)">not transition</button>
+  <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
+  <button class="button" data-filter="numberGreaterThan50">number > 50</button>
+  <button class="button" data-filter="ium">name ends with &ndash;ium</button>
+</div>
+			
+			<div class="isotope">
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>
+				<div class = "element-item"></div>					
+			</div>
+			
+			
+			
+			
+		</div>
+	</div>
+	
+</div>
+
+
+<script>
+	// external js: isotope.pkgd.js
+$( document ).ready( function() {
+	$('.isotope').isotope({
+		// options...
+		itemSelector: '.element-item',
+		masonry: {
+			columnWidth: 200
+		}
+	});
+  
+	});
+	
+	
+	
+	</script>
+<app-footer></app-footer>

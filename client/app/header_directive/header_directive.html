@@ -1,0 +1,90 @@
+<header>
+			
+				<div class = "header-left">
+					<a class = "logo">
+						OnlineLab
+					</a>
+				</div>
+				<div class = "header-right">
+					<div class = "header-right-left"> 
+						<div class = "language-version " >
+							<a href="#" md-ink-ripple="" class = "language">
+							English version
+							</a>
+						</div>
+						<div class = "top-menu">
+							<div class = "top-menu-wrap"> 
+								<ul class = "menu-items">
+									<li class = "menu-item"><a class = "item"  href="#">Делаем</a>
+										<ul class = "">
+											<li><a class = "item"  href="#">Web разработка</a></li>
+											<li><a class = "item"  href="#">Мобильные приложения</a></li>
+											<li><a class = "item"  href="#">Интернет маркетинг</a></li>
+											<li><a class = "item"  href="#">Электроника</a></li>
+										</ul>
+									</li>
+									<li class = "menu-item"><a class = "item"  href="#">Хвалимся</a>
+										<ul class = "">
+											<li><a class = "item"  href="#">Web разработка</a></li>
+											<li><a class = "item"  href="#">Мобильные приложения</a></li>
+											<li><a class = "item"  href="#">Интернет маркетинг</a></li>
+											<li><a class = "item"  href="#">Электроника</a></li>
+										</ul>
+										
+									</li>
+									<li class = "menu-item"><a class = "item"  href="#">Знакомимся</a>
+										<ul class = "">
+											<li><a class = "item"  href="#">Web разработка</a></li>
+											<li><a class = "item"  href="#">Мобильные приложения</a></li>
+											<li><a class = "item"  href="#">Интернет маркетинг</a></li>
+											<li><a class = "item"  href="#">Электроника</a></li>
+										</ul>
+									</li>
+									<li class = "menu-item"><a class = "item"  href="#">Пишем</a>
+										<ul class = "">
+											<li><a class = "item"  href="#">Web разработка</a></li>
+											<li><a class = "item"  href="#">Мобильные приложения</a></li>
+											<li><a class = "item"  href="#">Интернет маркетинг</a></li>
+											<li><a class = "item"  href="#">Электроника</a></li>
+										</ul>
+									</li>
+									<li class = "menu-item"><a class = "item"  href="#">Контактируем</a>
+										<ul class = "">
+											<li><a class = "item"  href="#">Web разработка</a></li>
+											<li><a class = "item"  href="#">Мобильные приложения</a></li>
+											<li><a class = "item"  href="#">Интернет маркетинг</a></li>
+											<li><a class = "item"  href="#">Электроника</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				
+					<div class = "header-right-right">
+						<div class = "city-menu_block">
+							<div class = "city-menu-wrap"> 
+					
+								<ul class = "city-items">
+									<!--<li class = "city-item"><a class = "item"  href="#" ng-click="current_city = 1">Москва</a></li>
+									<li class = "city-item"><a class = "item"  href="#" ng-click="current_city = 2">Санкт-Петербург</a></li>
+									<li class = "city-item active"><a class = "item"  href="#" ng-click="current_city = 3">Тамбов</a></li>
+									<li class = "city-item"><a class = "item"  href="#" ng-click="current_city = 4">Нью-Йорк</a></li>-->
+									
+									<li class = "city-item {{item.active}}" ng-class = "{'active': current_city == {{item.id}}}" 
+									ng-repeat = "item in city_items" >
+										<a  class = "item " ng-click="city_click(item)" href="#" >{{item.city}}</a>
+									</li>
+								</ul>
+							</div>
+							
+							<div class = "phone-number" >
+								{{city_phone}}
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</header>
+	<div ncy-breadcrumb ng-show="state.current.name != 'main'"></div>
