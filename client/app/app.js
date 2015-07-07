@@ -31,8 +31,15 @@ angular.module('onlinelabApp', [
 		  ncyBreadcrumb: {
 			  label: 'Портфолио'
 		  }
+      })
+	  .state('project', {
+		  url: '/portfolio/project',
+		  templateUrl: 'app/project/project.html',
+		  controller: 'ProjectCtrl',
+		  ncyBreadcrumb: {
+			  label: 'Проект'
+		  }
       });
-
 	
 	
 	$urlRouterProvider
