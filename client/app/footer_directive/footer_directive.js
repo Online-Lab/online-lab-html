@@ -5,10 +5,8 @@ angular.module('onlinelabApp')
         return {
             templateUrl: 'app/footer_directive/footer_directive.html',
 			restrict: 'E',
-
-
             scope: false
-        }
+        };
     })
 
   ;
