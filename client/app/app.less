@@ -129,15 +129,6 @@ body>.content-wrapper>.top-space{
 height:30px;	
 }
 
-header{
-	display:block;
-}
-
-header{
-	margin: 30px auto 0 auto;
-	max-width: 1190px;
-	height:100px;
-}
 .container{
 	max-width: 1190px;
 	margin: 0 auto 0 auto;	
@@ -150,85 +141,75 @@ header{
 	text-align: center;
 }
 
-
-
-header>div{
-float:left;
-height:100%;
-}
-
-header .header-right{
-float:none;
-padding:0 0 0 210px;	
-}
-header .header-right-left{
-float:left;	
-width: 60%;
-
-}
-header .header-right-right{
-float:left;	
-width: 40%;
-
-}
-header > .header-left{
-	width: 210px;
-display:table;	
-}
-
-header .phone-number{
-float:right;	
-clear:both;
-font-family:"ProximaNovaRegular";
-color: #000000;
-font-size:24px;
-font-weight: 700;
-line-height: 24px;
-margin:10px 30px 0 0;
-}
-header .presentation {
-float:right;
-clear:both;
-font-family: MyriadPro, Arial;
-color: #c22d2d;
-font-size:13px;
-line-height: 14px;
-margin:10px 20px 0 0;	
-}
-
-header .presentation a{
-font-family: MyriadPro, Arial;
-color: #c22d2d;
-font-size:13px;
-line-height: 14px;
-}
-
 html > body .container { 
 	height: auto; 
 	max-width: 1190px;
 	min-height: 100%; 
 }
 
-.header-left .logo {
-	font-family: proximanova-bold;
-	font-size:40px;
-	color: #c22c2c;
-	margin: 30px 0 0 0;
-	display: block;
+/* Header */
+
+.header-wrapper{
+	display:block;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+25,ffffff+25,f5f5f5+100 */
+background: #ffffff; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyNSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIyNSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjVmNWY1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  #ffffff 25%, #ffffff 25%, #f5f5f5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(25%,#ffffff), color-stop(25%,#ffffff), color-stop(100%,#f5f5f5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 25%,#ffffff 25%,#f5f5f5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 25%,#ffffff 25%,#f5f5f5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 25%,#ffffff 25%,#f5f5f5 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 25%,#ffffff 25%,#f5f5f5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-8 */
 
 }
-.language-version .language{
-	display:block;
-	font-family:proximanova-regular;
-	color:#9b9b9b;
-	font-size:13px;
-	width:100px;
-	height:30px;
-	line-height:30px;
-	border:2px solid #dcdcdc;
-	text-align:center;
-	
+
+.header-main{
+	margin: 30px auto 0 auto;
+	max-width: 1180px;
+	height:100px;
+
 }
+
+	.header-main > div{
+		float:left;
+	}
+
+	.logo{
+		width: 205px;
+	}
+
+		.logo a{
+			font-family: proximanova-bold;
+			font-size:40px;
+			color: #c22c2c;
+			margin: 30px 0 0 0;
+			display: block;
+			letter-spacing: -2px;
+		}
+
+	.menu-wrapper{
+
+	}
+
+		.language-version{
+
+		}
+
+			.language-version .language{
+				display:block;
+				font-family:proximanova-regular;
+				color:#9b9b9b;
+				font-size:13px;
+				width:100px;
+				height:30px;
+				line-height:30px;
+				border:2px solid #dcdcdc;
+				text-align:center;
+			}
+
 .top-menu{
   margin: 16px 0 0 0;
   min-width:453px;
@@ -297,9 +278,37 @@ html > body .container {
 }
 .top-menu .menu-item:hover > a {
 	color:#ffffff;
-	
-
 }
+
+
+.header-wrapper .phone-number{
+float:right;	
+clear:both;
+font-family:"ProximaNovaRegular";
+color: #000000;
+font-size:24px;
+font-weight: 700;
+line-height: 24px;
+margin:10px 30px 0 0;
+}
+.header-wrapper .presentation {
+float:right;
+clear:both;
+font-family: MyriadPro, Arial;
+color: #c22d2d;
+font-size:13px;
+line-height: 14px;
+margin:10px 20px 0 0;	
+}
+
+.header-wrapper .presentation a{
+font-family: MyriadPro, Arial;
+color: #c22d2d;
+font-size:13px;
+line-height: 14px;
+}
+
+
 .city-menu-wrap {
 	display: table;
 	width: 100%;
@@ -341,7 +350,7 @@ html > body .container {
 }
 .content-block.breadcrumbs{
 	background-color:#f5f5f5;
-	border-top:solid 1px #d4d4d4;
+	border-top:solid 1px #fff;
 }
 
 .breadcrumb_content {
@@ -370,6 +379,7 @@ html > body .container {
   color: #9b9b9b;
 }
 
+/* End Header */
 
 
 
