@@ -12,7 +12,6 @@ angular.module('onlinelabApp')
 			
 				scope.city_items = [
 				{city:'Москва', 			number: '+7 960 000 00 00', active:'', id:1},
-				{city:'Санкт-Петербург', 	number: '+7 960 111 11 11',	active:'', id:2},
 				{city:'Тамбов',				number: '+7 960 222 22 22', active:'', id:3},
 				{city:'Нью-Йорк', 			number: '+7 960 333 33 33', active:'', id:4}
 				];

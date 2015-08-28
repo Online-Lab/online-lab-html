@@ -71,13 +71,8 @@
 		<div class="phones-wrapper">
 			<div class = "city-menu_block">
 				<div class = "city-menu-wrap"> 
-		
+
 					<ul class = "city-items">
-						<!--<li class = "city-item"><a class = "item"  href="#" ng-click="current_city = 1">Москва</a></li>
-						<li class = "city-item"><a class = "item"  href="#" ng-click="current_city = 2">Санкт-Петербург</a></li>
-						<li class = "city-item active"><a class = "item"  href="#" ng-click="current_city = 3">Тамбов</a></li>
-						<li class = "city-item"><a class = "item"  href="#" ng-click="current_city = 4">Нью-Йорк</a></li>-->
-						
 						<li class = "city-item {{item.active}}" ng-class = "{'active': current_city == {{item.id}}}" 
 						ng-repeat = "item in city_items" >
 							<a  class = "item " ng-click="city_click(item)" href="#" >{{item.city}}</a>
@@ -88,8 +83,9 @@
 				<div class = "phone-number" >
 					{{city_phone}}
 				</div>
-			</div>
-	
+
+				<a href="#">Скачать презентацию</a>
+			</div>	
 		</div>
 		
 	</div>
