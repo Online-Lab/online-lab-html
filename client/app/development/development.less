@@ -140,13 +140,39 @@
         top: 2px;
       }
 
+    /* Таблица преимуществ и недостатков */
     .adv-weak{
+      border-bottom: 1px solid #bce4de;
+      margin-top: 30px;
+      width: 100%;
+
       th{
+        background: @green-color;
+        border: 1px solid #1c9081;
         color: #fff;
         font: 26px/20px proxima_nova_ltlight;
+        padding: 13px 0 17px 3px;
+        text-align: center;
+        width: 590px;
       }
       td{
+        border-left: 1px solid #c7e0dc;
+        border-right: 1px solid #c7e0dc;
         line-height: 20px;
+        padding: 0 0 0 57px;
+      }
+      td:nth-child(odd){
+        background: url(../../assets/images/development/list-item-right.png) 20px 10px no-repeat;
+      }
+      td:nth-child(even){
+        background: url(../../assets/images/development/list-item-wrong.png) 24px 10px no-repeat;
+      }
+      tr{
+        background: #eaf6f4;
+        height: 40px;
+      }
+      tr:nth-child(3){
+        background: #dfedeb;
       }
     }
   }
