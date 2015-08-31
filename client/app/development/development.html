@@ -66,10 +66,16 @@
   </div>
 
   <!-- Как мы будем работать над вашим проектом -->
-  <div class="workflow-wrapper">
+  <div class="workflow-wrapper" ng-controller="DevelopmentCtrl">
     <div class="banner">Как мы будем работать над вашим<br>проектом</div>
     <div class="content">
-      
+      <ul class="workflow-list">
+        <li ng-repeat="li in workflow">
+          <img src="" alt="">
+          <p class="name">Hello</p>
+          <p class="desc"></p>
+          </li>
+      </ul>
     </div>
   </div>
 
