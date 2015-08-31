@@ -1,4 +1,4 @@
-/* Development page styles */
+ /* Development page styles */
 
 @green-color: #20a493;
 
@@ -46,6 +46,7 @@
       list-style: none;
     }
 
+    /* Lifecycle methods list */
     .methods{
       color: #000;
       margin: 0 auto;
@@ -74,12 +75,70 @@
       }
     }
 
-    .lifecycle-list{
-      color: #000;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 20px;
+    /* Lifecycle list */
+    .lifecycle-list-wrapper{
+      overflow: hidden;
+      position: relative;
     }
+      .lifecycle-list{
+        color: #000;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 15px;
+        margin: 22px 0 20px 0;
+        overflow: hidden;
+        padding: 0;
+
+        li{
+          float: left;
+          height: 51px;
+          padding: 16px 0 0 70px;
+          position: relative;
+          width: 300px;
+        }
+        li:nth-child(1){
+          background: url(../../assets/images/development/list-item1.png) no-repeat;
+        }
+        li:nth-child(2){
+          background: url(../../assets/images/development/list-item2.png) no-repeat;
+        }
+        li:nth-child(3){
+          background: url(../../assets/images/development/list-item3.png) no-repeat;
+        }
+        li:nth-child(4){
+          background: url(../../assets/images/development/list-item-complete.png) no-repeat;
+          padding-top: 2px;
+          width: 240px;
+        }
+
+        li:nth-child(odd){
+          img{
+            display: block;
+            left: -50px;
+            position: absolute;
+            top: -25px;
+          }
+        }
+      }
+
+      .arrow-next1{
+        display: block;
+        left: 20px;
+        position: absolute;
+        top: 2px;
+      }
+      .arrow-next2{
+        display: block;
+        left: 323px;
+        position: absolute;
+        bottom: 0;
+      }
+      .arrow-next3{
+        display: block;
+        left: 620px;
+        position: absolute;
+        top: 2px;
+      }
 
     .adv-weak{
       th{
