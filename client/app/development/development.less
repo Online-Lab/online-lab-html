@@ -2,24 +2,35 @@
 
 .main-font{
   color: #6c6c6c;
-  font: 16px ProximaNovaRegular;
+  font: 16px/28px ProximaNovaRegular;
+}
+.banner-style{
+  color: #fff;
+  font: 50px a_coppergothcpsexpregular;
+  height: 200px;
+  letter-spacing: 1.5px;
+  padding: 66px 0 0 0;
+  text-align: center;
 }
 
-p{
-  .main-font;
-}
 
 .lifecycle-wrapper{
   height: 970px;
 
   .banner{
+    .banner-style;
     background: url(../../assets/images/development/lifecycle-banner.jpg);
-    height: 200px;
   }
 
   .content{
     margin: 0 auto;
+    padding: 40px 0 0 0;
     width: @content-width;
+
+    p{
+      .main-font;
+      text-align: center;
+    }
   }
 }
 
@@ -27,8 +38,8 @@ p{
   height: 650px;
 
   .banner{
+    .banner-style;
     background: url(../../assets/images/development/techs-banner.jpg);
-    height: 200px;
   }
 
   .content{
@@ -41,8 +52,9 @@ p{
   height: 1200px;
 
   .banner{
+    .banner-style;
     background: url(../../assets/images/development/workflow-banner.jpg);
-    height: 200px;
+    padding: 35px 0 0 0;
   }
 
   .content{
