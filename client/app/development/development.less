@@ -1,9 +1,19 @@
 /* Development page styles */
 
+@green-color: #20a493;
+
 .main-font{
   color: #6c6c6c;
-  font: 16px/28px ProximaNovaRegular;
+  font: 16px/30px ProximaNovaRegular;
 }
+
+.h2-like{
+  color: @green-color;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
 .banner-style{
   color: #fff;
   font: 50px a_coppergothcpsexpregular;
@@ -23,13 +33,30 @@
   }
 
   .content{
+    .main-font;
     margin: 0 auto;
     padding: 40px 0 0 0;
     width: @content-width;
 
     p{
-      .main-font;
       text-align: center;
+    }
+
+    .lifecycle-list{
+      color: #000;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .adv-weak{
+      th{
+        color: #fff;
+        font: 26px/20px proxima_nova_ltlight;
+      }
+      td{
+        line-height: 20px;
+      }
     }
   }
 }
