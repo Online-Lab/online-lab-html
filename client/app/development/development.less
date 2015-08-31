@@ -12,6 +12,7 @@
   font-size: 30px;
   font-weight: bold;
   line-height: 20px;
+  margin: 40px 0 20px 0 !important;
 }
 
 .banner-style{
@@ -35,10 +36,12 @@
   .content{
     .main-font;
     margin: 0 auto;
-    padding: 40px 0 0 0;
+    overflow: hidden;
+    padding: 22px 0 0 0;
     width: @content-width;
 
     p{
+      margin: 15px 0;
       text-align: center;
     }
 
@@ -49,7 +52,7 @@
     /* Lifecycle methods list */
     .methods{
       color: #000;
-      margin: 0 auto;
+      margin: 31px auto 28px auto;
       overflow: hidden;
       padding: 0;
       width: 378px;
@@ -77,6 +80,7 @@
 
     /* Lifecycle list */
     .lifecycle-list-wrapper{
+      margin: 39px 0 49px 0;
       overflow: hidden;
       position: relative;
     }
@@ -120,7 +124,6 @@
           }
         }
       }
-
       .arrow-next1{
         display: block;
         left: 20px;
@@ -155,6 +158,13 @@
         text-align: center;
         width: 590px;
       }
+      tr{
+        background: #eaf6f4;
+        height: 40px;
+      }
+      tr:nth-child(3){
+        background: #dfedeb;
+      }
       td{
         border-left: 1px solid #c7e0dc;
         border-right: 1px solid #c7e0dc;
@@ -167,14 +177,8 @@
       td:nth-child(even){
         background: url(../../assets/images/development/list-item-wrong.png) 24px 10px no-repeat;
       }
-      tr{
-        background: #eaf6f4;
-        height: 40px;
-      }
-      tr:nth-child(3){
-        background: #dfedeb;
-      }
     }
+
   }
 }
 
