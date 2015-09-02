@@ -23,7 +23,14 @@ angular.module('onlinelabApp', [
 			  label: 'Главная'
 		  }
       })
-	  
+	  .state('development', {
+      url: '/development',
+      templateUrl: 'app/development/development.html',
+      controller: 'DevelopmentCtrl',
+      ncyBreadcrumb: {
+        label: 'Разработка'
+      }
+      })    
 	  .state('portfolio', {
 		  url: '/portfolio',
 		  templateUrl: 'app/portfolio/portfolio.html',

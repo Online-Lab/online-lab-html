@@ -1,0 +1,235 @@
+<app-header></app-header>
+  
+  <!-- Магнит для заказчика -->
+  <div class="lifecycle-wrapper">
+    <div class="banner"><p>Магнит для заказчика</p></div>
+    <div class="content">
+      <p>Организация разработки проектов важнее всего. Наша забота о клиентах проявляется в том, что заказчик видит, как мы работаем и может вносить<br> рекомендации в любое время, что не повлияет на сроки и сложность работ. Это первое, что притягивает к нам клиентов.</p>
+      
+      <p class="h2-like">Применяем</p>
+      <ul class="methods">
+        <li class="li-agile">Agile</li>
+        <span>&</span>
+        <li class="li-scrum">Scrum</li>
+      </ul>
+
+      <p>Это методы, которыми руководствуются современные успешные команды разработчиков во всём мире. Работа распределяется между несколькими<br> профессионалами и выполняется короткими циклами, что позволяет работать над проектами быстро, гибко и выдавать высокую функциональность.</p>
+
+      <div class="lifecycle-list-wrapper">
+        <img class="arrow-next1" src="../../assets/images/development/next-arrow-top.png">
+        <img class="arrow-next2" src="../../assets/images/development/next-arrow-bottom.png">
+        <img class="arrow-next3" src="../../assets/images/development/next-arrow-top.png">
+        <ul class="lifecycle-list">
+          <li>Сделали часть</li>
+          <li>Сдали заказчику</li>
+          <li>Внесли дополнения</li>
+          <li>Принято!<br><br>Работаем дальше</li>
+        </ul>
+      </div>
+
+      <table class="adv-weak">
+        <tr>
+          <th>Лучше так</th><th>Чем так</th>
+        </tr>
+
+        <tr>
+          <td>Работающий продукт</td><td>Тонны документации</td>
+        </tr>
+        <tr>
+          <td>Гибкость и готовность к изменениям</td><td>Следование первоначальному плану</td>
+        </tr>
+        <tr>
+          <td>Взаимодействие с заказчиком</td><td>Зацикливание на процессах и инструментах</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- У нас все летает -->
+  <div class="techs-wrapper">
+    <div class="banner">У нас все летает</div>
+    <div class="content">
+      <p class="h2-like">Мы ненавидим медленно работающие сайты!</p>
+      <p><span class="bold">Профессиональный вызов</span> – сделать мощный, масштабируемый <span class="term">web-проект</span> <span class="term-example">(интернет-магазин, сервис, соц. сеть)</span> или комфортное <span class="term">мобильное приложение</span>.</p>
+      <p class="reason">Это вторая причина, почему наши клиенты любят работать с нами.</p>
+      <p>Такой подход требует от нас постоянного развития и изучения новых технологий, что мы с радостью и делаем. </p>
+
+      <p class="h2-like">Излюбленные языки программирования, платформы и технологии</p>
+      <ul class="tech-list">
+        <li><img src="../../assets/images/development/tech-js.png">JavaScript</li>
+        <li><img src="../../assets/images/development/tech-node-js.png">Node.js</li>
+        <li><img src="../../assets/images/development/tech-angular.png">AngularJS</li>
+        <li><img src="../../assets/images/development/tech-cdn.png">CDN</li>
+        <span>&</span>
+        <li><img src="../../assets/images/development/tech-cloud.png">Облачные хранилища</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Как мы будем работать над вашим проектом -->
+  <div class="workflow-wrapper" ng-controller="DevelopmentCtrl">
+    <div class="banner">Как мы будем работать над вашим<br>проектом</div>
+    <div class="content">
+
+      <ul class="workflow-list">
+        <li ng-repeat="li in workflow">
+            <table>
+              <tr>
+                <td><img ng-src="{{li.ico}}" alt=""></td>
+                <td>
+                  <div>
+                    <p class="name">{{li.name}}</p>
+                    <p class="desc">
+                      {{li.desc}}
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </li>
+      </ul>
+
+      <p class="note">На каждом этапе вы можете вносить дополнения, высказывать пожелания и обсуждать с нами следующие шаги. Если в самом конце работы над<br> проектом вы захотите полностью сменить концепцию, мы это сделаем, уложившись в сроки. Хотя, как говорится, нет таких исключений, которых<br> нельзя устроить хорошим людям. Но гибкость и готовность к изменениям – один из принципов философии <span class="bold">OnlineLab</span>.</p>
+    </div>
+  </div>
+
+<app-footer></app-footer>
+
+
+<script>
+jQuery(document).ready(function($){
+  var slidesWrapper = $('.cd-hero-slider');
+
+  //check if a .cd-hero-slider exists in the DOM 
+  if ( slidesWrapper.length > 0 ) {
+    var primaryNav = $('.cd-primary-nav'),
+      sliderNav = $('.cd-slider-nav'),
+      navigationMarker = $('.cd-marker'),
+      slidesNumber = slidesWrapper.children('li').length,
+      visibleSlidePosition = 0,
+      autoPlayId = false,
+      autoPlayDelay = false;
+
+    //upload videos (if not on mobile devices)
+    uploadVideo(slidesWrapper);
+
+    //autoplay slider
+    setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+
+    //on mobile - open/close primary navigation clicking/tapping the menu icon
+    primaryNav.on('click', function(event){
+      if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
+    });
+    
+    //change visible slide
+    sliderNav.on('click', 'li', function(event){
+      event.preventDefault();
+      var selectedItem = $(this);
+      if(!selectedItem.hasClass('selected')) {
+        // if it's not already selected
+        var selectedPosition = selectedItem.index(),
+          activePosition = slidesWrapper.find('li.selected').index();
+        
+        if( activePosition < selectedPosition) {
+          nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
+        } else {
+          prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
+        }
+
+        //this is used for the autoplay
+        visibleSlidePosition = selectedPosition;
+
+        updateSliderNavigation(sliderNav, selectedPosition);
+        updateNavigationMarker(navigationMarker, selectedPosition+1);
+        //reset autoplay
+        setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+      }
+    });
+  }
+
+  function nextSlide(visibleSlide, container, pagination, n){
+    visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+      visibleSlide.removeClass('is-moving');
+    });
+
+    container.children('li').eq(n).addClass('selected from-right').prevAll().addClass('move-left');
+    checkVideo(visibleSlide, container, n);
+  }
+
+  function prevSlide(visibleSlide, container, pagination, n){
+    visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+      visibleSlide.removeClass('is-moving');
+    });
+
+    container.children('li').eq(n).addClass('selected from-left').removeClass('move-left').nextAll().removeClass('move-left');
+    checkVideo(visibleSlide, container, n);
+  }
+
+  function updateSliderNavigation(pagination, n) {
+    var navigationDot = pagination.find('.selected');
+    navigationDot.removeClass('selected');
+    pagination.find('li').eq(n).addClass('selected');
+  }
+
+  function setAutoplay(wrapper, length, delay) {
+    if(wrapper.hasClass('autoplay')) {
+      clearInterval(autoPlayId);
+      autoPlayId = window.setInterval(function(){autoplaySlider(length)}, delay);
+    }
+  }
+
+  function autoplaySlider(length) {
+    if( visibleSlidePosition < length - 1) {
+      nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, visibleSlidePosition + 1);
+      visibleSlidePosition +=1;
+    } else {
+      prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, 0);
+      visibleSlidePosition = 0;
+    }
+    updateNavigationMarker(navigationMarker, visibleSlidePosition+1);
+    updateSliderNavigation(sliderNav, visibleSlidePosition);
+  }
+
+  function uploadVideo(container) {
+    container.find('.cd-bg-video-wrapper').each(function(){
+      var videoWrapper = $(this);
+      if( videoWrapper.is(':visible') ) {
+        // if visible - we are not on a mobile device 
+        var videoUrl = videoWrapper.data('video'),
+          video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
+        video.appendTo(videoWrapper);
+        // play video if first slide
+        if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
+      }
+    });
+  }
+
+  function checkVideo(hiddenSlide, container, n) {
+    //check if a video outside the viewport is playing - if yes, pause it
+    var hiddenVideo = hiddenSlide.find('video');
+    if( hiddenVideo.length > 0 ) hiddenVideo.get(0).pause();
+
+    //check if the select slide contains a video element - if yes, play the video
+    var visibleVideo = container.children('li').eq(n).find('video');
+    if( visibleVideo.length > 0 ) visibleVideo.get(0).play();
+  }
+
+  function updateNavigationMarker(marker, n) {
+    marker.removeClassPrefix('item').addClass('item-'+n);
+    temp_width = (n-1)*marker.removeClassPrefix('item').innerWidth()+14*(n-1);
+    
+    marker.removeClassPrefix('item').css( "-webkit-transform", "translateX("+temp_width+"px)");
+  }
+
+  $.fn.removeClassPrefix = function(prefix) {
+    //remove all classes starting with 'prefix'
+      this.each(function(i, el) {
+          var classes = el.className.split(" ").filter(function(c) {
+              return c.lastIndexOf(prefix, 0) !== 0;
+          });
+          el.className = $.trim(classes.join(" "));
+      });
+      return this;
+  };
+});
+</script>

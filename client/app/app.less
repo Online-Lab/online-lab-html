@@ -4,7 +4,7 @@
 
 @fa-font-path: '/bower_components/font-awesome/fonts';
 
-
+@content-width: 1180px;
 
 
 
@@ -96,6 +96,28 @@
     src: url(/assets/fonts/proximanova-regular.otf); /* ֿףעü ך פאיכף סמ רנטפעמל */
    }   
    
+@font-face {
+    font-family: 'a_coppergothcpsexpregular';
+    src: url('/assets/fonts/a_coppergothcpsexp_regular-webfont.eot');
+    src: url('/assets/fonts/a_coppergothcpsexp_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/a_coppergothcpsexp_regular-webfont.woff') format('woff'),
+         url('/assets/fonts/a_coppergothcpsexp_regular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/a_coppergothcpsexp_regular-webfont.svg#a_coppergothcpsexpregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'proxima_nova_ltlight';
+    src: url('/assets/fonts/proxima_nova_light-webfont.eot');
+    src: url('/assets/fonts/proxima_nova_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proxima_nova_light-webfont.woff') format('woff'),
+         url('/assets/fonts/proxima_nova_light-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proxima_nova_light-webfont.svg#proxima_nova_ltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
    
 html, body { 
 	height: 100%; 
@@ -146,6 +168,9 @@ html > body .container {
 	max-width: 1190px;
 	min-height: 100%; 
 }
+
+/* Import development page styles */
+@import 'development/development.less';
 
 
 /* Import header styles */
