@@ -29,7 +29,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     
     /* Logo block */
     .logo{
-      width: 207px;
+      width: 190px;
 
       a{
         font-family: proximanova-bold;
@@ -43,29 +43,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
     /* Menu block */
     .menu-wrapper{
-      width: 631px;
+      width: 648px;
 
       .language-version .language{
+        border:2px solid #dcdcdc;
+        color:#9b9b9b;
         display:block;
         font-family:proximanova-regular;
-        color:#9b9b9b;
         font-size:13px;
-        width:100px;
         height:30px;
         line-height:30px;
-        border:2px solid #dcdcdc;
+        margin: 0 0 0 17px;
         text-align:center;
+        width:100px;
       }
 
       /* Top menu styling */
       .top-menu{
         list-style-type: none;
-        margin: 16px 0 0 0;
+        margin: 4px 0 0 8px;
+        overflow: hidden;
+        padding: 0;
         
         & > li{
           float: left;
         }
-        & > ul{
+        ul{
           background-color:#d9f0ec;
           display:none;
           list-style-type: none;
@@ -77,6 +80,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
             padding:0 20px 0 0;
           }
         }
+
         /* Menu item styling */
         a.item {
           color: #20a493;
@@ -86,7 +90,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
           font-weight: 700;
           height:40px;
           line-height:40px;
-          padding: 0 17px;
+          outline: none;
+          padding: 0 9px 0 9px;
+          text-decoration: none;
           text-transform: uppercase;
         }
 
@@ -95,15 +101,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
           background-color:#20a493;
           & > a{
             color:#fff;
+            text-decoration: none;
           }
           & > ul{
             display:block;
             a{
+              text-decoration: none;
               text-transform:none;
             }
           }
         }
-        & > ul{
+        ul{
           li:hover{
             background-color:#a0dbd1;
           }
@@ -115,6 +123,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     .phones-wrapper{
       width: 342px;
 
+      /* City menu */
       .city-menu-wrap {
         overflow: hidden;
         margin-top: 3px;
@@ -148,7 +157,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         text-decoration:none;
         padding: 0 6px;
       }
-
       .city-item.active {
         background-image: url("/assets/images/city_active.png");
         background-position:bottom center;
@@ -177,79 +185,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 
-/*
-.top-menu{
-  margin: 16px 0 0 0;
-  min-width:453px;
-}
-
-.top-menu-wrap {
-  display: table;
-  width: 100%;
-}
-.top-menu-wrap .menu-items {
-  display: table-row;
-}
-
-.top-menu-wrap .menu-items li.menu-item {
-  display: table-cell;
-  width: auto;
-  padding: 0px;
-  float: inherit;
-}
-
-.menu-item a.item {
-  font-family:"ProximaNovaRegular";
-  color: #20a493;
-  display:block;
-  font-size:14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  height:40px;
-  line-height:40px;
-  padding-left: 17px;
-}
-
-.top-menu .menu-item ul{
-  display:none;
-  list-style-type: none;
-  padding: 10px 0px 0 0;
-  position:absolute;
-  background-color:#d9f0ec;
-  text-align:left;
-}
-.top-menu .menu-item:hover ul{
-  display:block;
-  font-size:12px;
-
-}
-.top-menu .menu-item:hover ul a{
-  display:block;
-  font-size:14px;
-
-}
-.top-menu .menu-item:hover ul li{
-  padding:0 20px 0 0;
-
-}
-.top-menu .menu-item:hover ul li a{
-  text-transform:none;
-
-}
-.top-menu .menu-item:hover ul li:hover{
-  background-color:#a0dbd1;
-
-}
-.top-menu .menu-item:hover {
-  background-color:#20a493;
-  color:#ffffff;
-}
-.top-menu .menu-item:hover > a {
-  color:#ffffff;
-}
-*/
-
-
+/* Breadcrumbs */
 .content-block.breadcrumbs{
   background-color:#f5f5f5;
   border-top:solid 1px #fff;
@@ -274,7 +210,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .breadcrumb_content > .active {
   color: #2eafa0;
 }
-
 .breadcrumb_content > li + li:before {
   content: ">";
   padding: 0 5px;
