@@ -4,7 +4,7 @@ angular.module('onlinelabApp')
   .directive('slickDirective', function () {
     return {
       restrict: 'A',
-      link: function (scope, element, attrs) {
+      link: function (scope, element) {
 		  $(element).slick( { 
 		  infinite: true,
 		  slidesToShow: 3,

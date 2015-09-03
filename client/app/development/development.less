@@ -1,0 +1,324 @@
+ /* Development page styles */
+
+@green-color: #20a493;
+
+.main-font{
+  color: #6c6c6c;
+  font: 16px/30px ProximaNovaRegular;
+}
+
+.bold{
+  color: #000;
+  font-weight: bold;
+}
+
+.term{
+  color: @green-color;
+}
+
+.h2-like{
+  color: @green-color;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 40px 0 20px 0 !important;
+}
+
+.banner-style{
+  color: #fff;
+  font: 50px a_coppergothcpsexpregular;
+  height: 200px;
+  letter-spacing: 1.5px;
+  padding: 66px 0 0 0;
+  text-align: center;
+}
+
+
+.lifecycle-wrapper{
+  height: 970px;
+
+  .banner{
+    .banner-style;
+    background: url(../../assets/images/development/lifecycle-banner.jpg);
+  }
+
+  .content{
+    .main-font;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 22px 0 0 0;
+    width: @content-width;
+
+    p{
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    ul{
+      list-style: none;
+    }
+
+    /* Lifecycle methods list */
+    .methods{
+      color: #000;
+      margin: 31px auto 28px auto;
+      overflow: hidden;
+      padding: 0;
+      width: 378px;
+
+      *{
+        float: left;
+      }
+      .li-agile{
+        background: url(../../assets/images/development/agile-icon.png) no-repeat;
+        height: 71px;
+        margin: 0 48px 0 0;
+        padding: 18px 0 0 90px;
+      }
+      span{
+        display: block;
+        margin: 0 48px 0 0;
+        padding: 18px 0 0 0;
+      }
+      .li-scrum{
+        background: url(../../assets/images/development/scrum-icon.png) no-repeat;
+        height: 71px;
+        padding: 18px 0 0 98px;
+      }
+    }
+
+    /* Lifecycle list */
+    .lifecycle-list-wrapper{
+      margin: 39px 0 49px 0;
+      overflow: hidden;
+      position: relative;
+    }
+      .lifecycle-list{
+        color: #000;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 15px;
+        margin: 22px 0 20px 0;
+        overflow: hidden;
+        padding: 0;
+
+        li{
+          float: left;
+          height: 51px;
+          padding: 16px 0 0 70px;
+          position: relative;
+          width: 300px;
+        }
+        li:nth-child(1){
+          background: url(../../assets/images/development/list-item1.png) no-repeat;
+        }
+        li:nth-child(2){
+          background: url(../../assets/images/development/list-item2.png) no-repeat;
+        }
+        li:nth-child(3){
+          background: url(../../assets/images/development/list-item3.png) no-repeat;
+        }
+        li:nth-child(4){
+          background: url(../../assets/images/development/list-item-complete.png) no-repeat;
+          padding-top: 2px;
+          width: 240px;
+        }
+
+        li:nth-child(odd){
+          img{
+            display: block;
+            left: -50px;
+            position: absolute;
+            top: -25px;
+          }
+        }
+      }
+      .arrow-next1{
+        display: block;
+        left: 20px;
+        position: absolute;
+        top: 2px;
+      }
+      .arrow-next2{
+        display: block;
+        left: 323px;
+        position: absolute;
+        bottom: 0;
+      }
+      .arrow-next3{
+        display: block;
+        left: 620px;
+        position: absolute;
+        top: 2px;
+      }
+
+    /* Таблица преимуществ и недостатков */
+    .adv-weak{
+      border-bottom: 1px solid #bce4de;
+      margin-top: 30px;
+      width: 100%;
+
+      th{
+        background: @green-color;
+        border: 1px solid #1c9081;
+        color: #fff;
+        font: 26px/20px proxima_nova_ltlight;
+        padding: 13px 0 17px 3px;
+        text-align: center;
+        width: 590px;
+      }
+      tr{
+        background: #eaf6f4;
+        height: 40px;
+      }
+      tr:nth-child(3){
+        background: #dfedeb;
+      }
+      td{
+        border-left: 1px solid #c7e0dc;
+        border-right: 1px solid #c7e0dc;
+        line-height: 20px;
+        padding: 0 0 0 57px;
+      }
+      td:nth-child(odd){
+        background: url(../../assets/images/development/list-item-right.png) 20px 10px no-repeat;
+      }
+      td:nth-child(even){
+        background: url(../../assets/images/development/list-item-wrong.png) 24px 10px no-repeat;
+      }
+    }
+
+  }
+}
+
+.techs-wrapper{
+  height: 650px;
+
+  .banner{
+    .banner-style;
+    background: url(../../assets/images/development/techs-banner.jpg);
+  }
+
+  .content{
+    .main-font;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 8px 0 0 0;
+    width: @content-width;
+
+    p{
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    ul{
+      list-style: none;
+    }
+
+    .term-example{
+      font-weight: bold;
+    }
+
+    .reason{
+      background: url(../../assets/images/development/reason-bg.png) top center no-repeat;
+      height: 54px;
+      margin-top: -6px;
+      padding: 7px 0 0 0;
+    }
+
+    .tech-list{
+      margin: 30px auto 0 auto;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 990px;
+
+      li{
+        float: left;
+        margin: 0 50px 0 0;
+      }
+      li:last-child{
+        margin: 0;
+      }
+
+      li img{
+        margin: 0 10px 0 0;
+      }
+
+      span{
+        color: #d2d2d2;
+        left: 715px;
+        position: absolute;
+        top: 20px;
+      }
+    }
+  }
+}
+
+.workflow-wrapper{
+  height: 1200px;
+
+  .banner{
+    .banner-style;
+    background: url(../../assets/images/development/workflow-banner.jpg);
+    padding: 35px 0 0 0;
+  }
+
+  .content{
+    .main-font;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 22px 0 0 0;
+    width: @content-width;
+
+    p{
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    ul{
+      list-style: none;
+    }
+
+    .workflow-list{
+      margin: 27px 0 0 0;
+      overflow: hidden;
+      padding: 0;
+
+      li{
+        margin: 0 0 30px 0;
+      }
+      td{
+        vertical-align: middle;
+      }
+      img{
+        float: left;
+        margin: 0 19px 0 0;
+      }
+      
+      p{
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      .name{
+        font-size: 22px;
+        line-height: 0;
+        margin: 0 0 20px 0;
+        .bold;
+      }
+      .desc{
+        line-height: 20px;
+      }
+    }
+
+    .note{
+      background: #eaf6f4;
+      border: 1px solid #dbe7e6;
+      margin: 12px 0 15px 0;
+      padding: 20px 0 20px 0;
+    }
+  }
+}
+
+/* End Development page styles */
