@@ -5,9 +5,54 @@
 		<h1>Название проекта</h1>
 		
 
+		
+		
+		<div class = "portfolio_menu"> 
 			
 			
+			<div id="filters" class="button-group mg_b_20 mg_t_50">  
+				<button class="button is-checked" data-filter=".description">Описание</button>
+				<button class="button" data-filter=".creating">Процесс создания</button>
+				<button class="button" data-filter=".other">Другая вкладка</button>
+
+				<span class = "activ_filter_point"></span>
+			</div>
+		</div>		
+		<div class="isotope">
+			<div class = "element-item description">
+			Описание проекта
+			</div>
+			<div class = "element-item creating">
+			Описание процесса создания
+			</div>
+			<div class = "element-item other">
+			Другая вкладка
+			</div>
+				
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class = "main_part"> 
+			<div class = "main_part_description"> </div>
+			<div class = "main_part_creating"> </div>
+			<div class = "main_part_other"> </div>
+		</div>	
 			
+		<div class = "right_part"> 
+			<div class = "right_part_client"> </div>
+			<div class = "right_part_team"> </div>
+		</div>	
 			
 			
 			
@@ -15,5 +60,49 @@
 	</div>
 	
 </div>
+<script>
+	// external js: isotope.pkgd.js
+$( document ).ready( function() {
+	
+	button_position = $('#filters .is-checked').position().left;
+	button_width = $('#filters .is-checked').width();
+	point_width = $(".activ_filter_point").width;
+	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+	
+	$(".activ_filter_point").css({'left':point_left});
+	
+		var $container = $('.isotope');
+		$container.isotope();
+		// filter buttons
+		$('#filters button').click(function(){
+			var $this = $(this);
+			// don't proceed if already selected
+			if ( !$this.hasClass('is-checked') ) {
+				$this.parents('#filters').find('.is-checked').removeClass('is-checked');
+				$this.addClass('is-checked');
+			}
+			var selector = $this.attr('data-filter');
+			$container.isotope({  itemSelector: '.element-item', filter: selector });
+			
+			
+			button_position = $this.position().left;
+			button_width = $this.width();
+			point_width = $(".activ_filter_point").width;
+			point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+			
+			$(".activ_filter_point").css({'left':point_left});
+			return false;
+			
+			
+		});    
 
+		
+		});
+
+
+
+	
+	
+	
+	</script>
 <app-footer></app-footer>
