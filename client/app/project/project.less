@@ -14,6 +14,10 @@
     padding: 0;
     width: @content-width;
 
+    p{
+        .main-font;
+    }
+
     .h1-like{
       color: @green-color !important;
       font: normal 34px/20px ProximaNovaLight !important;
@@ -22,7 +26,7 @@
     .h2-like{
       color: @green-color !important;
       font: normal 26px/20px ProximaNovaLight !important;
-      margin: 40px 0 20px 0 !important;
+      margin: 40px 0 13px 0 !important;
     }
     .h3-like{
       color: #000 !important;
@@ -42,19 +46,39 @@
 
     /* Client and team column styles */
     .project-info{
+      padding: 60px 0 0 0;
         width: 290px;
 
-        .client{
-          color: #000;
-          font: normal 22px/20px ProximaNovaLight !important;
+        p{
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .project-client{
+          .client{
+            color: #000;
+            font: normal 22px/20px ProximaNovaLight !important;
+            margin: 10px 0 38px 0;
+          }
+        }
+        .project-team{
+          margin: 0 0 210px 0;
+        }
+        .project-design{
+          .h3-like{
+            margin-bottom: 10px !important;
+          }
+          margin: 0 0 33px 0;
+        }
+        .project-promotion{
+          .h3-like{
+            margin-bottom: 10px !important;
+          }
         }
 
         hr{
           border-top: 2px solid #1ba69e;
+          margin: -5px 0 40px 0;
         }
-    }
-
-    p{
-        .main-font;
     }
 }
