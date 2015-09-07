@@ -4,7 +4,13 @@
 
 @fa-font-path: '/bower_components/font-awesome/fonts';
 
+/* Import fonts */
+@import '../assets/fonts/fonts.less';
+
 @content-width: 1180px;
+
+@green-color: #20a493;
+
 
 /**
  * App-wide Styles
@@ -47,70 +53,7 @@
   .generate_padding_classes(@n, (@i + 5));
 }
  
- 
-@font-face {
-    font-family: "ProximaNovaBold";
-    src: url("/assets/fonts/ProximaNovaBold/ProximaNovaBold.eot");
-    src: url("/assets/fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
-    url("/assets/fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
-    url("/assets/fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "ProximaNovaRegular";
-    src: url("/assets/fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
-    src: url("/assets/fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
-    url("/assets/fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
-    url("/assets/fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
 
-@font-face {
-    font-family: "ProximaNovaBlack";
-    src: url("/assets/fonts/ProximaNovaBlack/ProximaNovaBlack.eot");
-    src: url("/assets/fonts/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"),
-    url("/assets/fonts/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff"),
-    url("/assets/fonts/ProximaNovaBlack/ProximaNovaBlack.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-   
- @font-face {
-    font-family: proximanova-bold; /* Гарнитура шрифта */
-    src: url(/assets/fonts/proximanova-bold.otf); /* Путь к файлу со шрифтом */
-   }
- @font-face {
-    font-family: proximanovacond-regular; /* Гарнитура шрифта */
-    src: url(/assets/fonts/proximanovacond-regular.otf); /* Путь к файлу со шрифтом */
-   }
- @font-face {
-    font-family: proximanova-regular; /* Гарнитура шрифта */
-    src: url(/assets/fonts/proximanova-regular.otf); /* Путь к файлу со шрифтом */
-   }   
-   
-@font-face {
-    font-family: 'a_coppergothcpsexpregular';
-    src: url('/assets/fonts/a_coppergothcpsexp_regular-webfont.eot');
-    src: url('/assets/fonts/a_coppergothcpsexp_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/a_coppergothcpsexp_regular-webfont.woff') format('woff'),
-         url('/assets/fonts/a_coppergothcpsexp_regular-webfont.ttf') format('truetype'),
-         url('/assets/fonts/a_coppergothcpsexp_regular-webfont.svg#a_coppergothcpsexpregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'proxima_nova_ltlight';
-    src: url('/assets/fonts/proxima_nova_light-webfont.eot');
-    src: url('/assets/fonts/proxima_nova_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/proxima_nova_light-webfont.woff') format('woff'),
-         url('/assets/fonts/proxima_nova_light-webfont.ttf') format('truetype'),
-         url('/assets/fonts/proxima_nova_light-webfont.svg#proxima_nova_ltlight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
    
 html, body { 
