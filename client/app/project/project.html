@@ -1,15 +1,11 @@
 <app-header></app-header>
 
-<div class = "content-block">
-	<div class = "container" >
-		<h1>Название проекта</h1>
-		
+<div class = "#project">
 
-		
-		
+	<!-- Main content -->
+	<div class = "container">
+		<p class="h1-like">Название проекта</p>
 		<div class = "portfolio_menu"> 
-			
-			
 			<div id="filters" class="button-group mg_b_20 mg_t_50">  
 				<button class="button is-checked" data-filter=".description">Описание</button>
 				<button class="button" data-filter=".creating">Процесс создания</button>
@@ -17,8 +13,9 @@
 
 				<span class = "activ_filter_point"></span>
 			</div>
-		</div>		
-		<div class="isotope">
+		</div>
+
+<!-- 		<div class="isotope">
 			<div class = "element-item description">
 			Описание проекта
 			</div>
@@ -28,38 +25,72 @@
 			<div class = "element-item other">
 			Другая вкладка
 			</div>
-				
+		</div> -->
+
+		
+		<div class="description">
+			<p class="h2-like">Задача:</p>
+			<p>
+				У большинства так не бывает, но у нас слова «молодая», «эффективная» и «команда разработчиков» очетаются ультра-гармонично. Это потому, что мы амбициозные, работаем слаженно и используем новые прогрессивные технологии, что в совокупности даёт максимальный эффект. 
+			</p>
+			<img src="../../assets/images/project/project1_1.jpg" alt="">
+			<p>
+				А молодая не потому, что студенты (средний возраст сотрудников – 27 лет), а потому, что в ногу со временем. Высоконагруженные проекты, объединяющие в себе сложный веб-портал, мобильное приложение, гаджет, связанный с Вашим продуктом, и качественное продвижение всего вышеперечисленного в сети – это к нам. 
+			</p>
+			<p class="h2-like">Второй заголовок</p>
+			<p>
+				Наш уровень профессионализма, опыт и используемые технологии дают уверенность в том, что проект будет работать хорошо. Эта уверенность передаётся и Вам!
+			</p>
+			<img src="../../assets/images/project/project1_2.jpg" alt="">
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<div class = "main_part"> 
-			<div class = "main_part_description"> </div>
-			<div class = "main_part_creating"> </div>
-			<div class = "main_part_other"> </div>
-		</div>	
 			
 		<div class = "right_part"> 
 			<div class = "right_part_client"> </div>
 			<div class = "right_part_team"> </div>
-		</div>	
-			
-			
-			
-		
+		</div>
 	</div>
-	
+
+	<!-- Client and team info -->
+	<div class="right-bar">
+		<!-- Client -->
+		<p class="h2-like">Клиент:</p>
+		<img src="../../assets/images/project/project1_client.jpg">
+		<p class="client">Жизнь будущего</p>
+		<img src="../../assets/images/project1_review.jpg" alt="">
+
+		<!-- Team -->
+		<p class="h2-like">Над проектом работали:</p>
+		<p class="h3-like">Дизайн:</p>
+		<p>Сергей Панфилов</p>
+		<br>
+		<p class="h3-like">Верстка:</p>
+		<p>Дмитрий Ковылев, Александр Горожан</p>
+		<br>
+		<p class="h3-like">Код:</p>
+		<p>Сергей Малевич</p>
+		<br>
+		<p class="h3-like">Контент-менеджер:</p>
+		<p>Лариса Еременко</p>
+		<br>
+		<p class="h3-like">Менеджер проекта:</p>
+		<p>Федор Аристов</p>
+		<br>
+
+		<!-- Design -->
+		<p class="h3-like">Дизайн:</p>
+		<p>
+			Наш уровень профессионализма, опыт и используемые технологии дают уверенность в том, что проект будет работать хорошо.
+		</p>
+		<hr>
+		<img src="../../assets/images/project1_small.jpg" alt="">
+		<p class="h3-like">Продвижение:</p>
+		<p>
+			Наш уровень профессионализма, опыт и используемые технологии дают уверенность в том, что проект будет работать хорошо. 
+		</p>
+		<hr>
+	</div>
 </div>
+
 <script>
 	// external js: isotope.pkgd.js
 $( document ).ready( function() {
@@ -98,10 +129,6 @@ $( document ).ready( function() {
 
 		
 		});
-
-
-
-	
 	
 	
 	</script>
