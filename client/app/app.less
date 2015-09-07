@@ -6,12 +6,6 @@
 
 @content-width: 1180px;
 
-
-
-
-
-
-
 /**
  * App-wide Styles
  */
@@ -169,12 +163,14 @@ html > body .container {
 	min-height: 100%; 
 }
 
+/* Import header styles */
+@import 'header_directive/header_directive.less';
+
 /* Import development page styles */
 @import 'development/development.less';
 
-
-/* Import header styles */
-@import 'header_directive/header_directive.less';
+/* Import project page styles */
+@import 'project/project.less';
 
 
 .content-wrapper .content-block{
