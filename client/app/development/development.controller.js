@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("Hello");
-
 angular.module('onlinelabApp')
   .controller('DevelopmentCtrl', function ($scope, $http) {
   
