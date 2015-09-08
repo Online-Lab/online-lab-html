@@ -46,6 +46,14 @@ angular.module('onlinelabApp', [
 		  ncyBreadcrumb: {
 			  label: 'Проект'
 		  }
+      })
+    .state('blog', {
+      url: '/blog',
+      templateUrl: 'app/blog/blog.html',
+      controller: 'BlogCtrl',
+      ncyBreadcrumb: {
+        label: 'Наш блог'
+      }
       });
 	
 	
