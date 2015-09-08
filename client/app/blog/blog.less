@@ -10,7 +10,6 @@
 
 .blog-articles-main{
   margin: 0 auto;
-  overflow: hidden;
   padding: 0;
   width: @content-width;
 
@@ -26,6 +25,7 @@
   }
 
   .blog-articles-list{
+    overflow: hidden;
 
     .blog-articles-item{
       float: left;
@@ -51,4 +51,32 @@
       }
     }
   }
+
+  .blog-articles-pager{
+    display: table;
+    list-style: none;
+    margin: 21px auto 0 auto;
+    overflow: hidden;
+    padding: 0;
+    
+    li{
+      float: left;
+      margin: 0 10px 0 0;
+
+      a{
+        border: 2px solid @green-color;
+        color: #888;
+        display: block;
+        font: normal 20px/30px ProximaNovaRegular !important;
+        height: 31px;
+        text-align: center;
+        width: 31px;
+      }
+      a.active-page{
+        background: @green-color;
+        color: #fff;
+      }
+    }
+  }
+
 }
