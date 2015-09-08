@@ -3,7 +3,7 @@
   <div class="blog-articles-list">
     
     <div class="blog-articles-item" ng-repeat="i in [1,2,3,4,5,6]">
-      <p class="h2-like">Валидная верстка? Проще пареной репы репы репы!</p>
+      <p class="h2-like">Валидная верстка? Проще пареной репы!</p>
       <p class="blog-articles-item-date">28 марта 2015</p>
       <img src="../../assets/images/blog/blog-article1.jpg" alt="" class="blog-articles-item-image">
       <p class="blog-articles-item-desc">
@@ -17,6 +17,12 @@
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
   </ul>
+</div>
+
+<div class="blog-cloud-tag-wrapper">
+  <div class="blog-cloud-tag-main">
+    <img src="../../assets/images/blog/cloud-tag.jpg" alt="" class="blog-cloud-tag">
+  </div>
 </div>
 
 <script>
@@ -74,6 +80,7 @@ jQuery(document).ready(function($){
     visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
       visibleSlide.removeClass('is-moving');
     });
+
 
     container.children('li').eq(n).addClass('selected from-right').prevAll().addClass('move-left');
     checkVideo(visibleSlide, container, n);
