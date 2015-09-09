@@ -92,6 +92,8 @@
 
 <div ng-class="{'under-header-project': state.current.name == 'project',
 								'under-header-blogpost': state.current.name == 'blogpost'}" 
-		 ng-show="state.current.name == 'project' || state.current.name == 'blogpost'"></div>
+		 ng-show="state.current.name == 'project' || state.current.name == 'blogpost'">
+		 <div class="under-header-content">Заголовок записи</div>
+ </div>
 
 <div ncy-breadcrumb ng-show="state.current.name != 'main'"></div>
