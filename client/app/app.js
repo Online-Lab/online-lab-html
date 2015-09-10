@@ -62,6 +62,14 @@ angular.module('onlinelabApp', [
       ncyBreadcrumb: {
         label: 'Запись блога'
       }
+      })
+    .state('team', {
+      url: '/team',
+      templateUrl: 'app/team/team.html',
+      controller: 'TeamCtrl',
+      ncyBreadcrumb: {
+        label: 'О нас'
+      }
       });
 	
 	
