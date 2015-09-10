@@ -73,6 +73,11 @@ h1{
 @import '../assets/fonts/fonts.less';
 
 
+.container{
+    margin: 0 auto;
+    width: @content-width;
+}
+
 .banner-caption{
   display: table;
   height: 200px;
@@ -87,6 +92,23 @@ h1{
     vertical-align: middle;
   }
 }
+
+.main-font{
+  color: #6c6c6c;
+  font: 16px/30px ProximaNovaRegular;
+}
+
+.text-bold{
+  color: #000;
+  font-family: ProximaNovaBold;
+}
+.text-highlight{
+  color: @green-color;
+}
+.text-bg-highlight{
+  background: #eaf6f4;
+}
+
 
 
 @import 'header_directive/header_directive.less'; /* Import header styles */
