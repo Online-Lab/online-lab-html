@@ -6,7 +6,7 @@ if (is_production) {
   console.log('running bower install');
   exec('node node_modules/bower/bin/bower install');
   console.log('running grunt build:dist');
-  exec('node node_modules/grunt-cli/bin/grunt grunt build:dist');
+  exec('node node_modules/grunt-cli/bin/grunt build:dist');
   return;
 }
 
