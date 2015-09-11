@@ -2,7 +2,7 @@ require('shelljs/global');
 
 var is_production = process.env.NODE_ENV == "production";
 
-if (is_production === 'true') {
+if (is_production) {
   console.log('running bower install');
   exec('node node_modules/bower/bin/bower install');
   console.log('running grunt grunt build:dist');
