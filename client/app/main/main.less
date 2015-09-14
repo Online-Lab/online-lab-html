@@ -225,30 +225,22 @@
   
 }
 
-.green-prev{
-  width: 40px;
-  height: 40px;
-  background:none;
-  background-image: url(/assets/images/next-prev.png);
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  margin-top: -20px;
+.green-prev, .green-next{
+  background: url(/assets/images/next-prev.png) 0 0 no-repeat;
   border:none;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
   outline: none;
+  top: 50%;
+  width: 40px;
+}
+.green-prev{
+  left: -40px;
 }
 .green-next{
-  width: 40px;
-  height: 40px;
-  background:none;
-  background-image: url(/assets/images/next-prev.png);
-  position: absolute;
+  background-position: -40px 0;
   right: -40px;
-  top: 50%;
-  margin-top: -20px;
-  border:none;
-  background-position-x: 40px;
-  outline: none;
 }
 
 /* Feedback form */

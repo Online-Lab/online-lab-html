@@ -73,8 +73,8 @@ angular.module('onlinelabApp', [
       });
 	
 	
-	//$urlRouterProvider
-      //.otherwise('/');
+	$urlRouterProvider
+      .otherwise('/');
 
     $locationProvider.html5Mode(true);
   });
