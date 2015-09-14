@@ -36,9 +36,10 @@ module.exports = function(app) {
   app.use('/app/',              express.static(appPath + "/app/"));
   app.use('/assets',            express.static(appPath + "/assets/"));
 
-  // All other routes should redirect to the index.html
-  //
-  app.all("/*", function(req, res, next) {
-    res.sendFile("index.html", { root: "dist/public" });
-  });
+  // // All other routes should redirect to the index.html
+  // //
+  // app.all("/*", function(req, res, next) {
+  //   //res.sendFile("index.html", { root: "dist/public" });
+  //   res.sendfile(app.get('appPath') + '/index.html');
+  // });
 };
