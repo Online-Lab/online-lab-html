@@ -67,9 +67,13 @@ angular.module('onlinelabApp', [
       url: '/team',
       templateUrl: 'app/team/team.html',
       controller: 'TeamCtrl',
-      ncyBreadcrumb: {
-        label: 'О нас'
-      }
+      ncyBreadcrumb: { label: 'О нас' }
+      })
+    .state('mobile', {
+        url: '/mobile',
+        templateUrl: 'app/mobile/mobile.html',
+        controller: 'MobileCtrl',
+        ncyBreadcrumb: { label: 'Мобильные приложения' }
       });
 	
 	
