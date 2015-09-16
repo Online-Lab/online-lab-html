@@ -2,5 +2,12 @@
 
 angular.module('onlinelabApp')
   .controller('ContactCtrl', function ($scope) {
-    $scope.message = 'Hello';
+    $scope.marks = [
+      {
+        pos: {x: 100, y: 100}
+      },
+      {
+        pos: {x: 300, y: 500}
+      }
+    ];
   });
