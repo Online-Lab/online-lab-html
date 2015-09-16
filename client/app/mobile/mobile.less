@@ -1,9 +1,16 @@
-.m-t-10{ margin-top: 10px; }
-.m-b-10{ margin-bottom: 10px; }
-.m-t-20{ margin-top: 20px; }
-.m-b-20{ margin-bottom: 20px; }
-.m-t-25{ margin-top: 25px; }
-.m-b-25{ margin-bottom: 25px; }
+.m-t-10{ margin-top: 10px !important; }
+.m-b-10{ margin-bottom: 10px !important; }
+.m-t-20{ margin-top: 20px !important; }
+.m-b-20{ margin-bottom: 20px !important; }
+.m-t-25{ margin-top: 25px !important; }
+.m-b-25{ margin-bottom: 25px !important; }
+.m-t-30{ margin-top: 30px !important; }
+.m-b-30{ margin-bottom: 30px !important; }
+.m-t-40{ margin-top: 40px !important; }
+.m-b-40{ margin-bottom: 40px !important; }
+
+.p-t-30{ padding-top: 30px !important; }
+.p-b-30{ padding-bottom: 30px !important; }
 
 .banner-mobile{
   background: url(../../assets/images/mobile/banner-mobile.jpg) 0 0 no-repeat;
@@ -11,10 +18,32 @@
 
 .container-mobile{
   overflow: hidden;
-  padding: 50px 0 0 0;
 
   p{
     .main-font;
     margin: 0;
+  }
+
+  .mobile-advantage{
+    .bold;
+    color: #000;
+    font-size: 20px;
+  }
+
+  .mobile-advantage-methods{
+    margin: 0;
+    padding: 0;
+    p{
+      .bold;
+      color: #000;
+    }
+    li{
+      background: url(../../assets/images/mobile/list-marker.png) 0 center no-repeat;
+      color: @green-color;
+      font-size: 16px;
+      line-height: 30px;
+      list-style: none;
+      padding: 0 0 0 21px;
+    }
   }
 }
