@@ -67,8 +67,11 @@
 </div>
 
 <div ng-class="{'under-header-project': state.current.name == 'project',
-								'under-header-blogpost': state.current.name == 'blogpost'}" 
-		 ng-show="state.current.name == 'project' || state.current.name == 'blogpost'">
+								'under-header-blogpost': state.current.name == 'blogpost',
+								'under-header-contact': state.current.name == 'contact'}" 
+		 ng-show="state.current.name == 'project' || 
+		 					state.current.name == 'blogpost' || 
+		 					state.current.name == 'contact'">
 		 <div class="under-header-content">Заголовок записи</div>
  </div>
 
