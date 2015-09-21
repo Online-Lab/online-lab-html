@@ -46,10 +46,10 @@
 			<div class = "city-menu_block">
 				<div class = "city-menu-wrap"> 
 
-					<ul class = "city-items">
-						<li class = "city-item {{item.active}}" ng-class = "{'active': current_city == {{item.id}}}" 
-						ng-repeat = "item in city_items" >
-							<a  class = "item " ng-click="city_click(item)" href="#" >{{item.city}}</a>
+					<ul class="city-items">
+						<li class="city-item {{item.active}}" ng-class="{'active': current_city == city.id}" 
+								ng-repeat="city in city_items">
+							<a class="item" ng-click="changeCity(city)" href="#">{{city.city}}</a>
 						</li>
 					</ul>
 				</div>
