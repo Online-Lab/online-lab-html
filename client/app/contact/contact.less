@@ -20,10 +20,55 @@
         margin: 6px 0 0 9px;
       }
     }
+    .map-object:hover{
+      background: url(../../assets/images/contact/mark-selected.png) 0 0 no-repeat;
+    }
 
     .map-object-selected{
       background: url(../../assets/images/contact/mark-selected.png) 0 0 no-repeat;
       z-index: 10;
     }
   }
+}
+
+/* Contact tooltip */
+.contact-tooltip{
+  display: none;
+  height: auto;
+
+  .contact-tooltip-info{
+    color: #747474;
+    font-family: 'ProximaNovaRegular';
+    font-size: 20px;
+
+    td{
+      padding: 10px 10px 10px 0;
+      vertical-align: top;
+    }
+    .contact-tooltip-city{
+      .bold;
+      color: #5c5c5c;
+      font-size: 13px;
+      padding: 10px 0 20px 0;
+      text-transform: uppercase;
+    }
+    .contact-tooltip-address,
+    .contact-tooltip-phone{
+      .bold;
+      color: @green-color;
+    }
+   }
+
+   .contact-tooltip-close-btn{
+    color: #747474;
+    font-size: 20px;
+    margin: 5px 10px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+   }
+}
+
+.contact-tooltip-visible{
+    display: block;
 }

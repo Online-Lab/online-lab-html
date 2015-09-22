@@ -6,14 +6,14 @@ angular.module('onlinelabApp')
     $scope.marks = [
       {
         city: "Тамбов",
-        address: "Тамбов, Кавалерийская 7а",
-        phone: "+7(4752) 341-341",
+        address: "ул. Кавалерийская, д.7а",
+        phone: "+7 (4752) 341-341",
         pos: {x: 684, y: 234}
       },
       {
         city: "Москва",
-        address: "Москва, Ленинский пр-т 30",
-        phone: "+7(499) 348-24-43",
+        address: "Ленинский пр-т, д.30",
+        phone: "+7 (499) 348-24-43",
         pos: {x: 668, y: 224}
       },
       {
@@ -25,7 +25,7 @@ angular.module('onlinelabApp')
       {
         city: "New York",
         address: "54 W 40th St New York, NY 10018",
-        phone: " +1(347) 681 244",
+        phone: " +1 (347) 681 244",
         pos: {x: 319, y: 294}
       }
     ];

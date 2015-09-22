@@ -9,5 +9,27 @@
          ng-click="selectMark(mark)">
       <img src="../../assets/images/contact/ico-home.png" alt="">
     </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip-arrow contact-tooltip left-arrow span-4" 
+         ng-class="{'contact-tooltip-visible': selectedMark != undefined}"
+         ng-style="{left: selectedMark.pos.x, top: selectedMark.pos.y}">
+      <!-- Close btn -->
+      <a class="contact-tooltip-close-btn" href="#" ng-click="selectedMark = undefined">X</a>
+      <!-- Info -->
+      <table class="contact-tooltip-info">
+        <tr>
+          <th class="contact-tooltip-city" ng-bind="selectedMark.city"></th>
+        </tr>
+        <tr>
+          <td>Адрес:</td>
+          <td class="contact-tooltip-address" ng-bind="selectedMark.address"></td>
+        </tr>
+        <tr>
+          <td>Телефон:</td>
+          <td class="contact-tooltip-phone" ng-bind="selectedMark.phone"></td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>

@@ -1,0 +1,62 @@
+/* Tooltip block */
+.tooltip-arrow {
+    -webkit-box-shadow: 0 0 0 #000 inset, 0 0 10px 1px #ccc;
+       -moz-box-shadow: 0 0 0 #000 inset, 0 0 10px 1px #ccc;
+            box-shadow: 0 0 0 #000 inset, 0 0 10px 1px #ccc;
+
+    background-color:#fff;
+    color:#000;
+    font-size: 12px;
+    left: 0;
+    max-width:800px;
+    min-width: 200px;
+    min-height: 100px;
+    margin:-80px 0 0 40px;
+    padding:20px;
+    position:absolute;
+    top: 0;
+}
+
+/* Common rules for all arrows */
+.tooltip-arrow:before,
+.tooltip-arrow:after {
+    content:"\2666";
+    font-family: monospace;
+    font-size:50px;
+    line-height:52px;
+    text-align:center;
+    
+    position:absolute;
+    overflow:hidden;
+    width:50px;
+    height:50px;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.tooltip-arrow:before {
+    color:#fff;
+}
+.tooltip-arrow:after {
+    color:#fff;
+}
+
+
+/* Left arrow */
+.left-arrow:before,
+.left-arrow:after {
+    top:50px;
+    left:-25px;
+    margin-top:-25px;
+    clip:rect(0px, 25px, 50px, 0px);
+}
+.left-arrow:before {
+    -moz-text-shadow:    -2px 0px 6px #ccc;
+    -webkit-text-shadow:-2px 0px 6px #ccc;
+    text-shadow:        -2px 0px 6px #ccc;
+}
+.left-arrow:after {
+    left:-24px;
+}
