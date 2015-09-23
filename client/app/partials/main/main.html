@@ -146,50 +146,33 @@
 
 <div class = "content-block portfolio">
 	<div class = "container">
-			<div class = "mg_t_75 mg_b_60 caption">Наше портфолио</div>
+		<div class = "mg_t_75 mg_b_60 caption">Наше портфолио</div>
 		<div class = "slider_container mg_b_75">	
 			<section class="cd-hero">
+				<!-- Content -->
+				<ul class="cd-hero-slider">
+					<li ng-repeat="item in portfolioList" ng-class="{'selected': item == portfolioList[0]}">
+						<div class="cd-full-width">
+							<h2 ng-bind="item.title"></h2>
+							<p ng-bind="item.desc"></p>
+						</div>
+					</li>
+				</ul>
+
+				<!-- Navigation -->
 				<div class="cd-slider-nav">
 					<nav>
-						<span class="cd-marker item-1"></span>
+						<!-- <span class="cd-marker item-1"></span> -->
+						
 						<ul>
-							<li><a style = "background-image: url(/assets/images/main/captureproof.png);" class="selected" href="#"></a></li>
-							<li><a style = "background-image: url(/assets/images/main/kupon.png);" href="#"></a></li>
-							<li><a style = "background-image: url(/assets/images/main/streetbee.png);" href="#"></a></li>
-							<li><a style = "background-image: url(/assets/images/main/pathful.png);" href="#"></a></li>
+							<li ng-repeat="(itemIndex, item) in portfolioList" 
+									ng-class="{'cd-slider-selected-item': currentPortfolioItem == item, 'selected': item == portfolioList[0]}">
+								<a ng-click="gotoProject(itemIndex, item)" ng-style="{'background-image': 'url(' + item.img + ')'}" href="#"></a>
+							</li>
 						</ul>
 					</nav> 
 				</div>
 
-				<ul class="cd-hero-slider" >
-					<li class="selected">
-						<div class="cd-full-width">
-							<h2>Captureproof – приложение для современного врача</h2>
-							<p>Позволяет удалённо диагностировать и наблюдать за пациентом в любое удобное время. Пациент описывает свои симптомы с помощью фотографий и видео, показывает результаты анализов. С этим приложением ходить к врачу теперь можно редко!</p>
-						</div>
-					</li>
-					
-					<li >
-						<div class="cd-full-width">
-							<h2>Все скидочные купоны Минска</h2>
-							<p>Сервис kupon.by – это самые выгодные скидки от ресторанов, бутиков, театров, клубов, салонов красоты и других заведений Минска. Зайди и выбери свой бесплатный скидочный купон!</p>
-						</div>
-					</li>
-					
-					<li>
-						<div class="cd-full-width">
-							<h2>Вербуй мерчендайзеров со Streetbee</h2>
-							<p>Streetbee – бесплатное мобильное приложение, с помощью которого любой, у кого есть смартфон, может стать вашим полевым аудитором, торговым представителем и мерчендайзером. Собирайте ценную информацию о точке продаж легко!</p>
-						</div>
-					</li>
-					
-					<li>
-						<div class="cd-full-width">
-							<h2>Pathful анализирует ваш контент</h2>
-							<p>Pathful – удобная и очень информативная программа для анализа множественного контента. Узнайте, какие части контента вашего сайта, блога, социальной сети и e-mail рассылки на самом деле помогают Вашему бизнесу расти!</p>
-						</div>
-					</li>
-				</ul>
 			</section>
 		</div>
 	</div>
