@@ -3,8 +3,8 @@
 angular.module('onlinelabApp')
 	.directive('appFooter', function () {
         return {
-            templateUrl: 'app/footer_directive/footer_directive.html',
-			restrict: 'E',
+            templateUrl: 'app/directives/footer/footer.html',
+			      restrict: 'E',
             scope: false
         };
     })
