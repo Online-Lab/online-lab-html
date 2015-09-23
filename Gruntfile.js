@@ -360,7 +360,7 @@ module.exports = function (grunt) {
             'assets/images/{,*/}*.{webp}',
             'assets/fonts/**/*',
             'index.html',
-            'db.json'
+            'data/**/*'
           ]
         }, {
           expand: true,
