@@ -24,7 +24,7 @@ angular.module('onlinelabApp')
       				scope.state = $state;
 
             },
-            templateUrl: 'app/header_directive/header_directive.html',
+            templateUrl: 'app/directives/header/header.html',
             scope: false
         };
     }])
