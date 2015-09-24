@@ -46,31 +46,8 @@
   .generate_padding_classes(@n, (@i + 5));
 }
    
-html, body { 
-	height: 100%; 
-	margin: 0; 
-	padding: 0; 
-}
-body {
-	margin: 0 auto;
-	font: 12px "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-webkit-overflow-scrolling: touch;
-	word-wrap: break-word;
-	font-family: "ProximaNovaRegular";
-}
-
-span, img {
-	outline: 0;
-}
-a, a:hover, a:active, a:focus {
-  text-decoration: none;
-  outline: 0;
-}
-
-h1{
-	color:#2eafa0;
-}
+/* Reset tags */
+@import '../assets/css/reset.less';
 
 /* Import fonts */
 @import '../assets/fonts/fonts.less';
