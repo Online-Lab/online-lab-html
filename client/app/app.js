@@ -75,6 +75,12 @@ angular.module('onlinelabApp', [
         controller: 'MobileCtrl',
         ncyBreadcrumb: { label: 'Мобильные приложения' }
       })
+    .state('electronics', {
+        url: '/electronics',
+        templateUrl: 'app/partials/electronics/electronics.html',
+        controller: 'ElectronicsCtrl',
+        ncyBreadcrumb: { label: 'Электроника' }
+      })
     .state('contact', {
         url: '/contact',
         templateUrl: 'app/partials/contact/contact.html',
