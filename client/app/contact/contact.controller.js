@@ -8,13 +8,13 @@ angular.module('onlinelabApp')
         city: "Тамбов",
         address: "ул. Кавалерийская, д.7а",
         phone: "+7 (4752) 341-341",
-        pos: {x: 684, y: 234}
+        pos: {x: 693, y: 243}
       },
       {
         city: "Москва",
         address: "Ленинский пр-т, д.30",
         phone: "+7 (499) 348-24-43",
-        pos: {x: 668, y: 224}
+        pos: {x: 665, y: 218}
       },
       {
         city: "Tallinn",
