@@ -77,7 +77,7 @@ angular.module('onlinelabApp', [
       })
     .state('contact', {
         url: '/contact',
-        templateUrl: 'app/contact/contact.html',
+        templateUrl: 'app/partials/contact/contact.html',
         controller: 'ContactCtrl',
         ncyBreadcrumb: { label: 'Контакты' }
       });
