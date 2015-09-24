@@ -27,32 +27,31 @@
 }
 
 
+/* Footer menu */
 .content-block.footer_menu_bg{
   background-image: url(/assets/images/footer_menu_bg.png);
-  height:140px;
 }
-.content-block.footer_menu_bg .container{
+.footer_menu_container{
   padding:22px 0 0 0;
+  
+  .footer_menu_col{
+    ul{
+      list-style-type: none;
+      padding: 0;
+      
+      li{
+        line-height:30px;
+
+        a{
+          color:#ffffff;
+          font-family:ProximaNovaRegular;
+          font-size:14px;
+        }
+      }
+    }
+  }
 }
 
-.footer_menu_col ul{
-  list-style-type: none;
-  padding: 0;
-  color: #ffffff;
-}
-.footer_menu_col ul li{
-  line-height:30px;
-}
-
-.footer_menu_col ul li a{
-  color:#ffffff;
-  text-decoration:none;
-  font-family:ProximaNovaRegular;
-  font-size:14px;
-}
-.footer_menu_col ul li a:hover{
-  text-decoration:none;
-}
 
 .content-block.footer_contacts{
   color:#878787;
