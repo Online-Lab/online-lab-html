@@ -6,12 +6,14 @@
 		</div>
 
 		<div class="menu-wrapper"> 
+			<!-- Language version -->
 			<div class = "language-version " >
 				<a href="#" class="language">
 				English version
 				</a>
 			</div>
 
+			<!-- Top menu -->
 			<ul class = "top-menu">
 				<li>
 					<a class = "item"  href="/development">Делаем</a>
@@ -22,46 +24,38 @@
 						<li><a class = "item"  href="#">Электроника</a></li>
 					</ul>
 				</li>
-
 				<li>
 					<a class = "item"  href="/portfolio">Хвалимся</a>
 				</li>
-
 				<li>
 					<a class = "item"  href="/team">Знакомимся</a>
 				</li>
-
 				<!-- <li>
 					<a class = "item"  href="/blog">Пишем</a>
 				</li> -->
-
 				<li>
 					<a class = "item"  href="/contact">Контактируем</a>
 				</li>
 			</ul>
-
 		</div>
-		
+
+		<!-- Phones -->
 		<div class="phones-wrapper">
 			<div class = "city-menu_block">
 				<div class = "city-menu-wrap"> 
 
 					<ul class="city-items">
-						<li class="city-item {{item.active}}" ng-class="{'active': current_city == city.id}" 
-								ng-repeat="city in city_items">
-							<a class="item" ng-click="changeCity(city)" href="#">{{city.city}}</a>
+						<li class="city-item" ng-repeat="city in cities" ng-class="{'active': currentCity == city}">
+							<a class="item" ng-click="changeCity(city)" href="#">{{city.name}}</a>
 						</li>
 					</ul>
 				</div>
-				
-				<div class = "phone-number" >
-					{{city_phone}}
-				</div>
+								
+				<div class="phone-number" >{{city_phone}}</div>
 
 				<a href="#" class="presentation">Скачать презентацию</a>
 			</div>	
-		</div>
-		
+		</div>		
 	</div>
 
 </div>

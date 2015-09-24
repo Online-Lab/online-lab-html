@@ -7,18 +7,18 @@ angular.module('onlinelabApp')
         return {
             restrict: 'E',
             link: function (scope) {      			
-      				scope.city_items = [
-        				{ city:'Москва',	phone: '+7 (499) 348-24-43', active:'', id:1 },
-        				{ city:'Тамбов',	phone: '+7 (4752) 341-341', active:'', id:3 },
-        				{ city:'Нью-Йорк',	phone: '+1 (347) 681 244', active:'', id:4 }
+      				scope.cities = [
+        				{ name:'Москва',	phone: '+7 (499) 348-24-43' },
+        				{ name:'Тамбов',	phone: '+7 (4752) 341-341' },
+        				{ name:'Нью-Йорк',	phone: '+1 (347) 681 244' }
       				];
 
-              scope.city_phone = scope.city_items[1].phone;
-              scope.current_city = scope.city_items[1].id;
+              scope.currentCity = scope.cities[0];
+              scope.city_phone = scope.cities[0].phone;
 
       				scope.changeCity = function (city){
+                scope.currentCity = city;
       					scope.city_phone = city.phone;
-      					scope.current_city = city.id;
               };
       				
       				scope.state = $state;
