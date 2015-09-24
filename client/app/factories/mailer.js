@@ -6,7 +6,7 @@ app.factory("Mailer", function($http){
 
         var fromEmail = 'order@online-lab.ru';
         var fromName = 'OnlineLab';
-        var toEmail = 'ds007007@yandex.ru';
+        var toEmail = 'info@online-lab.ru';
         var replyTo = 'email';
         var key = 'TJdPhYZqNObq2pUPjJnG5w';
         var subject = "Новая заявка с сайта Online-Lab.ru";
