@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('onlinelabApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($scope, $http, Mailer) {
 
+    //Get portfolio
     $scope.portfolioList = undefined;
     $http.get('/data/db.json').success(function(data){
       $scope.portfolioList = data.portfolio;
@@ -10,7 +11,7 @@ angular.module('onlinelabApp')
       $scope.currentPortfolioItem = $scope.portfolioList[0];
     });
 
-    //$scope.portfolioSliderLeft = 0;
+    //Click project in portfolio slider
     $scope.gotoProject = function(itemIndex, item) {
       //Current item
       $scope.currentPortfolioItem = item;
@@ -23,5 +24,24 @@ angular.module('onlinelabApp')
         left = 0;
       //animate
       $(".cd-slider-nav nav").animate({left: left}, 500);
+    };
+
+    //User data
+    $scope.newOrderData = {
+      name: "",
+      phone: "",
+      email: ""
+    };
+
+    //Get consultation
+    $scope.order = function(){
+      var msg = "Была добавлена новая заявка. Информация о клиенте: <br><br>" + 
+        ($scope.newOrderData.name ? "Имя: " + $scope.newOrderData.name + "<br>" : '') + 
+        ($scope.newOrderData.email ? "E-mail: " + $scope.newOrderData.email + "<br>" : '') + 
+        ($scope.newOrderData.phone ? "Тел.: " + $scope.newOrderData.phone + "<br>" : '');
+
+      Mailer.sendEmail(msg).success(function(){
+        alert("Ваша заявка принята");
+      });
     };
 });

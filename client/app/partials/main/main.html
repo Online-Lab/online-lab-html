@@ -205,17 +205,17 @@
 		
 		<form>
 			<div class="col-lg-3 col-md-4 mg_t_5 mg_b_5">
-				<input type="text" placeholder="Ваше имя" class="feedback-form-name">
+				<input type="text" placeholder="Ваше имя" class="feedback-form-name" ng-model="newOrderData.name">
 			</div>
 			
 			<div class="col-lg-3  col-md-4 mg_t_5 mg_b_5">
-				<input type="text" placeholder="Телефон" class="feedback-form-phone">
+				<input type="text" placeholder="Телефон" class="feedback-form-phone" ng-model="newOrderData.phone">
 			</div>
 			<div class="col-lg-3  col-md-4 mg_t_5 mg_b_5">
-				<input type="text" placeholder="Электронная почта" class="feedback-form-email">
+				<input type="text" placeholder="Электронная почта" class="feedback-form-email" ng-model="newOrderData.email">
 			</div>
 			<div class="col-lg-3  col-md-12 mg_t_5 mg_b_5">
-				<input type="submit">
+				<input type="submit" ng-click="order()">
 			</div>
 		</form>
 	</div>
