@@ -1,13 +1,32 @@
 <div class="container container-contact p-t-30 p-b-30">
   <p class="h1-like column span-12 m-t-10 m-b-20">Контакты</p>
 
-  <div class="container-contact-map column span-12 m-t-30">
-    <img src="../../assets/images/contact/map.png" alt="">
+  <div class="column span-1"><!-- Empty block -->
+    &nbsp;
+  </div>
+  <div class="contact-card-main column span-11 last"><!-- Contacts list block -->
+    <table class="contact-card column m-t-30 m-b-40" ng-repeat="mark in marks">
+      <tr>
+        <th class="contact-card-city p-b-30" ng-bind="mark.city"></th>
+      </tr>
+      <tr>
+        <td>Адрес:</td>
+        <td ng-bind="mark.address"></td>
+      </tr>
+      <tr>
+        <td>Телефон:</td>
+        <td ng-bind="mark.phone"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="contact-map column span-12 m-t-30">
+    <img src="/assets/images/contact/map.png" alt="">
 
     <!-- Marks -->
     <div class="map-object" ng-repeat="mark in marks" ng-style="{left: mark.pos.x, top: mark.pos.y}" ng-class="{'map-object-selected': selectedMark == mark}"
          ng-click="selectMark(mark)">
-      <img src="../../assets/images/contact/ico-home.png" alt="">
+      <img src="/assets/images/contact/ico-home.png" alt="">
     </div>
 
     <!-- Tooltip -->

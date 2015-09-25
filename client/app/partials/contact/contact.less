@@ -5,7 +5,39 @@
     font: normal 34px/20px ProximaNovaLight !important;
   }
 
-  .container-contact-map{
+  /* Contacts list*/
+  .contact-card-main{
+    .contact-card{
+      color: #747474;
+      font-family: 'ProximaNovaRegular';
+      font-size: 20px;
+
+      &:nth-child(odd){
+        .span-6;
+      }
+      &:nth-child(even){
+        .span-5;
+        .last;
+      }
+      
+      td{
+        padding: 10px 0 10px 0;
+        vertical-align: top;
+      }
+
+      tr > td:first-child{
+        width: 150px;
+      }
+      .contact-card-city{
+        color: @green-color;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  /* Map */
+  .contact-map{
     position: relative;
 
     .map-object{
