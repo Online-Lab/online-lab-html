@@ -71,7 +71,7 @@ angular.module('onlinelabApp', [
       })
     .state('mobile', {
         url: '/mobile',
-        templateUrl: 'app/mobile/mobile.html',
+        templateUrl: 'app/partials/mobile/mobile.html',
         controller: 'MobileCtrl',
         ncyBreadcrumb: { label: 'Мобильные приложения' }
       })
