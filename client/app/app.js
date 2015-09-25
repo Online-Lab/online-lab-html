@@ -33,7 +33,7 @@ angular.module('onlinelabApp', [
       })    
 	  .state('portfolio', {
 		  url: '/portfolio',
-		  templateUrl: 'app/portfolio/portfolio.html',
+		  templateUrl: 'app/partials/portfolio/portfolio.html',
 		  controller: 'PortfolioCtrl',
 		  ncyBreadcrumb: {
 			  label: 'Портфолио'
