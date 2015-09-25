@@ -81,6 +81,12 @@ angular.module('onlinelabApp', [
         controller: 'ElectronicsCtrl',
         ncyBreadcrumb: { label: 'Электроника' }
       })
+    .state('marketing', {
+        url: '/marketing',
+        templateUrl: 'app/partials/marketing/marketing.html',
+        controller: 'MarketingCtrl',
+        ncyBreadcrumb: { label: 'Интернет маркетинг' }
+      })
     .state('contact', {
         url: '/contact',
         templateUrl: 'app/partials/contact/contact.html',
