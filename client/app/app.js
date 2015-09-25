@@ -92,6 +92,12 @@ angular.module('onlinelabApp', [
         templateUrl: 'app/partials/contact/contact.html',
         controller: 'ContactCtrl',
         ncyBreadcrumb: { label: 'Контакты' }
+      })
+    .state('vacancies', {
+        url: '/vacancies',
+        templateUrl: 'app/partials/vacancies/vacancies.html',
+        controller: 'VacanciesCtrl',
+        ncyBreadcrumb: { label: 'Вакансии' }
       });
 	
 	
