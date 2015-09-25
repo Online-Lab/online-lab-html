@@ -49,7 +49,7 @@ angular.module('onlinelabApp', [
       })
     .state('blog', {
       url: '/blog',
-      templateUrl: 'app/blog/blog.html',
+      templateUrl: 'app/partials/blog/blog.html',
       controller: 'BlogCtrl',
       ncyBreadcrumb: {
         label: 'Наш блог'
