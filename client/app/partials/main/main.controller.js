@@ -3,6 +3,9 @@
 angular.module('onlinelabApp')
   .controller('MainCtrl', function ($scope, $http, Mailer) {
 
+    //Phone mask
+    $scope.phoneMask = "+7(999)999-99-99";
+
     //Get portfolio
     $scope.portfolioList = undefined;
     $http.get('/data/db.json').success(function(data){
