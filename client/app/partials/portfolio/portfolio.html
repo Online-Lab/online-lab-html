@@ -5,11 +5,12 @@
 		<div class = "portfolio_menu"> 
 			<div id="filters" class="button-group mg_b_20 mg_t_50">  
 				<button class="button is-checked" data-filter="*">Все вместе</button>
-			  <button class="button" data-filter=".services">Сервисы</button>
-			  <button class="button" data-filter=".shops">Интернет-магазины</button>
-			  <button class="button" data-filter=".startups">Стартапы</button>
+			  <button class="button" data-filter=".store">Интернет-магазин</button>
+			  <button class="button" data-filter=".resource">Ресурс</button>
+			  <button class="button" data-filter=".portal">Корпоративный портал</button>
+			  <button class="button" data-filter=".mobile_app">Мобильное приложение</button>
+			  <button class="button" data-filter=".marketing">Маркетинг</button>
 			  <button class="button" data-filter=".electronics">Электроника</button>
-			  <button class="button" data-filter=".mobile_apps">Мобильные приложения</button>
 			  <span class = "activ_filter_point"></span>
 			</div>
 		</div>
@@ -17,7 +18,7 @@
 		<div class="container container-portfolio p-b-30">
 			<div class="isotope">
 
-				<a href="#" class="element-item" style="background-image:url({{item.card_image}})"
+				<a href="#" class="element-item {{item.kind}}" style="background-image:url({{item.card_image}})"
 					  ng-repeat="item in portfolioList">
 					<div class="item-description">
 						<div class="item-description-caption" ng-bind="item.name"></div>
@@ -35,38 +36,40 @@
 
 
 <script>
-// 	// external js: isotope.pkgd.js
-// $( document ).ready( function() {
+	// external js: isotope.pkgd.js
+$( document ).ready( function() {
 	
-// 	button_position = $('#filters .is-checked').position().left;
-// 	button_width = $('#filters .is-checked').width();
-// 	point_width = $(".activ_filter_point").width;
-// 	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+	// button_position = $('#filters .is-checked').position().left;
+	// button_width = $('#filters .is-checked').width();
+	// point_width = $(".activ_filter_point").width;
+	// point_left = button_position + button_width / 2 + 4;// + point_width / 2;
 	
-// 	$(".activ_filter_point").css({'left':point_left});
+	// $(".activ_filter_point").css({'left':point_left});
 	
-// 		var $container = $('.isotope');
-// 		$container.isotope();
-// 		// filter buttons
-// 		$('#filters button').click(function(){
-// 			var $this = $(this);
-// 			// don't proceed if already selected
-// 			if ( !$this.hasClass('is-checked') ) {
-// 				$this.parents('#filters').find('.is-checked').removeClass('is-checked');
-// 				$this.addClass('is-checked');
-// 			}
-// 			var selector = $this.attr('data-filter');
-// 			$container.isotope({  itemSelector: '.element-item', filter: selector });
-			
-			
-// 			button_position = $this.position().left;
-// 			button_width = $this.width();
-// 			point_width = $(".activ_filter_point").width;
-// 			point_left = button_position + button_width / 2 + 4;// + point_width / 2;
-			
-// 			$(".activ_filter_point").css({'left':point_left});
-// 			return false;
-// 		});
+	// var $container = $('.isotope');
+	// console.log($container);
+	// $container.isotope();
+	
+	// // filter buttons
+	// $('#filters button').click(function(){
+	// 	var $this = $(this);
+	// 	// don't proceed if already selected
+	// 	if ( !$this.hasClass('is-checked') ) {
+	// 		$this.parents('#filters').find('.is-checked').removeClass('is-checked');
+	// 		$this.addClass('is-checked');
+	// 	}
+	// 	var selector = $this.attr('data-filter');
+	// 	$container.isotope({  itemSelector: '.element-item', filter: selector });
+		
+		
+	// 	button_position = $this.position().left;
+	// 	button_width = $this.width();
+	// 	point_width = $(".activ_filter_point").width;
+	// 	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+		
+	// 	$(".activ_filter_point").css({'left':point_left});
+	// 	return false;
+	// });
 
-// 	});
-	</script>
+});
+</script>
