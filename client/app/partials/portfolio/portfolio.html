@@ -17,11 +17,11 @@
 		<div class="container container-portfolio p-b-30">
 			<div class="isotope">
 
-				<a href="#" class="element-item" style="background-image:url({{portfolioItem.img}})"
-					  ng-repeat="portfolioItem in portfolioList">
+				<a href="#" class="element-item" style="background-image:url({{item.card_image}})"
+					  ng-repeat="item in portfolioList">
 					<div class="item-description">
-						<div class="item-description-caption" ng-bind="portfolioItem.title"></div>
-						<!-- <div class="item-description-text" ng-bind="portfolioItem.desc"></div> -->
+						<div class="item-description-caption" ng-bind="item.name"></div>
+						<!-- <div class="item-description-text" ng-bind="item.description_short"></div> -->
 					</div>
 				</a>
 

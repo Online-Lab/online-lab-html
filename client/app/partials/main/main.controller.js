@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('onlinelabApp')
-  .controller('MainCtrl', function ($scope, $http, Mailer) {
+  .controller('MainCtrl', function ($scope, $http, Mailer, Project) {
 
     //Phone mask
     $scope.phoneMask = "+7(999)999-99-99";
@@ -13,7 +13,7 @@ angular.module('onlinelabApp')
       //Current item
       $scope.currentPortfolioItem = $scope.portfolioList[0];
     });
-
+    
     //Click project in portfolio slider
     $scope.gotoProject = function(itemIndex, item) {
       //Current item
