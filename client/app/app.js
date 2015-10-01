@@ -39,10 +39,10 @@ angular.module('onlinelabApp', [
 			  label: 'Портфолио'
 		  }
       })
-	  .state('project', {
-		  url: '/project',
-		  templateUrl: 'app/partials/project/project.html',
-		  controller: 'ProjectCtrl',
+	  .state('project-details', {
+		  url: '/projects/:projectId',
+		  templateUrl: 'app/partials/project-details/project-details.html',
+		  controller: 'ProjectDetailsCtrl',
 		  ncyBreadcrumb: {
 			  label: 'Проект'
 		  }
