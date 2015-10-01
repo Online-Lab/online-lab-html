@@ -84,43 +84,43 @@
 </div>
 
 <script>
-	// external js: isotope.pkgd.js
-$( document ).ready( function() {
+// 	// external js: isotope.pkgd.js
+// $( document ).ready( function() {
 	
-	button_position = $('#filters .is-checked').position().left;
-	button_width = $('#filters .is-checked').width();
-	point_width = $(".activ_filter_point").width;
-	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+// 	button_position = $('#filters .is-checked').position().left;
+// 	button_width = $('#filters .is-checked').width();
+// 	point_width = $(".activ_filter_point").width;
+// 	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
 	
-	$(".activ_filter_point").css({'left':point_left});
+// 	$(".activ_filter_point").css({'left':point_left});
 	
-		var $container = $('.isotope');
-		$container.isotope();
-		// filter buttons
-		$('#filters button').click(function(){
-			var $this = $(this);
-			// don't proceed if already selected
-			if ( !$this.hasClass('is-checked') ) {
-				$this.parents('#filters').find('.is-checked').removeClass('is-checked');
-				$this.addClass('is-checked');
-			}
-			var selector = $this.attr('data-filter');
-			$container.isotope({  itemSelector: '.element-item', filter: selector });
+// 		var $container = $('.isotope');
+// 		$container.isotope();
+// 		// filter buttons
+// 		$('#filters button').click(function(){
+// 			var $this = $(this);
+// 			// don't proceed if already selected
+// 			if ( !$this.hasClass('is-checked') ) {
+// 				$this.parents('#filters').find('.is-checked').removeClass('is-checked');
+// 				$this.addClass('is-checked');
+// 			}
+// 			var selector = $this.attr('data-filter');
+// 			$container.isotope({  itemSelector: '.element-item', filter: selector });
 			
 			
-			button_position = $this.position().left;
-			button_width = $this.width();
-			point_width = $(".activ_filter_point").width;
-			point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+// 			button_position = $this.position().left;
+// 			button_width = $this.width();
+// 			point_width = $(".activ_filter_point").width;
+// 			point_left = button_position + button_width / 2 + 4;// + point_width / 2;
 			
-			$(".activ_filter_point").css({'left':point_left});
-			return false;
+// 			$(".activ_filter_point").css({'left':point_left});
+// 			return false;
 			
 			
-		});    
+// 		});    
 
 		
-		});
+// 		});
 	
 	
 	</script>
