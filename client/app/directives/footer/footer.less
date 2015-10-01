@@ -31,7 +31,7 @@
 }
 
 
-/* Footer menu */
+/* Footer menu block */
 .footer-menu-wrapper{
   background-image: url(/assets/images/footer_menu_bg.png);
   
@@ -57,7 +57,7 @@
   }
 }
 
-
+/* Footer contacts block */
 .footer-contacts-wrapper{
   color:#878787;
   font-size:18px;
@@ -76,101 +76,88 @@
   }
 }
 
-
-.content-block.footer_bottom{
+/* Footer bottom block */
+.footer-bottom-wrapper{
   background-color:#ebebeb;
   border-top:solid 1px #d4d4d4;
-}
-
-/* Social icons */
-.social_footer{
-  overflow: hidden;
-  a{
-    display:block;
-    float:left;
-    width:40px;
-    height:40px;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
   
-  .vk_footer{
-    background-image: url(/assets/images/footer/vk-gray.png);
-    &:hover{
-      background-image: url(/assets/images/footer/vk.png);
+  .footer-bottom-container{
+    /* Left block */
+    .footer-bottom-left{
+      float:left;
+      width:380px;
+      padding-top:10px;
+      
+      .vacancy_footer{
+        color:#747474;
+        font-size:14px;
+        
+        span{
+          color:#000000;
+          font-size:14px;
+          font-family: "ProximaNovaBold";
+        }
+        a{
+          color:#28a797;
+          font-family: "ProximaNovaBold";
+          text-decoration:none;
+        }
+      }
+    }
+    /* Center block */
+    .footer-bottom-center{
+      float:left;
+      width:420px;
+      padding-top:5px;
+      
+      .presentation_footer{
+        color:#28a797;
+        font-family: "ProximaNovaBold";
+        text-decoration:none;
+        float:left;
+        font-size:14px;
+        margin-top: 10px;
+        visibility: hidden;
+      }
+      .social_footer{
+        overflow: hidden;
+        a{
+          display:block;
+          float:left;
+          width:40px;
+          height:40px;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+        .vk_footer{
+          background-image: url(/assets/images/footer/vk-gray.png);
+          &:hover{ background-image: url(/assets/images/footer/vk.png); }
+        }
+        .linked_footer{
+          background-image: url(/assets/images/footer/in-gray.png);
+          &:hover{ background-image: url(/assets/images/footer/in.png); }
+        }
+        .github_footer{
+          background-image: url(/assets/images/footer/github-gray.png);
+          &:hover{ background-image: url(/assets/images/footer/github.png); }
+        }
+        .facebook_footer {
+          background-image: url(/assets/images/footer/fb-gray.png);
+          &:hover{ background-image: url(/assets/images/footer/fb.png); }
+        }
+        .google_plus_footer{
+          background-image: url(/assets/images/footer/google-gray.png);
+          &:hover{ background-image: url(/assets/images/footer/google.png); }
+        }
+      }
+    }
+    /* Right block */
+    .footer-bottom-right{
+      float:right;
+      text-align:right;
+      color:#747474;
+      padding-top: 15px;
+      font-size:14px;
     }
   }
-  .linked_footer{
-    background-image: url(/assets/images/footer/in-gray.png);
-    &:hover{
-      background-image: url(/assets/images/footer/in.png);
-    }
-  }
-  .github_footer{
-    background-image: url(/assets/images/footer/github-gray.png);
-    &:hover{
-      background-image: url(/assets/images/footer/github.png);
-    }
-  }
-  .facebook_footer {
-    background-image: url(/assets/images/footer/fb-gray.png);
-    &:hover{
-      background-image: url(/assets/images/footer/fb.png);
-    }
-  }
-  .google_plus_footer{
-    background-image: url(/assets/images/footer/google-gray.png);
-    &:hover{
-      background-image: url(/assets/images/footer/google.png);
-    }
-  }
-}
-
-
-
-
-.content-block.footer_bottom .vacancy_footer{
-  color:#747474;
-  font-size:14px;
-}
-.content-block.footer_bottom .vacancy_footer span{
-  color:#000000;
-  font-size:14px;
-  font-family: "ProximaNovaBold";
-}
-
-.content-block.footer_bottom .vacancy_footer a{
-  color:#28a797;
-  font-family: "ProximaNovaBold";
-  text-decoration:none;
-}
-
-
-.content-block.footer_bottom .presentation_footer{
-  color:#28a797;
-  font-family: "ProximaNovaBold";
-  text-decoration:none;
-  float:left;
-  font-size:14px;
-  margin-top: 10px;
-  visibility: hidden;
-}
-
-.content-block.footer_bottom  .footer_bottom_left{
-  float:left;
-  width:380px;
-  padding-top:10px;
-}
-
-.content-block.footer_bottom  .footer_bottom_center{
-  float:left;
-  width:420px;
-  padding-top:5px;
-}
-.content-block.footer_bottom .footer_bottom_right{
-  float:right;
-  text-align:right;
-  color:#747474;
-  padding-top: 15px;
-  font-size:14px;
 }
