@@ -31,10 +31,10 @@ angular.module('onlinelabApp', [
         label: 'Разработка'
       }
       })    
-	  .state('portfolio', {
-		  url: '/portfolio',
-		  templateUrl: 'app/partials/portfolio/portfolio.html',
-		  controller: 'PortfolioCtrl',
+	  .state('projects', {
+		  url: '/projects',
+		  templateUrl: 'app/partials/projects/projects.html',
+		  controller: 'ProjectsCtrl',
 		  ncyBreadcrumb: {
 			  label: 'Портфолио'
 		  }
