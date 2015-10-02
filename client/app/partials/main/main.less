@@ -271,19 +271,24 @@
   background: #fff;
   
   .main-products-container{
+    .h2-like{
+      color:  #28a797;
+      font-size: 34px;
+      font-weight: 300;
+      line-height: 20px;
+      margin: 50px 0 30px 0 !important;
+      text-align: center;
+    }
+    
     .main-products-corousel{
-      max-width:1000px;
-      margin:0 auto;
-      
+      &>div{
+        float: left;
+        margin-right: 20px;
+      }
       .main-products-slide-container{
-        outline: 0;
-        padding:12px; 
-        
-        .main-products-slide{
-          width: 310px;
-          height: 320px;
-          margin: 0 auto;
-        }
+        height: 320px;
+        width: 310px;
+        &:last-child{ margin: 0; }
       }
     }
   }
