@@ -10,57 +10,59 @@
   }
 }
 
-/* Banner */
-.main_banner{
+/* Main banner */
+.main-banner-wrapper{
     background-image: url("/assets/images/main_baner1.jpg");
-    height: 600px;
-    background-size: cover;
     background-position: center center;
+    background-size: cover;
+    height: 600px;
+    
+    .main-banner-container{
+      color: #fff;
+      font-family: ProximaNovaRegular;
+      
+      .main-banner-caption{
+        font-size: 36px;
+        font-weight: 700;
+        padding: 110px 0 30px 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .main-banner-text{
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0 auto 130px auto;
+        max-width: 1000px;
+        text-align: center;
+      }
+      
+      .banner-request-button-border{
+        background-color: rgba(0,0,0,0.5);
+        display: block;
+        height: 81px;
+        padding: 7px 0 0 0;
+        margin: 0 auto;
+        width: 314px;
+        &:hover{ background-color: rgba(100,100,100,0.5); }
+        
+        .banner-request-button{
+          background: #2eafa0;
+          color: #fff;
+          display: block;
+          font-size: 28px;
+          height: 67px;
+          margin: 0 auto;
+          width: 300px;
+          line-height: 67px;
+          text-align: center;
+          text-decoration:none;
+          &:hover{ color: #fff; }
+        }
+      }
+    }
 }
 
- .main_banner .banner-caption{ 
-    font-family: ProximaNovaRegular;
-    color: #ffffff;
-    font-size: 36px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    padding: 115px 0 50px 0;
- }
- 
-  .main_banner .banner-text{ 
-    font-family: ProximaNovaRegular;
-    color: #ffffff;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto 100px auto;
-    max-width: 1000px;
- }
- 
-.main_banner .banner_request_border{
-    background-color: rgba(0,0,0,0.5);
-    height: 81px;
-    display: block;
-    margin: 0 auto;
-    width: 314px;
-    padding: 7px 0 0 0;
-}
-.main_banner .banner_request_border:hover{
-    background-color: rgba(100,100,100,0.5);
-}
-.main_banner .banner_request_button{
-    background: #2eafa0;
-    color: #e1eeec;
-    font-size: 28px;
-    font-family: "ProximaNovaRegular";
-    height: 67px;
-    display: block;
-    margin: 0 auto;
-    width: 300px;
-    line-height: 67px;
-    text-align: center;
-    text-decoration:none;
-}
+
 
 /* Services */
 .container .services_block{
