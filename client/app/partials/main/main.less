@@ -150,77 +150,32 @@
       }
     }
 }
-.content-block.description  .description_text{
-    color: #6c6c6c;
-    font-size: 16px;
-    line-height: 25px;
-    text-align: justify;
-}
-.content-block.description  .description_text .list_number{
-    display:table-cell;
-    vertical-align: middle;
-}
-.content-block.description  .description_text .list_text{
-    display:table-cell;
-    vertical-align: middle;
-}
-.content-block.description  .description_text > ul li{
-    clear:both;
-}
-.content-block.description .red-hexagon{
+.main-description-question{
+    color:#fff;
     background-color: #fb4242;
-    height:40px;
+    font-size:22px;
+    font-weight: 400;
     line-height:40px;
-    color:#ffffff;
-    font-size:20px;
-    text-align:center;
-    position:relative;
     margin:0 auto;
-    width: 450px;
+    position:relative;
+    text-align:center;
+    width: 470px;
 }
-.content-block.description .red-hexagon:before{
+.main-description-question:before{
+    background: url(/assets/images/main/red_hexagon_left.png) no-repeat;
     content:"";
-    width:22px;
     height:40px;
-    background-image:url(/assets/images/main/red_hexagon_left.png);
-    float:left;
-    background-position-x: right;
-    background-repeat:no-repeat;
-    left:-22px; 
+    left:-20px;
     position:absolute;
+    width:20px;
 }
-.content-block.description .red-hexagon:after{
+.main-description-question:after{
+    background: url(/assets/images/main/red_hexagon_right.png) no-repeat;
     content:"";
-    width:22px;
     height:40px;
-    background-image:url(/assets/images/main/red_hexagon_right.png);
-    float:left;
-    background-position-x: left;
-    background-repeat:no-repeat;
-    right:-22px;
     position:absolute;
-}
-
-.list_type_number_in_round{
-    border: 4px solid #20a493;
-    height: 63px;
-    width: 63px;
-    text-align: center;
-    border-radius: 100%;
-    vertical-align: middle;
-    line-height: 59px;
-    font-size: 36px;
-    color: #20a493;
-    }
-.not_list_style{
-    list-style-type: none;
-    }
-
-.clear:after{
-    clear:both;
-    content:"";
-    height:1px;
-    display:block;
+    right:-20px;
+    width:20px;
 }
 
 
