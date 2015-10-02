@@ -12,91 +12,93 @@
 
 /* Main banner */
 .main-banner-wrapper{
-    background-image: url("/assets/images/main_baner1.jpg");
-    background-position: center center;
-    background-size: cover;
-    height: 600px;
+  background-image: url("/assets/images/main_baner1.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 600px;
+  
+  .main-banner-container{
+    color: #fff;
+    font-family: ProximaNovaRegular;
     
-    .main-banner-container{
-      color: #fff;
-      font-family: ProximaNovaRegular;
+    .main-banner-caption{
+      font-size: 36px;
+      font-weight: 700;
+      padding: 110px 0 30px 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .main-banner-text{
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0 auto 130px auto;
+      max-width: 1000px;
+      text-align: center;
+    }
+    
+    .banner-request-button-border{
+      background-color: rgba(0,0,0,0.5);
+      display: block;
+      height: 81px;
+      padding: 7px 0 0 0;
+      margin: 0 auto;
+      width: 314px;
+      &:hover{ background-color: rgba(100,100,100,0.5); }
       
-      .main-banner-caption{
-        font-size: 36px;
-        font-weight: 700;
-        padding: 110px 0 30px 0;
-        text-align: center;
-        text-transform: uppercase;
-      }
-      .main-banner-text{
-        font-size: 20px;
-        line-height: 30px;
-        margin: 0 auto 130px auto;
-        max-width: 1000px;
-        text-align: center;
-      }
-      
-      .banner-request-button-border{
-        background-color: rgba(0,0,0,0.5);
+      .banner-request-button{
+        background: #2eafa0;
+        color: #fff;
         display: block;
-        height: 81px;
-        padding: 7px 0 0 0;
+        font-size: 28px;
+        height: 67px;
         margin: 0 auto;
-        width: 314px;
-        &:hover{ background-color: rgba(100,100,100,0.5); }
-        
-        .banner-request-button{
-          background: #2eafa0;
-          color: #fff;
-          display: block;
-          font-size: 28px;
-          height: 67px;
-          margin: 0 auto;
-          width: 300px;
-          line-height: 67px;
-          text-align: center;
-          text-decoration:none;
-          &:hover{ color: #fff; }
-        }
+        width: 300px;
+        line-height: 67px;
+        text-align: center;
+        text-decoration:none;
+        &:hover{ color: #fff; }
       }
     }
+  }
 }
-
 
 
 /* Services */
-.container .services_block{
-    margin-top: 30px;
+.main-services-wrapper{
+  background: #fff;
+  font-family: 'ProximaNovaRegular';
+  
+  .main-services-container{
+    .services_block{
+      
+      .service_image{
+        height:130px;
+        
+        img{
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      .service_caption{
+        color: #010101;  
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 30px;
+        padding: 20px 0 20px 0;
+        text-align: center;
+      }
+      .service_text{
+        color: #6c6c6c;        
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        padding: 14px;
+        text-align: justify;
+      }
+    }
+  }
 }
-.services_block .service{
-    text-decoration:none;
-    display:block;
-    
-}
-.services_block .service img{
-    display: block;
-    margin: 0 auto;
-}
-.services_block .service .service_image{
-    width:100%;
-    height:130px;
-    
-}
-.services_block .service .service_caption{
-    font-family: 'ProximaNovaRegular';
-    font-size: 22px;
-    margin: 20px 0 20px 0;
-    text-align: center;
-    color:#000000;
-    
-}
-.services_block .service .service_text{
-    font-family: 'ProximaNovaRegular';
-    font-size: 16px;
-    text-align: justify;
-    color: #6c6c6c;
-    
-}
+
 
 /* Description*/
 .content-block.description{
