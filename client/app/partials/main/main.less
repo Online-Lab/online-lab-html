@@ -267,19 +267,26 @@
 
 
 /* Products */
-.products .products-slide{
-  width: 310px;
-  height: 320px;
-  margin: 0 auto;
-}
-.product-slide-container{
-  outline: 0;
-  padding:12px; 
-}
-.products-corousel{
-  max-width:1000px;
-  margin:0 auto;
+.main-products-wrapper{
+  background: #fff;
   
+  .main-products-container{
+    .main-products-corousel{
+      max-width:1000px;
+      margin:0 auto;
+      
+      .main-products-slide-container{
+        outline: 0;
+        padding:12px; 
+        
+        .main-products-slide{
+          width: 310px;
+          height: 320px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }
 
 .green-prev, .green-next{
