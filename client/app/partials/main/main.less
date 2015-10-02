@@ -181,40 +181,47 @@
 
 
 /* Portfolio */
-.content-block.portfolio{
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ffffff 0%, #dbdbdb 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dbdbdb)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #ffffff 0%,#dbdbdb 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #ffffff 0%,#dbdbdb 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #ffffff 0%,#dbdbdb 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #ffffff 0%,#dbdbdb 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+.main-portfolio-wrapper{
+  background: #dbdbdb;
+  
+  .main-portfolio-container{
+    .h2-like{
+      color:  #28a797;
+      font-size: 34px;
+      font-weight: 300;
+      line-height: 20px;
+      margin: 50px 0 30px 0 !important;
+      text-align: center;
+    }
+    
+    .main-portfolio-slider-container{
+      .cd-hero-slider li{
+          background: #2C343B;
+      }
 
-    .cd-hero-slider li{
-        background: #2C343B;
-    }
+      .cd-slider-nav {
+          overflow: hidden;
+          margin: 0 40px;
+          width: 1100px;
+      }
+      .cd-slider-nav nav{
+          width: 2000px;
+      }
+      .cd-slider-nav li{
+          border-bottom: 6px solid rgba(0,0,0,0);
+      }
+      .cd-slider-nav a{
+          margin: 0;
+          background-size: auto 80%;
+      }
 
-    .cd-slider-nav {
-        overflow: hidden;
-        margin: 0 40px;
-        width: 1100px;
+      .cd-slider-selected-item{
+          border-bottom: 6px solid red !important;
+      }
     }
-    .cd-slider-nav nav{
-        width: 2000px;
-    }
-    .cd-slider-nav li{
-        border-bottom: 6px solid rgba(0,0,0,0);
-    }
-    .cd-slider-nav a{
-        margin: 0;
-        background-size: auto 80%;
-    }
-
-    .cd-slider-selected-item{
-        border-bottom: 6px solid red !important;
-    }
+  }
 }
+
 
 /* Products */
 .products .products-slide{
