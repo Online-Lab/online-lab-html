@@ -38,37 +38,38 @@
 <script>
 	// external js: isotope.pkgd.js
 $( document ).ready( function() {
-	
+	//Checked filter button vars
 	button_position = $('#filters .is-checked').position().left;
 	button_width = $('#filters .is-checked').width();
 	point_width = $(".active_filter_point").width;
 	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
-	
+	//Set checked filter button position
 	$(".active_filter_point").css({'left':point_left});
 	
 	// var $container = $('.isotope');
 	// console.log($container);
 	// $container.isotope();
 	
-	// filter buttons
+	//Filter buttons click
 	$('#filters button').click(function(){
 		var $this = $(this);
-		// don't proceed if already selected
+		
+		//Highlight checked filter button
 		if (!$this.hasClass('is-checked')) {
 			$this.parents('#filters').find('.is-checked').removeClass('is-checked');
 			$this.addClass('is-checked');
 		}
-		// var selector = $this.attr('data-filter');
-		// $container.isotope({  itemSelector: '.element-item', filter: selector });
 		
-		
+		//Checked filter button vars
 		button_position = $this.position().left;
 		button_width = $this.width();
 		point_width = $(".active_filter_point").width;
 		point_left = button_position + button_width / 2 + 4;// + point_width / 2;
-		
+		//Set checked filter button position
 		$(".active_filter_point").css({'left':point_left});
-		// return false;
+		
+		// var selector = $this.attr('data-filter');
+		// $container.isotope({  itemSelector: '.element-item', filter: selector });
 	});
 
 });
