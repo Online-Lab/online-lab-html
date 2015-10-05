@@ -2,6 +2,7 @@
 	<div class = "container" >
 		<h1>Портфолио</h1>
 		
+		<!-- Filter menu -->
 		<div class = "portfolio_menu"> 
 			<div id="filters" class="button-group mg_b_20 mg_t_50">  
 				<button class="button is-checked" data-filter="*">Все вместе</button>
@@ -15,12 +16,11 @@
 			</div>
 		</div>
 
+		<!-- Items for filtering -->
 		<div class="container container-portfolio p-b-30">
+		
 			<div id="portfolio-items" class="isotope">
-
-				<a href="/projects/{{item.id}}" class="element-item" style="background-image:url({{item.card_image}})"
-					  ng-repeat="item in portfolioList"
-					  data-filter="{{item.kind}}">
+				<a href="/projects/{{item.id}}" class="element-item" style="background-image:url({{item.card_image}})" data-filter="{{item.kind}}" ng-repeat="item in portfolioList">
 					<div class="item-description">
 						<div class="item-description-caption" ng-bind="item.name"></div>
 						<!-- <div class="item-description-text" ng-bind="item.description_short"></div> -->
@@ -29,10 +29,8 @@
 
 			</div>
 		</div>
-						
 		
 	</div>
-	
 </div>
 
 
