@@ -161,25 +161,16 @@
 
 <!-- Feedback form -->
 <a name="form" class="anchor"></a>
-<div class="content-block feedback_form">
-	<div class="container">
-		<div class="mg_t_50 caption">Нужен качественный проект?</div>
-		<div class="mg_t_20 mg_b_20">Получите нашу консультацию бесплатно</div>
+<div class="main-feedback-wrapper">
+	<div class="container main-feedback-container p-t-30 p-b-40">
+		<p class="main-feedback-caption column span-12 last m-t-30 m-b-20">Нужен качественный проект?</p>
+		<p class="column span-12 last m-t-10 m-b-20">Получите нашу консультацию бесплатно</p>
 		
-		<form>
-			<div class="col-lg-3 col-md-4 mg_t_5 mg_b_5">
-				<input type="text" placeholder="Ваше имя" class="feedback-form-name" ng-model="newOrderData.name">
-			</div>
-			
-			<div class="col-lg-3  col-md-4 mg_t_5 mg_b_5">
-				<input type="text" placeholder="Телефон" class="feedback-form-phone" ng-model="newOrderData.phone" ui-mask="+7(999)999-99-99" ui-mask-placeholder>
-			</div>
-			<div class="col-lg-3  col-md-4 mg_t_5 mg_b_5">
-				<input type="text" placeholder="Электронная почта" class="feedback-form-email" ng-model="newOrderData.email">
-			</div>
-			<div class="col-lg-3  col-md-12 mg_t_5 mg_b_5">
-				<input type="submit" ng-click="order()">
-			</div>
+		<form class="main-feedback-form column span-12 last m-t-30 m-b-50">
+			<input type="text" placeholder="Ваше имя" class="main-feedback-form-name column span-3" ng-model="newOrderData.name">
+			<input type="text" placeholder="Телефон" class="main-feedback-form-phone column span-3" ng-model="newOrderData.phone" ui-mask="+7(999)999-99-99" ui-mask-placeholder>
+			<input type="text" placeholder="Электронная почта" class="main-feedback-form-email column span-3" ng-model="newOrderData.email">
+			<input type="submit" class="main-feedback-form-btn column span-3 last" ng-click="order()">
 		</form>
 	</div>
 </div>
