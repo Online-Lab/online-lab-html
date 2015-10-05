@@ -5,21 +5,22 @@
 		<div class = "portfolio_menu"> 
 			<div id="filters" class="button-group mg_b_20 mg_t_50">  
 				<button class="button is-checked" data-filter="*">Все вместе</button>
-			  <button class="button" data-filter=".store">Интернет-магазин</button>
-			  <button class="button" data-filter=".resource">Ресурс</button>
-			  <button class="button" data-filter=".portal">Корпоративный портал</button>
-			  <button class="button" data-filter=".mobile_app">Мобильное приложение</button>
-			  <button class="button" data-filter=".marketing">Маркетинг</button>
-			  <button class="button" data-filter=".electronics">Электроника</button>
+			  <button class="button" data-filter="store">Интернет-магазин</button>
+			  <button class="button" data-filter="resource">Ресурс</button>
+			  <button class="button" data-filter="portal">Корпоративный портал</button>
+			  <button class="button" data-filter="mobile_app">Мобильное приложение</button>
+			  <button class="button" data-filter="marketing">Маркетинг</button>
+			  <button class="button" data-filter="electronics">Электроника</button>
 			  <span class = "active_filter_point"></span>
 			</div>
 		</div>
 
 		<div class="container container-portfolio p-b-30">
-			<div class="isotope">
+			<div id="portfolio-items" class="isotope">
 
-				<a href="/projects/{{item.id}}" class="element-item {{item.kind}}" style="background-image:url({{item.card_image}})"
-					  ng-repeat="item in portfolioList">
+				<a href="/projects/{{item.id}}" class="element-item" style="background-image:url({{item.card_image}})"
+					  ng-repeat="item in portfolioList"
+					  data-filter="{{item.kind}}">
 					<div class="item-description">
 						<div class="item-description-caption" ng-bind="item.name"></div>
 						<!-- <div class="item-description-text" ng-bind="item.description_short"></div> -->
@@ -45,11 +46,7 @@ $( document ).ready( function() {
 	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
 	//Set checked filter button position
 	$(".active_filter_point").css({'left':point_left});
-	
-	// var $container = $('.isotope');
-	// console.log($container);
-	// $container.isotope();
-	
+		
 	//Filter buttons click
 	$('#filters button').click(function(){
 		var $this = $(this);
@@ -68,8 +65,16 @@ $( document ).ready( function() {
 		//Set checked filter button position
 		$(".active_filter_point").css({'left':point_left});
 		
-		// var selector = $this.attr('data-filter');
-		// $container.isotope({  itemSelector: '.element-item', filter: selector });
+		//Filter logic
+		var currentFilter = $this.attr('data-filter');
+		if (currentFilter == "*"){
+			//show all items
+			$("#portfolio-items").children(".element-item").show();
+		}
+		else{
+			$("#portfolio-items").children(".element-item").hide();
+			$("#portfolio-items").children(".element-item[data-filter='" + currentFilter + "']").show();
+		}
 	});
 
 });
