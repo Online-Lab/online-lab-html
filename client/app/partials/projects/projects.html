@@ -11,7 +11,7 @@
 			  <button class="button" data-filter=".mobile_app">Мобильное приложение</button>
 			  <button class="button" data-filter=".marketing">Маркетинг</button>
 			  <button class="button" data-filter=".electronics">Электроника</button>
-			  <span class = "activ_filter_point"></span>
+			  <span class = "active_filter_point"></span>
 			</div>
 		</div>
 
@@ -39,12 +39,12 @@
 	// external js: isotope.pkgd.js
 $( document ).ready( function() {
 	
-	// button_position = $('#filters .is-checked').position().left;
-	// button_width = $('#filters .is-checked').width();
-	// point_width = $(".activ_filter_point").width;
-	// point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+	button_position = $('#filters .is-checked').position().left;
+	button_width = $('#filters .is-checked').width();
+	point_width = $(".active_filter_point").width;
+	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
 	
-	// $(".activ_filter_point").css({'left':point_left});
+	$(".active_filter_point").css({'left':point_left});
 	
 	// var $container = $('.isotope');
 	// console.log($container);
@@ -62,12 +62,12 @@ $( document ).ready( function() {
 		// $container.isotope({  itemSelector: '.element-item', filter: selector });
 		
 		
-		// button_position = $this.position().left;
-		// button_width = $this.width();
-		// point_width = $(".activ_filter_point").width;
-		// point_left = button_position + button_width / 2 + 4;// + point_width / 2;
+		button_position = $this.position().left;
+		button_width = $this.width();
+		point_width = $(".active_filter_point").width;
+		point_left = button_position + button_width / 2 + 4;// + point_width / 2;
 		
-		// $(".activ_filter_point").css({'left':point_left});
+		$(".active_filter_point").css({'left':point_left});
 		// return false;
 	});
 
