@@ -312,44 +312,45 @@
   right: -40px;
 }
 
-/* Feedback form */
-.content-block.feedback_form{
-    background-image: url("/assets/images/main/feedback_bg.jpg");
-    min-height: 350px;
+
+/* Feedback */
+.main-feedback-wrapper{
+    background: url("/assets/images/main/feedback_bg.jpg") center center;
     background-size: cover;
-    background-position: center center;
+    height: 350px;
+    
+    .main-feedback-container{
+      color: #fff;
+      font-family: ProximaNovaRegular;
+      font-size: 26px;
+      text-align: center;
+      
+      .main-feedback-caption{
+        font-size: 48px;
+      }
+      /* From */
+      .main-feedback-form{
+        font-size: 20px;
+        color: #fff;
+        
+        .main-feedback-form-name,
+        .main-feedback-form-phone,
+        .main-feedback-form-email{
+            background: none;
+            border: solid 2px #fff;
+            font-size: 20px;
+            padding: 10px 17px;
+        }
+        .main-feedback-form-btn{
+            background-color: #fb4242;
+            border: none;
+            padding: 12px;
+            text-align: center;
+        }
+      }
+    }
 }
-.content-block.feedback_form>div{
-    color: #ffffff;
-    font-size: 22px;
-    text-align:center;
-}
-.content-block.feedback_form .caption{
-    color: #ffffff;
-    font-size: 50px;
-}
-.content-block.feedback_form .feedback-form-name,
-.content-block.feedback_form .feedback-form-phone,
-.content-block.feedback_form .feedback-form-email{
-    width: 275px;
-    height: 50px;
-    background:none;
-    border: solid 2px #ffffff;
-    color: #ffffff;
-    font-size: 20px;
-    padding-left: 5px;
-}
-.content-block.feedback_form input[type=submit]{
-    width: 280px;
-    height: 50px;
-    background-color: #fb4242;
-    color: #ffffff;
-    border: none;
-    font-size: 20px;
-}
-.content-block.feedback_form form div{
-    text-align:center;
-}
+
 
 /* Blog and command */
 .blog-command .caption{
