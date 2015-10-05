@@ -1,0 +1,78 @@
+.isotope{
+  overflow: hidden;
+}
+.isotope .element-item{
+  display: block;
+  float: left;
+  height: 270px;
+  width: 285px;
+}
+.isotope .element-item .item-description{
+  width: 100%;
+  height: 0;
+  background-color: rgba(0,0,0,0.6);
+  
+  opacity:0;
+  -webkit-transition: opacity 0.2s ease-in-out 0.05s;
+     -moz-transition: opacity 0.2s ease-in-outt 0.05s;
+       -o-transition: opacity 0.2s ease-in-out 0.05s;
+          transition: opacity 0.2s ease-in-out 0.05s;
+}
+.isotope .element-item:hover .item-description{
+  height:100%;
+  opacity:1;
+  -webkit-transition: opacity 0.2s ease-in-out 0.051s;
+     -moz-transition: opacity 0.23s ease-in-outt 0.05s;
+       -o-transition: opacity 0.2s ease-in-out 0.05s;
+          transition: opacity 0.2s ease-in-out 0.05s;
+}
+.isotope .element-item .item-description .item-description-caption{
+  float:left;
+  padding:20px 20px 10px 20px;
+  font-size:22px;
+  color: #ffffff;
+}
+.isotope .element-item .item-description .item-description-text{
+  float:left;
+  padding:10px 20px 10px 20px;
+  font-size:18px;
+  color:#888888;
+}
+
+
+
+#filters{
+ position: relative;  
+}
+#filters button{ 
+  background: none;
+  border: none; 
+  font-size:16px;
+  
+}
+#filters button:focus{ 
+  outline:none;
+  
+  
+}
+#filters button.is-checked{ 
+  background-color: #c22d2d;
+  border: none !important ;
+  color:#ffffff;
+  
+}
+
+
+.activ_filter_point{
+  background-image: url("/assets/images/city_active.png");
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-repeat: no-repeat;
+  display: block;
+  left: 0;
+     -webkit-transition: left 0.3s ease-out 0.1s;
+     -moz-transition: left 0.3s ease-out 0.1s;
+     -o-transition: left 0.3s ease-out 0.1s;
+     transition: left 0.3s ease-out 0.1s;
+}
