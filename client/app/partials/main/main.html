@@ -232,10 +232,14 @@
 		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
 	};
   
+  //Scrolling to form
 	var scrollToForm = function(){
 		$(window).scrollTo($('#form-anchor'),{
 			duration: 800,
-			easing: 'easeInOutSine'
+			easing: 'easeInOutSine',
+			onAfter(){
+				$(".main-feedback-form-name").focus();
+			}
 		});
 	};
 </script>
