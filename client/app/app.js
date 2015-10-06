@@ -25,7 +25,7 @@ angular.module('onlinelabApp', [
 		  }
       })
 	  .state('development', {
-      url: '/development',
+      url: '/developmentlkjibndslfhbldjshfbsjdfghbg',
       templateUrl: 'app/partials/development/development.html',
       controller: 'DevelopmentCtrl',
       ncyBreadcrumb: {
@@ -105,7 +105,7 @@ angular.module('onlinelabApp', [
 	$urlRouterProvider
       .otherwise('/');
 
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
   })
 
   .run(function($anchorScroll, $window) {
