@@ -128,7 +128,7 @@
 						<ul>
 							<li ng-repeat="(itemIndex, item) in portfolioList" 
 									ng-class="{'cd-slider-selected-item': currentPortfolioItem == item, 'selected': item == portfolioList[0]}">
-								<a ng-click="gotoProject(itemIndex, item)" ng-style="{'background-image': 'url(' + item.img + ')'}" href="#"></a>
+								<a ng-click="gotoProject(itemIndex, item)" ng-style="{'background-image': 'url(' + item.img + ')'}"></a>
 							</li>
 						</ul>
 					</nav> 
