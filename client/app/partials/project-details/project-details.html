@@ -2,7 +2,7 @@
 
 	<!-- Main content -->
 	<div class = "project-content">
-		<p class="h1-like">Название проекта</p>
+		<p class="h1-like" ng-bind="project.name"></p>
 		<div class = "portfolio_menu"> 
 			<div id="filters" class="button-group mg_b_20 mg_t_50">  
 				<button class="button is-checked" data-filter=".description">Описание</button>
@@ -26,8 +26,8 @@
 		</div> -->
 
 		
-		<div class="project-description">
-			<p class="h2-like">Задача:</p>
+		<div class="project-description" ng-bind-html="project.description">
+<!-- 			<p class="h2-like">Задача:</p>
 			<p>
 				У большинства так не бывает, но у нас слова «молодая», «эффективная» и «команда разработчиков» очетаются ультра-гармонично. Это потому, что мы амбициозные, работаем слаженно и используем новые прогрессивные технологии, что в совокупности даёт максимальный эффект. 
 			</p>
@@ -39,7 +39,7 @@
 			<p>
 				Наш уровень профессионализма, опыт и используемые технологии дают уверенность в том, что проект будет работать хорошо. Эта уверенность передаётся и Вам!
 			</p>
-			<img src="/assets/images/project/project1_2.jpg" alt="">
+			<img src="/assets/images/project/project1_2.jpg" alt=""> -->
 		</div>
 	</div>
 
