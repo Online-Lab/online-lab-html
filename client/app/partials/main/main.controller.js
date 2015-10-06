@@ -38,16 +38,52 @@ angular.module('onlinelabApp')
     
     //Feedback form message
     $scope.formMessage = "";
+    $scope.isFormValid = true;
 
     //Get consultation
     $scope.order = function(){
-      var msg = "Была добавлена новая заявка. Информация о клиенте: <br><br>" + 
-        ($scope.newOrderData.name ? "Имя: " + $scope.newOrderData.name + "<br>" : '') + 
-        ($scope.newOrderData.email ? "E-mail: " + $scope.newOrderData.email + "<br>" : '') + 
-        ($scope.newOrderData.phone ? "Тел.: " + $scope.newOrderData.phone + "<br>" : '');
+            
+      if(formFeedback.name.$invalid || 
+         formFeedback.phone.$invalid ||
+         formFeedback.email.$invalid){
+        //Valid flag
+        $scope.isFormValid = false;
+        //Message text
+        if (formFeedback.name.$invalid){
+          $scope.formMessage = "Введите имя";
+        }
+        else if (formFeedback.phone.$invalid){
+          $scope.formMessage = "Введите номер телефона";
+        }
+        else if (formFeedback.email.$invalid){
+          $scope.formMessage = "Введите корректный адрес электронной почты";
+        }
+      }
+      else{
+        $scope.isFormValid = true;
+        $scope.formMessage = "Подождите...";
+        
+        //Sending email
+        var msg = "Была добавлена новая заявка. Информация о клиенте: <br><br>" + 
+          ($scope.newOrderData.name ? "Имя: " + $scope.newOrderData.name + "<br>" : '') + 
+          ($scope.newOrderData.email ? "E-mail: " + $scope.newOrderData.email + "<br>" : '') + 
+          ($scope.newOrderData.phone ? "Тел.: " + $scope.newOrderData.phone + "<br>" : '');
+          
+        alert("Заявка отправлена");
+        clearForm();
 
-      Mailer.sendEmail(msg).success(function(){
-        alert("Ваша заявка принята");
-      });
+        /*Mailer.sendEmail(msg).success(function(){
+          //alert("Ваша заявка принята");
+          $scope.formMessage = "Ваша заявка принята";
+          //Clear fields
+          clearForm();
+          
+        });*/
+      }
+      
+    };
+    
+    var clearForm = function(){
+      
     };
 });
