@@ -20,7 +20,7 @@
 		<div class="container container-portfolio p-b-30">
 		
 			<div id="portfolio-items" class="isotope">
-				<a href="/projects/{{item.id}}" class="element-item" style="background-image:url({{item.card_image}})" data-filter="{{item.kind}}" ng-repeat="item in portfolioList">
+				<a ui-sref="project-details({projectId: item.id})" class="element-item" style="background-image:url({{item.card_image}})" data-filter="{{item.kind}}" ng-repeat="item in portfolioList">
 					<div class="item-description">
 						<div class="item-description-caption" ng-bind="item.name"></div>
 						<!-- <div class="item-description-text" ng-bind="item.description_short"></div> -->
