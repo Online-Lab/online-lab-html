@@ -5,7 +5,7 @@
 		<p class="main-banner-text">Высоконагруженные проекты, объединяющие в себе сайт, мобильное приложение, гаджет, связанные с вашим продуктом, а также качественное продвижение всего этого в сети - это к нам</p>
 		
 		<div class="main-banner-request-button-border">
-			<a  href="#form" class="main-banner-request-button">Оставить заявку</a>
+			<a class="main-banner-request-button" onclick="scrollToForm()">Оставить заявку</a>
 		</div>
 	</div>
 </div>
@@ -158,7 +158,7 @@
 </div>
 
 <!-- Feedback form -->
-<a name="form" class="anchor"></a>
+<a id="form-anchor" name="form" class="anchor"></a>
 <div class="main-feedback-wrapper">
 	<div class="container main-feedback-container p-t-30 p-b-40">
 		<p class="main-feedback-caption column span-12 last m-t-20 m-b-10">Нужен качественный проект?</p>
@@ -217,6 +217,28 @@
 
 	</div>
 </div> -->
+
+<script>
+	//Easing functions: borrowed from jQuery easing plugin
+  //http://gsgd.co.uk/sandbox/jquery.easing.php
+  $.easing.elasout = function(x, t, b, c, d) {
+      var s=1.70158;var p=0;var a=c;
+      if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+      if (a < Math.abs(c)) { a=c; var s=p/4; }
+      else var s = p/(2*Math.PI) * Math.asin (c/a);
+      return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+  };
+  $.easing.easeInOutSine = function (x, t, b, c, d) {
+		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+	};
+  
+	var scrollToForm = function(){
+		$(window).scrollTo($('#form-anchor'),{
+			duration: 800,
+			easing: 'easeInOutSine'
+		});
+	};
+</script>
 
 
 <script>
