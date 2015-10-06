@@ -25,7 +25,7 @@ angular.module('onlinelabApp', [
 		  }
       })
 	  .state('development', {
-      url: '/developmentlkjibndslfhbldjshfbsjdfghbg',
+      url: '/development',
       templateUrl: 'app/partials/development/development.html',
       controller: 'DevelopmentCtrl',
       ncyBreadcrumb: {
