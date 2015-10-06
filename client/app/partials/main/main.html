@@ -15,7 +15,7 @@
 	<div class="container main-services-container p-t-40 p-b-20" >
 		
 		<div class="main-services-block column span-3 m-t-30 m-b-20">
-			<a href="/development">
+			<a ui-sref="development">
 				<div class="service_image">
 					<img src = "/assets/images/main/service1.png" >
 				</div>
@@ -26,7 +26,7 @@
 			</a>
 		</div>
 		<div class="main-services-block column span-3 m-t-30 m-b-20">
-			<a href="/mobile">
+			<a ui-sref="mobile">
 				<div class="service_image">
 					<img src = "/assets/images/main/service2.png" >
 				</div>
@@ -37,7 +37,7 @@
 			</a>
 		</div>
 		<div class="main-services-block column span-3 m-t-30 m-b-20">
-			<a href="/marketing">
+			<a ui-sref="marketing">
 				<div class="service_image">
 					<img src = "/assets/images/main/service3.png" >
 				</div>
@@ -49,7 +49,7 @@
 			</a>
 		</div>
 		<div class="main-services-block column span-3 last m-t-30 m-b-20">
-			<a href="/electronics">
+			<a ui-sref="electronics">
 				<div class="service_image">
 					<img src = "/assets/images/main/service4.png" >
 				</div>
@@ -114,7 +114,7 @@
 							<p class="main-portfolio-slider-title" ng-bind="item.title"></p>
 							<p class="main-portfolio-slider-desc" ng-bind="item.desc"></p>
 							<div class="main-portfolio-slider-button-border">
-								<a href="/projects/{{item.id}}" class="main-portfolio-slider-button">Узнать больше</a>
+								<a ui-sref="project-details({projectId: item.id})" class="main-portfolio-slider-button">Узнать больше</a>
 							</div>
 						</div>
 					</li>
@@ -128,7 +128,7 @@
 						<ul>
 							<li ng-repeat="(itemIndex, item) in portfolioList" 
 									ng-class="{'cd-slider-selected-item': currentPortfolioItem == item, 'selected': item == portfolioList[0]}">
-								<a ng-click="gotoProject(itemIndex, item)" ng-style="{'background-image': 'url(' + item.img + ')'}" href="#"></a>
+								<a ng-click="gotoProject(itemIndex, item)" ng-style="{'background-image': 'url(' + item.img + ')'}"></a>
 							</li>
 						</ul>
 					</nav> 
