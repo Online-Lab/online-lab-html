@@ -14,6 +14,8 @@ var app = express();
 var server = require('http').createServer(app);
 require('./config/express')(app);
 require('./routes')(app);
+var proxyMiddleware = require('http-proxy-middleware')
+var proxyApi = require('../proxy_api.conf')
 
 // Start server
 server.listen(config.port, config.ip, function () {
@@ -22,6 +24,16 @@ server.listen(config.port, config.ip, function () {
 
 // Expose app
 exports = module.exports = app;
+
+//Proxy
+if (process.env.PROXY_API_DISABLED == 'true') { return; }
+
+proxyApi.config.match.forEach(function(m){
+  app.use(proxyMiddleware(m, {
+    target: proxyApi.config.target,
+    changeOrigin: true
+  }));
+});
 
 
 // var gzippo = require('gzippo')

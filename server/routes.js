@@ -38,8 +38,8 @@ module.exports = function(app) {
 
   // All other routes should redirect to the index.html
   //
-  app.all("/*", function(req, res, next) {
-    //res.sendFile("index.html", { root: "dist/public" });
-    res.sendfile(app.get('appPath') + '/index.html');
-  });
+  // app.all("/*", function(req, res, next) {
+  //   //res.sendFile("index.html", { root: "dist/public" });
+  //   res.sendfile(app.get('appPath') + '/index.html');
+  // });
 };
