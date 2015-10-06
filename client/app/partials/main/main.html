@@ -169,7 +169,7 @@
 			<input type="text" placeholder="Телефон*" class="main-feedback-form-phone column span-3" ng-model="newOrderData.phone" ui-mask="+7(999)999-99-99" ui-mask-placeholder>
 			<input type="text" placeholder="Электронная почта*" class="main-feedback-form-email column span-3" ng-model="newOrderData.email">
 			<input type="submit" value="Отправить" class="main-feedback-form-btn column span-3 last" ng-click="order()">
-			<p class="main-feedback-form-msg column span-12 last m-t-20"></p>
+			<p class="main-feedback-form-msg column span-12 last m-t-20" ng-show="formMessage != ''"></p>
 		</form>
 	</div>
 </div>
