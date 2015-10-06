@@ -5,6 +5,7 @@ angular.module('onlinelabApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
+  'ui.mask',
   'ncy-angular-breadcrumb'
 ])
   .config(function($breadcrumbProvider) {
