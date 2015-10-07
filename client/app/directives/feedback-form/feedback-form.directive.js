@@ -19,6 +19,8 @@ angular.module('onlinelabApp')
         //Get consultation
         $scope.order = function(){
 
+          var patternEmail = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+          
           if (nameField.val() == ''){
             messageBlock.text("Введите имя");
             nameField.focus();
@@ -27,7 +29,7 @@ angular.module('onlinelabApp')
             messageBlock.text("Введите номер телефона");
             phoneField.focus();
           }
-          else if (emailField.val() == ''){
+          else if (emailField.val() == '' ||  !patternEmail.test(emailField.val())){
             messageBlock.text("Введите корректный адрес электронной почты");
             emailField.focus();
           }
@@ -35,11 +37,17 @@ angular.module('onlinelabApp')
             messageBlock.text("Подождите...");
             orderBtn.prop('disabled', true);
             
+            //User data
+            var newOrderData = {
+              name: nameField.val(),
+              phone: phoneField.val(),
+              email: emailField.val()
+            };
             //Sending email
             var msg = "Была добавлена новая заявка. Информация о клиенте: <br><br>" + 
-              ($scope.newOrderData.name ? "Имя: " + $scope.newOrderData.name + "<br>" : '') + 
-              ($scope.newOrderData.email ? "E-mail: " + $scope.newOrderData.email + "<br>" : '') + 
-              ($scope.newOrderData.phone ? "Тел.: " + $scope.newOrderData.phone + "<br>" : '');
+              (newOrderData.name ? "Имя: " + newOrderData.name + "<br>" : '') + 
+              (newOrderData.email ? "E-mail: " + newOrderData.email + "<br>" : '') + 
+              (newOrderData.phone ? "Тел.: " + newOrderData.phone + "<br>" : '');
               
             setTimeout(function(){
               messageBlock.text("Ваша заявка принята");
@@ -47,11 +55,8 @@ angular.module('onlinelabApp')
             }, 3000);
 
             /*Mailer.sendEmail(msg).success(function(){
-              //alert("Ваша заявка принята");
-              $scope.formMessage = "Ваша заявка принята";
-              //Clear fields
+              messageBlock.text("Ваша заявка принята");
               clearForm();
-              
             });*/
           }
           
