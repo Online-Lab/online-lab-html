@@ -20,17 +20,24 @@ angular.module('onlinelabApp')
         $scope.order = function(){
 
           var patternEmail = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+          //reset error classes
+          nameField.removeClass("error");
+          phoneField.removeClass("error");
+          emailField.removeClass("error");
           
           if (nameField.val() == ''){
             messageBlock.text("Введите имя");
+            nameField.addClass("error");
             nameField.focus();
           }
           else if (phoneField.val() == ''){
             messageBlock.text("Введите номер телефона");
+            phoneField.addClass('error');
             phoneField.focus();
           }
           else if (emailField.val() == '' ||  !patternEmail.test(emailField.val())){
             messageBlock.text("Введите корректный адрес электронной почты");
+            emailField.addClass("error");
             emailField.focus();
           }
           else{
