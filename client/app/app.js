@@ -108,16 +108,19 @@ angular.module('onlinelabApp', [
     //$locationProvider.html5Mode(true);
   })
 
-  .run(function($anchorScroll, $window) {
-    //Hack to scroll to top when navigating to new URLS but not back/forward
-    var wrap = function(method) {
-      var orig = $window.window.history[method];
-      $window.window.history[method] = function() {
-        var retval = orig.apply(this, Array.prototype.slice.call(arguments));
-        $anchorScroll();
-        return retval;
-      };
-    };
-    wrap('pushState');
-    wrap('replaceState');
+  .run(function ($rootScope, $location, $uiViewScroll) {
+    $rootScope.$on('$viewContentLoaded',function(){
+      //Scroll to top when state changes
+      var hash = $location.hash();
+      var element =
+           findDomElement('#' + hash)|| 
+           findDomElement('a[name="' + hash + '"]')||
+           angular.element(window.document.body);
+      $uiViewScroll(element);
+      
+      function findDomElement (selector) {
+        var result = $(selector);
+        return (result.length > 0 ? result : null);
+      }
+    });
   });
