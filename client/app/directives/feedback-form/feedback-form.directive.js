@@ -9,43 +9,31 @@ angular.module('onlinelabApp')
         
       },
       link: function ($scope, elem, attrs) {
-        //Inputs
+        //Form elements
         var nameField = $(elem).find('.main-feedback-form-name'),
             phoneField = $(elem).find('.main-feedback-form-phone'),
-            emailField = $(elem).find('.main-feedback-form-email');
-        
-        //User data
-        $scope.newOrderData = {
-          name: "",
-          phone: "",
-          email: ""
-        };
-        
-        //Feedback form message
-        $scope.formMessage = "";
-        $scope.isFormValid = true;
+            emailField = $(elem).find('.main-feedback-form-email'),
+            orderBtn = $(elem).find('.main-feedback-form-btn'),
+            messageBlock = $(elem).find('.main-feedback-form-msg');
     
         //Get consultation
         $scope.order = function(){
 
           if (nameField.val() == ''){
-            $scope.isFormValid = false;
-            $scope.formMessage = "Введите имя";
+            messageBlock.text("Введите имя");
             nameField.focus();
           }
           else if (phoneField.val() == ''){
-            $scope.isFormValid = false;
-            $scope.formMessage = "Введите номер телефона";
+            messageBlock.text("Введите номер телефона");
             phoneField.focus();
           }
           else if (emailField.val() == ''){
-            $scope.isFormValid = false;
-            $scope.formMessage = "Введите корректный адрес электронной почты";
+            messageBlock.text("Введите корректный адрес электронной почты");
             emailField.focus();
           }
           else{
-            $scope.isFormValid = true;
-            $scope.formMessage = "Подождите...";
+            messageBlock.text("Подождите...");
+            orderBtn.prop('disabled', true);
             
             //Sending email
             var msg = "Была добавлена новая заявка. Информация о клиенте: <br><br>" + 
@@ -53,8 +41,10 @@ angular.module('onlinelabApp')
               ($scope.newOrderData.email ? "E-mail: " + $scope.newOrderData.email + "<br>" : '') + 
               ($scope.newOrderData.phone ? "Тел.: " + $scope.newOrderData.phone + "<br>" : '');
               
-            alert("Заявка отправлена");
-            clearForm();
+            setTimeout(function(){
+              messageBlock.text("Ваша заявка принята");
+              clearForm();
+            }, 3000);
 
             /*Mailer.sendEmail(msg).success(function(){
               //alert("Ваша заявка принята");
@@ -68,7 +58,11 @@ angular.module('onlinelabApp')
         };
         
         var clearForm = function(){
-          
+          nameField.val('');
+          phoneField.val('');
+          emailField.val('');
+          orderBtn.prop('disabled', false);
+          nameField.focus();
         };
       }
     };
