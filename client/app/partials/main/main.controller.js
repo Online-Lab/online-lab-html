@@ -40,22 +40,19 @@ angular.module('onlinelabApp')
 
     //Get consultation
     $scope.order = function(){
-            
-      if(formFeedback.name.$invalid || 
-         formFeedback.phone.$invalid ||
-         formFeedback.email.$invalid){
-        //Valid flag
+
+      if ($scope.newOrderData.name == ''){
         $scope.isFormValid = false;
-        //Message text
-        if (formFeedback.name.$invalid){
-          $scope.formMessage = "Введите имя";
-        }
-        else if (formFeedback.phone.$invalid){
-          $scope.formMessage = "Введите номер телефона";
-        }
-        else if (formFeedback.email.$invalid){
-          $scope.formMessage = "Введите корректный адрес электронной почты";
-        }
+        $scope.formMessage = "Введите имя";
+        console.log($scope.isFormValid);
+      }
+      else if ($scope.newOrderData.phone == ''){
+        $scope.isFormValid = false;
+        $scope.formMessage = "Введите номер телефона";
+      }
+      else if ($scope.newOrderData.email == ''){
+        $scope.isFormValid = false;
+        $scope.formMessage = "Введите корректный адрес электронной почты";
       }
       else{
         $scope.isFormValid = true;
