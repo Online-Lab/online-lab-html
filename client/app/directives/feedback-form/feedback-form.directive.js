@@ -60,15 +60,15 @@ angular.module('onlinelabApp')
               (newOrderData.email ? "E-mail: " + newOrderData.email + "<br>" : '') + 
               (newOrderData.phone ? "Тел.: " + newOrderData.phone + "<br>" : '');
               
-            setTimeout(function(){
-              messageBlock.text("Ваша заявка принята");
-              clearForm();
-            }, 3000);
+            // setTimeout(function(){
+            //   messageBlock.text("Ваша заявка принята");
+            //   clearForm();
+            // }, 3000);
 
-            /*Mailer.sendEmail(msg).success(function(){
+            Mailer.sendEmail(msg).success(function(){
               messageBlock.text("Ваша заявка принята");
               clearForm();
-            });*/
+            });
           }
           
         };
