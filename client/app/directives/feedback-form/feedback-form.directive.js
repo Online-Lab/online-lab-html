@@ -15,6 +15,10 @@ angular.module('onlinelabApp')
             emailField = $(elem).find('.main-feedback-form-email'),
             orderBtn = $(elem).find('.main-feedback-form-btn'),
             messageBlock = $(elem).find('.main-feedback-form-msg');
+            
+        phoneField.inputmask("+7(999)999-99-99", {
+          "clearIncomplete": true
+        });
     
         //Get consultation
         $scope.order = function(){
