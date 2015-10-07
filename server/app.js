@@ -15,7 +15,7 @@ var server = require('http').createServer(app);
 require('./config/express')(app);
 require('./routes')(app);
 var proxyMiddleware = require('http-proxy-middleware')
-var proxyApi = require('../proxy_api.conf')
+var proxyApi = require('./config/proxy_api.conf')
 
 // Start server
 server.listen(config.port, config.ip, function () {
