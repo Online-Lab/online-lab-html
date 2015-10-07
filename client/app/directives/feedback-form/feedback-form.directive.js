@@ -9,6 +9,11 @@ angular.module('onlinelabApp')
         
       },
       link: function ($scope, elem, attrs) {
+        //Inputs
+        var nameField = $(elem).find('.main-feedback-form-name'),
+            phoneField = $(elem).find('.main-feedback-form-phone'),
+            emailField = $(elem).find('.main-feedback-form-email');
+        
         //User data
         $scope.newOrderData = {
           name: "",
@@ -23,18 +28,20 @@ angular.module('onlinelabApp')
         //Get consultation
         $scope.order = function(){
 
-          if ($scope.newOrderData.name == ''){
+          if (nameField.val() == ''){
             $scope.isFormValid = false;
             $scope.formMessage = "Введите имя";
-            console.log($scope.isFormValid);
+            nameField.focus();
           }
-          else if ($scope.newOrderData.phone == ''){
+          else if (phoneField.val() == ''){
             $scope.isFormValid = false;
             $scope.formMessage = "Введите номер телефона";
+            phoneField.focus();
           }
-          else if ($scope.newOrderData.email == ''){
+          else if (emailField.val() == ''){
             $scope.isFormValid = false;
             $scope.formMessage = "Введите корректный адрес электронной почты";
+            emailField.focus();
           }
           else{
             $scope.isFormValid = true;
