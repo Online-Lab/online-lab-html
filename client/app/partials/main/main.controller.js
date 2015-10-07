@@ -4,9 +4,7 @@ angular.module('onlinelabApp')
   .controller('MainCtrl', function ($scope, $http, Mailer, Project) {
 
     //Get portfolio
-    $scope.portfolioList = undefined;
-    $http.get('/data/db.json').success(function(data){
-      $scope.portfolioList = data.portfolio;
+    $scope.portfolioList = Project.query(function(){
       //Current item
       $scope.currentPortfolioItem = $scope.portfolioList[0];
     });

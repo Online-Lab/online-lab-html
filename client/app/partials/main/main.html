@@ -111,8 +111,8 @@
 				<ul class="cd-hero-slider">
 					<li ng-repeat="item in portfolioList" ng-class="{'selected': item == portfolioList[0]}">
 						<div class="cd-full-width">
-							<p class="main-portfolio-slider-title" ng-bind="item.title"></p>
-							<p class="main-portfolio-slider-desc" ng-bind="item.desc"></p>
+							<p class="main-portfolio-slider-title" ng-bind="item.name"></p>
+							<p class="main-portfolio-slider-desc" ng-bind-html="item.description_short"></p>
 							<div class="main-portfolio-slider-button-border">
 								<a ui-sref="project-details({projectId: item.id})" class="main-portfolio-slider-button">Узнать больше</a>
 							</div>
@@ -128,7 +128,7 @@
 						<ul>
 							<li ng-repeat="(itemIndex, item) in portfolioList" 
 									ng-class="{'cd-slider-selected-item': currentPortfolioItem == item, 'selected': item == portfolioList[0]}">
-								<a ng-click="gotoProject(itemIndex, item)" ng-style="{'background-image': 'url(' + item.img + ')'}"></a>
+								<a ng-click="gotoProject(itemIndex, item)" ng-style="{'background-image': 'url(' + item.logo_image + ')'}"></a>
 							</li>
 						</ul>
 					</nav> 
