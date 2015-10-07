@@ -60,16 +60,18 @@
 
 </div>
 
-<div ng-class="{'under-header-project': state.current.name == 'project-details',
-								'under-header-blogpost': state.current.name == 'blogpost',
+<!-- Header image for project -->
+<div class="under-header-project" ng-show="state.current.name == 'project-details' && state.project_image">
+	<img ng-src="{{state.project_image}}" ng-show="state.project_image" alt="">
+</div>
+<!-- Header image -->
+<div ng-class="{'under-header-blogpost': state.current.name == 'blogpost',
 								'under-header-contact': state.current.name == 'contact',
 								'under-header-vacancies': state.current.name == 'vacancies'}" 
-		 ng-show="state.current.name == 'project-details' || 
-		 					state.current.name == 'blogpost' || 
+		 ng-show="state.current.name == 'blogpost' || 
 		 					state.current.name == 'contact' || 
 		 					state.current.name == 'vacancies'">
 		 <div class="under-header-content">Заголовок записи</div>
-		 <!-- <img ng-src="{{state.project_image}}" alt=""> -->
  </div>
 
 <div ncy-breadcrumb ng-show="state.current.name != 'main'"></div>
