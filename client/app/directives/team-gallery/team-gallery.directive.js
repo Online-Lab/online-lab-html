@@ -3,7 +3,7 @@
 angular.module('onlinelabApp')
   .directive('teamGallery', function () {
     return {
-      templateUrl: 'app/team-gallery_directive/team-gallery_directive.html',
+      templateUrl: 'app/directives/team-gallery/team-gallery.html',
       restrict: 'EA',
       link: function (scope, element, attrs) {
         scope.teamPhotos = [
