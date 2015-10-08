@@ -15,7 +15,6 @@
     "jquery": "~1.11.0",
     "json3": "~3.3.1",
     "lodash": "~2.4.1",
-    "slick.js": "~1.5.5",
     "jquery.scrollTo": "~2.1.2"
   },
   "devDependencies": {
