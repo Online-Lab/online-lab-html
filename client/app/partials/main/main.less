@@ -302,6 +302,9 @@
           background: rgba(0,0,0,0.4);
           height: 100%;
           position: relative;
+          opacity: 0;
+          transition-property: opacity;
+          transition-duration: 0.1s;
           width: 100%;
           
           .main-products-slide-title{
@@ -324,6 +327,11 @@
             position: absolute;
             top: 50%;
             width: 32px;
+          }
+          
+          /* Hover state */
+          &:hover{
+            opacity: 1;
           }
         }
       }
