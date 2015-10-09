@@ -99,6 +99,11 @@ angular.module('onlinelabApp', [
         templateUrl: 'app/partials/vacancies/vacancies.html',
         controller: 'VacanciesCtrl',
         ncyBreadcrumb: { label: 'Вакансии' }
+      })
+    .state('store', {
+        url: '/store',
+        templateUrl: 'app/partials/store/store.html',
+        controller: 'StoreCtrl'
       });
 	
 	
