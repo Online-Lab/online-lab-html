@@ -1,9 +1,9 @@
 <div id="side-menu-overlay" onclick="showHideSideMenu()"></div>
 <div id="side-menu-wrapper">
-  <div id="side-menu-container">
-    <!-- Button -->
-    <a id="side-menu-button" onclick="showHideSideMenu()"></a>
-    
+  <!-- Button -->
+  <a id="side-menu-button" onclick="showHideSideMenu()"></a>
+  
+  <div id="side-menu-container">    
     <!-- Menu -->
     <ul>
       <li>Главная</li>
@@ -20,7 +20,6 @@
       <li>Блог</li>
       <li>Контакты</li>
     </ul>
-    
   </div>
 </div>
 
@@ -35,12 +34,12 @@
         sideMenuButton = $('#side-menu-button');
     
     if (!isSideMenuActive){
-      sideMenuContainer.addClass('side-menu-active');
+      sideMenuWrapper.addClass('side-menu-active');
       sideMenuOverlay.addClass('side-menu-active');
       sideMenuButton.addClass('side-menu-active');
     }
     else{
-      sideMenuContainer.removeClass('side-menu-active');
+      sideMenuWrapper.removeClass('side-menu-active');
       sideMenuOverlay.removeClass('side-menu-active');
       sideMenuButton.removeClass('side-menu-active');
     }

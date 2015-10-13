@@ -10,10 +10,9 @@
   width: 0;
 }
 
-/* Side menu container */
-#side-menu-container{
+/* Side menu wrapper */
+#side-menu-wrapper{
   background: #20a493;
-  color: #fefefe;
   height: 100%;
   left: 0;
   position: fixed;
@@ -22,7 +21,7 @@
   visibility: hidden;
   width: 0;
   
-  /* Side menu button */
+  /* Show/hide button */
   #side-menu-button{
     background: url(/assets/images/side_menu/button.png) no-repeat;
     cursor: pointer;
@@ -38,10 +37,14 @@
     width: 57px;
   }
   
-  ul{
+  /* Container */
+  #side-menu-container{
+    color: #fefefe;
     overflow: hidden;
-    text-overflow: clip;
-    width: 270px;
+    
+    ul{
+      width: 270px;
+    }
   }
 }
 
@@ -51,10 +54,10 @@
   opacity: 0.5;
   width: 100%;
 }
-#side-menu-container.side-menu-active{
+#side-menu-wrapper.side-menu-active{
   visibility: visible;
   width: 270px;
 }
-#side-menu-button.dise-menu-active{
+#side-menu-button.side-menu-active{
   left: 200px;
 }
