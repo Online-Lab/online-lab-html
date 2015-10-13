@@ -1,3 +1,4 @@
+/* Side menu overlay */
 #side-menu-overlay{
   background: #000;
   height: 0;
@@ -9,16 +10,19 @@
   width: 0;
 }
 
+/* Side menu container */
 #side-menu-container{
   background: #20a493;
-  color: #fff;
+  color: #fefefe;
   height: 100%;
   left: 0;
   position: fixed;
   top: 0;
-  transition: width 0.5s;
+  transition: width 0.5s, visibility 0.5s;
+  visibility: hidden;
   width: 0;
   
+  /* Side menu button */
   #side-menu-button{
     background: url(/assets/images/side_menu/button.png) no-repeat;
     cursor: pointer;
@@ -30,17 +34,20 @@
     left: 0px;
     top: 200px;
     transition: left 0.5s;
+    visibility: visible;
     width: 57px;
   }
 }
 
+/* Active state styles */
 #side-menu-overlay.side-menu-active{
   height: 100%;
   opacity: 0.5;
   width: 100%;
 }
 #side-menu-container.side-menu-active{
-  width: 200px;
+  visibility: visible;
+  width: 270px;
 }
 #side-menu-button.dise-menu-active{
   left: 200px;
