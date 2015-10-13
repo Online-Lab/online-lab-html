@@ -24,9 +24,9 @@
 </div>
 
 <script>
-  //Show and hide side menu logic
   var isSideMenuActive = false;
   
+  //Show and hide side menu logic
   var showHideSideMenu = function(){
     var sideMenuOverlay = $('#side-menu-overlay'),
         sideMenuWrapper = $('#side-menu-wrapper'),
@@ -45,4 +45,9 @@
     }
     isSideMenuActive = !isSideMenuActive;
   }
+  
+  //Hide side menu when menu item was clicked
+  $('#side-menu-container ul.side-menu-list a').click(function(){
+    showHideSideMenu();
+  });
 </script>
