@@ -1,4 +1,26 @@
 <div id="side-menu-overlay"></div>
 <div id="side-menu-container">
-  <a id="side-menu-button"></a>
+  <a id="side-menu-button" onclick="sideMenuButtonClick()"></a>
 </div>
+
+<script>
+  var isSideMenuActive = false;
+  
+  var sideMenuButtonClick = function(){
+    var sideMenuOverlay = $('#side-menu-overlay'),
+        sideMenuContainer = $('#side-menu-container'),
+        sideMenuButton = $('#side-menu-button');
+    
+    if (!isSideMenuActive){
+      sideMenuContainer.addClass('side-menu-active');
+      sideMenuOverlay.addClass('side-menu-active');
+      sideMenuButton.addClass('side-menu-active');
+    }
+    else{
+      sideMenuContainer.removeClass('side-menu-active');
+      sideMenuOverlay.removeClass('side-menu-active');
+      sideMenuButton.removeClass('side-menu-active');
+    }
+    isSideMenuActive = !isSideMenuActive;
+  }
+</script>
