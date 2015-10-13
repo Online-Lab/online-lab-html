@@ -1,9 +1,15 @@
 #side-menu-overlay{
-  background: rgba(0,0,0,0.5);
-  height: 100%;
+  background: transparent;
+  height: 0;
   left: 0;
   position: fixed;
   top: 0;
+  transition: background 0.5s;
+  width: 0;
+}
+#side-menu-overlay.side-menu-active{
+  background: rgba(0,0,0,0.5);
+  height: 100%;
   width: 100%;
 }
 
@@ -14,7 +20,8 @@
   left: 0;
   position: fixed;
   top: 0;
-  width: 200px;
+  transition: width 0.5s;
+  width: 0;
   
   #side-menu-button{
     background: #20a493;
@@ -27,4 +34,7 @@
     top: 200px;
     width: 30px;
   }
+}
+#side-menu-container.side-menu-active{
+  width: 200px;
 }
