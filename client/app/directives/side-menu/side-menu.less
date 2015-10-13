@@ -45,7 +45,7 @@
     color: #fefefe;
     overflow: hidden;
     
-    ul{
+    ul.side-menu-list{
       font-family: ProximaNovaRegular;
       font-size: 14px;
       font-weight: 600;
@@ -53,9 +53,10 @@
       text-transform: uppercase;
       width: @side-menu-width;
       
-      ul{
+      ul.side-menu-sublist{
         font-size: 12px;
         font-weight: 500;
+        width: @side-menu-width;
       }
       
       a{
