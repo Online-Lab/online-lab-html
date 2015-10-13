@@ -25,11 +25,12 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <app-side-menu></app-side-menu>
     <app-header></app-header>
 
       <div ui-view=""></div>
       
-    <app-footer></app-footer>    
+    <app-footer></app-footer>
 
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
@@ -54,6 +55,7 @@
           <script src="app/directives/feedback-form/feedback-form.directive.js"></script>
           <script src="app/directives/footer/footer.directive.js"></script>
           <script src="app/directives/header/header.directive.js"></script>
+          <script src="app/directives/side-menu/side-menu.directive.js"></script>
           <script src="app/directives/team-gallery/team-gallery.directive.js"></script>
           <script src="app/factories/mailer.js"></script>
           <script src="app/partials/blog/blog.controller.js"></script>

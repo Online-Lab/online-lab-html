@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('onlinelabApp')
-  .directive('sideMenu', function () {
+  .directive('appSideMenu', function () {
     return {
       templateUrl: 'app/directives/side-menu/side-menu.html',
       restrict: 'EA',
