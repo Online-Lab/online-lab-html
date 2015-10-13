@@ -26,6 +26,51 @@
   width: 0;
   z-index: 101;
   
+  /* Container */
+  #side-menu-container{
+    color: #fefefe;
+    overflow: hidden;
+    
+    /* Menu */
+    ul.side-menu-list{
+      font-family: ProximaNovaRegular;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 40px;
+      list-style: none;
+      padding-left: 0;
+      text-transform: uppercase;
+      width: @side-menu-width;
+      
+      &>li{
+        background-position: 23px 8px;
+        background-repeat: no-repeat;
+        padding-left: 60px;
+      }
+      .side-menu-list-item-home{background-image: url(/assets/images/side_menu/home.png);}
+      .side-menu-list-item-team{background-image: url(/assets/images/side_menu/about.png);}
+      .side-menu-list-item-development{background-image: url(/assets/images/side_menu/development.png);}
+      .side-menu-list-item-portfolio{background-image: url(/assets/images/side_menu/portfolio.png);}
+      .side-menu-list-item-blog{background-image: url(/assets/images/side_menu/blog.png);}
+      .side-menu-list-item-contact{background-image: url(/assets/images/side_menu/contact.png);}
+      
+      /* Submenu */
+      ul.side-menu-sublist{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 30px;
+        list-style: none;
+        margin: 5px 0;
+        padding-left: 20px;
+        width: @side-menu-width;
+      }
+      
+      a{
+        color: #fefefe;
+      }
+    }
+  }
+  
   /* Show/hide button */
   #side-menu-button{
     background: url(/assets/images/side_menu/button.png) no-repeat;
@@ -40,31 +85,6 @@
     transition: left @side-menu-animation-duration;
     visibility: visible;
     width: 57px;
-  }
-  
-  /* Container */
-  #side-menu-container{
-    color: #fefefe;
-    overflow: hidden;
-    
-    ul.side-menu-list{
-      font-family: ProximaNovaRegular;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 40px;
-      text-transform: uppercase;
-      width: @side-menu-width;
-      
-      ul.side-menu-sublist{
-        font-size: 12px;
-        font-weight: 500;
-        width: @side-menu-width;
-      }
-      
-      a{
-        color: #fefefe;
-      }
-    }
   }
 }
 
