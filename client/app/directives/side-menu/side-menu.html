@@ -1,25 +1,27 @@
 <div id="side-menu-overlay" onclick="showHideSideMenu()"></div>
-<div id="side-menu-container">
-  <!-- Button -->
-  <a id="side-menu-button" onclick="showHideSideMenu()"></a>
-  
-  <!-- Menu -->
-  <ul>
-    <li>Главная</li>
-    <li>О нас</li>
-    <li>Делаем
-      <ul>
-        <li>Разработка</li>
-        <li>Мобильные приложения</li>
-        <li>Маркетинг</li>
-        <li>Электроника</li>
-      </ul>
-    </li>
-    <li>Портфолио</li>
-    <li>Блог</li>
-    <li>Контакты</li>
-  </ul>
-  
+<div id="side-menu-wrapper">
+  <div id="side-menu-container">
+    <!-- Button -->
+    <a id="side-menu-button" onclick="showHideSideMenu()"></a>
+    
+    <!-- Menu -->
+    <ul>
+      <li>Главная</li>
+      <li>О нас</li>
+      <li>Делаем
+        <ul>
+          <li>Разработка</li>
+          <li>Мобильные приложения</li>
+          <li>Маркетинг</li>
+          <li>Электроника</li>
+        </ul>
+      </li>
+      <li>Портфолио</li>
+      <li>Блог</li>
+      <li>Контакты</li>
+    </ul>
+    
+  </div>
 </div>
 
 <script>
@@ -28,6 +30,7 @@
   
   var showHideSideMenu = function(){
     var sideMenuOverlay = $('#side-menu-overlay'),
+        sideMenuWrapper = $('#side-menu-wrapper'),
         sideMenuContainer = $('#side-menu-container'),
         sideMenuButton = $('#side-menu-button');
     
