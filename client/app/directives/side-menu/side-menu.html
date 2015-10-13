@@ -1,12 +1,12 @@
-<div id="side-menu-overlay"></div>
+<div id="side-menu-overlay" onclick="showHideSideMenu()"></div>
 <div id="side-menu-container">
-  <a id="side-menu-button" onclick="sideMenuButtonClick()"></a>
+  <a id="side-menu-button" onclick="showHideSideMenu()"></a>
 </div>
 
 <script>
   var isSideMenuActive = false;
   
-  var sideMenuButtonClick = function(){
+  var showHideSideMenu = function(){
     var sideMenuOverlay = $('#side-menu-overlay'),
         sideMenuContainer = $('#side-menu-container'),
         sideMenuButton = $('#side-menu-button');
