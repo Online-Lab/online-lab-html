@@ -12,11 +12,12 @@ angular.module('onlinelabApp')
         $scope.lastProjectsDisplayCount = $scope.lastProjectsList.length;
     });
     
+    //Show more button logic
     $scope.showMoreProjects = function(){
       if ($scope.lastProjectsList.length <= 3) 
         return;
       
-      if ($scope.lastProjectsDisplayCount > $scope.lastProjectsList.length)
+      if ($scope.lastProjectsDisplayCount >= $scope.lastProjectsList.length)
       {
         $scope.lastProjectsDisplayCount = 3;
         if ($scope.lastProjectsList.length < 3)
