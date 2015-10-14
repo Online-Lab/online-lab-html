@@ -13,6 +13,17 @@ angular.module('onlinelabApp')
     });
     
     $scope.showMoreProjects = function(){
+      if ($scope.lastProjectsList.length <= 3) 
+        return;
       
+      if ($scope.lastProjectsDisplayCount > $scope.lastProjectsList.length)
+      {
+        $scope.lastProjectsDisplayCount = 3;
+        if ($scope.lastProjectsList.length < 3)
+          $scope.lastProjectsDisplayCount = $scope.lastProjectsList.length;
+      }
+      else{
+        $scope.lastProjectsDisplayCount += 3;
+      }
     };
   });
