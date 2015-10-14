@@ -251,7 +251,7 @@
 <div class="container container-store-last-projects p-t-10 p-b-30">
   <p class="h2-like column span-12 m-t-30 m-b-10">Последние разработанные интернет-магазины</p>
   <div class="store-proj-preview column span-4 m-t-20 m-b-20" ng-repeat="item in lastProjectsList | limitTo: lastProjectsDisplayCount">
-    <a href="#">
+    <a ui-sref="project-details({projectId: item.id})">
       <div class="store-proj-preview-image m-b-20" style="background-image: url({{item.card_image}});">
         <!-- <img ng-src="{{item.card_image}}" alt="" class="m-b-20"> -->
       </div>
