@@ -2,7 +2,17 @@
 
 angular.module('onlinelabApp')
   .controller('StoreCtrl', function ($scope, Project) {
-    //Get last prijects
-    $scope.lastProjectsList = Project.query();
-    console.dir($scope.lastProjectsList);
+    //Count of projects to display
+    $scope.lastProjectsDisplayCount = 3;
+    
+    //Get last projects
+    $scope.lastProjectsList = Project.query(function(){
+      //Correct count of projects to display
+      if ($scope.lastProjectsList.length < 3)
+        $scope.lastProjectsDisplayCount = $scope.lastProjectsList.length;
+    });
+    
+    $scope.showMoreProjects = function(){
+      
+    };
   });
