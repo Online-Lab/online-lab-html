@@ -29,4 +29,5 @@ angular.module('onlinelabApp')
         $scope.lastProjectsDisplayCount += 3;
       }
     };
+    
   });
