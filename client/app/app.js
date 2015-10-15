@@ -29,7 +29,7 @@ angular.module('onlinelabApp', [
       templateUrl: 'app/partials/development/development.html',
       controller: 'DevelopmentCtrl',
       ncyBreadcrumb: {
-        label: 'Разработка'
+        label: 'Web разработка'
       }
       })    
 	  .state('projects', {
@@ -103,7 +103,8 @@ angular.module('onlinelabApp', [
     .state('store', {
         url: '/store',
         templateUrl: 'app/partials/store/store.html',
-        controller: 'StoreCtrl'
+        controller: 'StoreCtrl',
+        ncyBreadcrumb: { label: 'Интернет магазины' }
       });
 	
 	
