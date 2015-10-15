@@ -6,9 +6,7 @@ angular.module('onlinelabApp').directive('title', ['$rootScope', '$timeout',
         var listener = function(event, toState) {
 
           $timeout(function() {
-            $rootScope.title = (toState.title) 
-            ? toState.title
-            : 'Сетевая лаборатория';
+            $rootScope.title = (toState.title) ? toState.title : 'Сетевая лаборатория';
           });
         };
 

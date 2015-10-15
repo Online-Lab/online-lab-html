@@ -72,7 +72,8 @@ angular.module('onlinelabApp', [
         ncyBreadcrumb: {
           label: '{{projectName}}',
           parent: 'projects'
-        }
+        },
+        title: 'Портфолио – Сетевая Лаборатория'
       })
       .state('blog', {
         url: '/blog',
