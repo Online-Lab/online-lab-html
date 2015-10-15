@@ -1,3 +1,5 @@
-# robotstxt.org
-
 User-agent: *
+Disallow:
+
+Host: www.online-lab.ru
+Sitemap: http://online-lab.ru/sitemap.xml
