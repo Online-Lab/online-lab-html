@@ -11,20 +11,20 @@ angular.module('onlinelabApp', [
   .config(function($breadcrumbProvider) {
     $breadcrumbProvider.setOptions({
       prefixStateName: 'main',
-	  templateUrl: 'app/veiws/breadcrumbs_tpl.html'
+      templateUrl: 'app/veiws/breadcrumbs_tpl.html'
     });
   })
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-	  $stateProvider
+    $stateProvider
       .state('main', {
-		  url: '/',
-		  templateUrl: 'app/partials/main/main.html',
-		  controller: 'MainCtrl',
-		  ncyBreadcrumb: {
-			  label: 'Главная'
-		  }
+      url: '/',
+      templateUrl: 'app/partials/main/main.html',
+      controller: 'MainCtrl',
+      ncyBreadcrumb: {
+        label: 'Главная'
+      }
       })
-	  .state('development', {
+    .state('development', {
       url: '/development',
       templateUrl: 'app/partials/development/development.html',
       controller: 'DevelopmentCtrl',
@@ -32,21 +32,22 @@ angular.module('onlinelabApp', [
         label: 'Web разработка'
       }
       })    
-	  .state('projects', {
-		  url: '/projects',
-		  templateUrl: 'app/partials/projects/projects.html',
-		  controller: 'ProjectsCtrl',
-		  ncyBreadcrumb: {
-			  label: 'Портфолио'
-		  }
+    .state('projects', {
+      url: '/projects',
+      templateUrl: 'app/partials/projects/projects.html',
+      controller: 'ProjectsCtrl',
+      ncyBreadcrumb: {
+        label: 'Портфолио'
+      }
       })
-	  .state('project-details', {
-		  url: '/projects/:projectId',
-		  templateUrl: 'app/partials/project-details/project-details.html',
-		  controller: 'ProjectDetailsCtrl',
-		  ncyBreadcrumb: {
-			  label: 'Проект'
-		  }
+    .state('project-details', {
+      url: '/projects/:projectId',
+      templateUrl: 'app/partials/project-details/project-details.html',
+      controller: 'ProjectDetailsCtrl',
+      ncyBreadcrumb: {
+        label: 'Проект',
+        parent: 'projects'
+      }
       })
     .state('blog', {
       url: '/blog',
@@ -106,9 +107,9 @@ angular.module('onlinelabApp', [
         controller: 'StoreCtrl',
         ncyBreadcrumb: { label: 'Интернет магазины' }
       });
-	
-	
-	$urlRouterProvider
+  
+  
+  $urlRouterProvider
       .otherwise('/');
 
     //$locationProvider.html5Mode(true);
