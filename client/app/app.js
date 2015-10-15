@@ -15,6 +15,7 @@ angular.module('onlinelabApp', [
     });
   })
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.html5Mode(false).hashPrefix('!');
     $stateProvider
       .state('main', {
         url: '/',
