@@ -57,7 +57,7 @@ angular.module('onlinelabApp', [
         description: 'Услуги интернет-маркетинга: поисковое продвижение сайтов, маркетинговые исследования, управление репутацией. Сетевая лаборатория. Телефон: +7(499) 348-2443'
       })
       .state('store', {
-        url: '/store',
+        url: '/development/store',
         templateUrl: 'app/partials/store/store.html',
         controller: 'StoreCtrl',
         ncyBreadcrumb: { label: 'Интернет магазины' },
