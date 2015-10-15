@@ -45,7 +45,7 @@ angular.module('onlinelabApp', [
       templateUrl: 'app/partials/project-details/project-details.html',
       controller: 'ProjectDetailsCtrl',
       ncyBreadcrumb: {
-        label: 'Проект',
+        label: '{{projectName}}',
         parent: 'projects'
       }
       })

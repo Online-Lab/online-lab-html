@@ -2,6 +2,9 @@
 
 angular.module('onlinelabApp')
   .controller('ProjectDetailsCtrl', function ($scope, $http, $state, Project) {
+    
+    $scope.projectName = "";
+    
     //Current project id
     $scope.projectId = $state.params.projectId;
     
@@ -11,6 +14,7 @@ angular.module('onlinelabApp')
       //Save project header_image to state
       $state.project_image = $scope.project.header_image;
       
-      console.log($state.project_image);
+      //Breadcrumbs
+      $scope.projectName = $scope.project.name;
     });
   });
