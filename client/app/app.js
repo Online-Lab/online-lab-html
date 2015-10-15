@@ -60,7 +60,10 @@ angular.module('onlinelabApp', [
         url: '/development/store',
         templateUrl: 'app/partials/store/store.html',
         controller: 'StoreCtrl',
-        ncyBreadcrumb: { label: 'Интернет магазины' },
+        ncyBreadcrumb: { 
+          label: 'Интернет магазины',
+          parent: 'development'
+        },
         title: 'Разработка интернет-магазина | Создание сайта интернет-магазина под ключ',
         description: 'Услуги по созданию сложных интернет-магазинов под ключ в Москве. Сетевая лаборатория. Телефон: +7(499) 348-2443'
       })
