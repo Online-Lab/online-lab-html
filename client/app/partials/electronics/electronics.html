@@ -32,27 +32,16 @@
 <!-- Last projects -->
 <div class="container container-electronics-last p-b-30">
   <p class="h2-like column span-12 m-t-30 m-b-10">Последняя разработаная электроника</p>
-  <div class="column span-4 m-t-20 m-b-20 electronics-proj-preview">
-    <a href="#">
-      <img src="/assets/images/mobile/last1.jpg" alt="" class="m-b-20">
-      <p>Калькулятор</p>
-    </a>
-  </div>
-  <div class="column span-4 m-t-20 m-b-20 electronics-proj-preview">
-    <a href="#">
-      <img src="/assets/images/mobile/last2.jpg" alt="" class="m-b-20">
-      <p>Телефон</p>
-    </a>
-  </div>
-  <div class="column span-4 last m-t-20 m-b-20 electronics-proj-preview">
-    <a href="#">
-      <img src="/assets/images/mobile/last2.jpg" alt="" class="m-b-20">
-      <p>Мобильный телефон</p>
+  <div class="electronics-proj-preview column span-4 m-t-20 m-b-20" ng-repeat="item in lastProjectsList | limitTo: lastProjectsDisplayCount">
+    <a ui-sref="project-details({projectId: item.id})">
+      <div class="electronics-proj-preview-image m-b-20" style="background-image: url({{item.card_image}});">
+      </div>
+      <p class="electronics-proj-preview-name" ng-bind="item.name"></p>
     </a>
   </div>
 
   <!-- View all -->
   <div class="column span-12 m-t-20 m-b-20">
-    <a href="#" class="view-all-electronics-projects-btn">Посмотреть все</a>
+    <a class="view-all-electronics-projects-btn" ng-click="showMoreProjects()" ng-show="lastProjectsList.length > 3" ng-bind="lastProjectsDisplayCount >= lastProjectsList.length ? 'Скрыть' : 'Посмотреть еще'"></a>
   </div>
 </div>
