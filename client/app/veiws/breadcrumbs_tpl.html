@@ -1,6 +1,6 @@
-<div class = "content-block breadcrumbs">
-	<div class = "container">
-	<ol class="breadcrumb_content">
+<div class = "breadcrumbs-wrapper">
+	<div class = "container breadcrumbs-container">
+	<ol class="breadcrumb-content">
 		<li ng-repeat="step in steps | limitTo:(steps.length-1)">
 			<a href="{{step.ncyBreadcrumbLink}}" ng-bind-html="step.ncyBreadcrumbLabel"></a>
 		</li>
