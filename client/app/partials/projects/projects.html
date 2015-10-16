@@ -1,35 +1,26 @@
-<div class = "content-block">
-	<div class = "container" >
-		<h1>Портфолио</h1>
-		
-		<!-- Filter menu -->
-		<div class = "portfolio_menu"> 
-			<div id="filters" class="button-group mg_b_20 mg_t_50">  
-				<button class="button is-checked" data-filter="*">Все вместе</button>
-			  <button class="button" data-filter="store">Интернет-магазин</button>
-			  <button class="button" data-filter="resource">Ресурс</button>
-			  <button class="button" data-filter="portal">Корпоративный портал</button>
-			  <button class="button" data-filter="mobile_app">Мобильное приложение</button>
-			  <button class="button" data-filter="marketing">Маркетинг</button>
-			  <button class="button" data-filter="electronics">Электроника</button>
-			  <span class = "active_filter_point"></span>
-			</div>
+<!-- Items for filtering -->
+<div class="container container-portfolio p-t-30 p-b-30">
+	<h1 class="column span-12 m-t-10 m-b-20">Портфолио</h1>
+	<!-- Filter menu -->
+	<div class = "portfolio-menu column span-12 m-t-10">
+		<div id="filters" class="button-group">
+			<button class="button is-checked" data-filter="*">Все вместе</button>
+		  <button class="button" data-filter="store">Интернет-магазин</button>
+		  <button class="button" data-filter="resource">Ресурс</button>
+		  <button class="button" data-filter="portal">Корпоративный портал</button>
+		  <button class="button" data-filter="mobile_app">Мобильное приложение</button>
+		  <button class="button" data-filter="marketing">Маркетинг</button>
+		  <button class="button" data-filter="electronics">Электроника</button>
+		  <span class = "active_filter_point"></span>
 		</div>
-
-		<!-- Items for filtering -->
-		<div class="container container-portfolio p-b-30">
-		
-			<div id="portfolio-items" class="isotope">
-				<a ui-sref="project-details({projectId: item.id})" class="element-item" style="background-image:url({{item.card_image}})" data-filter="{{item.kind}}" ng-repeat="item in portfolioList">
-					<div class="item-description">
-						<div class="item-description-caption" ng-bind="item.name"></div>
-						<!-- <div class="item-description-text" ng-bind="item.description_short"></div> -->
-					</div>
-				</a>
-
+	</div>
+	<!-- Portfolio items -->
+	<div id="portfolio-items" class="isotope column span-12 m-t-20">
+		<a ui-sref="project-details({projectId: item.id})" class="element-item" style="background-image:url({{item.card_image}})" data-filter="{{item.kind}}" ng-repeat="item in portfolioList">
+			<div class="item-description">
+				<div class="item-description-caption" ng-bind="item.name"></div>
 			</div>
-		</div>
-		
+		</a>
 	</div>
 </div>
 
