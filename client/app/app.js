@@ -68,6 +68,14 @@ angular.module('onlinelabApp', [
         title: 'Разработка интернет-магазина | Создание сайта интернет-магазина под ключ',
         description: 'Услуги по созданию сложных интернет-магазинов под ключ в Москве. Сетевая лаборатория. Телефон: +7(499) 348-2443'
       })
+      .state('resources', {
+        url: '/resources',
+        templateUrl: 'app/partials/resources/resources.html',
+        controller: 'ResourcesCtrl',
+        ncyBreadcrumb: { 
+          label: 'Интернет ресурсы'
+        }
+      })
       .state('projects', {
         url: '/projects',
         templateUrl: 'app/partials/projects/projects.html',
