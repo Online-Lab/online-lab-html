@@ -136,7 +136,7 @@ angular.module('onlinelabApp', [
       var element =
            findDomElement('#' + hash)|| 
            findDomElement('a[name="' + hash + '"]')||
-           angular.element(window.document.body);
+           angular.element(window.document.documentElement);
       $uiViewScroll(element);
       
       function findDomElement (selector) {
