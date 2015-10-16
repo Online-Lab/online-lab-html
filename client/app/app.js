@@ -29,7 +29,7 @@ angular.module('onlinelabApp', [
         url: '/development',
         templateUrl: 'app/partials/development/development.html',
         controller: 'DevelopmentCtrl',
-        ncyBreadcrumb: { label: 'Web разработка' },
+        ncyBreadcrumb: { label: 'Web-разработка' },
         title: 'Создание сайтов | Разработка интернет-проектов – Online-lab',
         description: 'Сетевая лаборатория – создание интернет-сайтов в Москве, разработка веб-проектов различной сложности. Телефон: +7(499) 348-2443'
       })
@@ -53,7 +53,7 @@ angular.module('onlinelabApp', [
         url: '/marketing',
         templateUrl: 'app/partials/marketing/marketing.html',
         controller: 'MarketingCtrl',
-        ncyBreadcrumb: { label: 'Интернет маркетинг' },
+        ncyBreadcrumb: { label: 'Интернет-маркетинг' },
         title: 'Комплексный Интернет-маркетинг | Агентство  интернет-продвижения и маркетинга Online-lab',
         description: 'Услуги интернет-маркетинга: поисковое продвижение сайтов, маркетинговые исследования, управление репутацией. Сетевая лаборатория. Телефон: +7(499) 348-2443'
       })
@@ -62,7 +62,7 @@ angular.module('onlinelabApp', [
         templateUrl: 'app/partials/store/store.html',
         controller: 'StoreCtrl',
         ncyBreadcrumb: { 
-          label: 'Интернет магазины',
+          label: 'Интернет-магазины',
           parent: 'development'
         },
         title: 'Разработка интернет-магазина | Создание сайта интернет-магазина под ключ',
@@ -73,7 +73,7 @@ angular.module('onlinelabApp', [
         templateUrl: 'app/partials/resources/resources.html',
         controller: 'ResourcesCtrl',
         ncyBreadcrumb: { 
-          label: 'Интернет ресурсы'
+          label: 'Интернет-ресурсы'
         }
       })
       .state('projects', {
