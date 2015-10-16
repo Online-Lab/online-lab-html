@@ -71,3 +71,21 @@
     </li>
   </ul>
 </div>
+
+<!-- Last projects block -->
+<div class="container container-resources-last-projects p-t-10 p-b-30">
+  <p class="h2-like column span-12 m-t-30">Последние разработанные интернет-ресурсы</p>
+  <div class="resources-proj-preview column span-4 m-t-20 m-b-20" ng-repeat="item in lastProjectsList | limitTo: lastProjectsDisplayCount">
+    <a ui-sref="project-details({projectId: item.id})">
+      <div class="resources-proj-preview-image m-b-20" style="background-image: url({{item.card_image}});">
+        <!-- <img ng-src="{{item.card_image}}" alt="" class="m-b-20"> -->
+      </div>
+      <p class="resources-proj-preview-name" ng-bind="item.name"></p>
+    </a>
+  </div>
+
+  <!-- View all -->
+  <div class="column span-12 m-t-20 m-b-30">
+    <a class="view-all-resources-projects-btn" ng-click="showMoreProjects()" ng-show="lastProjectsList.length > 3" ng-bind="lastProjectsDisplayCount >= lastProjectsList.length ? 'Скрыть' : 'Посмотреть еще'"></a>
+  </div>
+</div>
