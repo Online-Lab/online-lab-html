@@ -230,6 +230,7 @@
 </div>
 
 
+
 <!-- Scrolling to form -->
 <script>
   //Easing functions: borrowed from jQuery easing plugin
@@ -246,15 +247,15 @@
   };
   
   //Scrolling to form function
-  var scrollToForm = function(){
-    $(window).scrollTo($('#form-anchor'),{
+  function scrollToForm(){
+    $("html").scrollTo($('#form-anchor'),{
       duration: 800,
       easing: 'easeInOutSine',
       onAfter(){
         $(".main-feedback-form-name").focus();
       }
     });
-  };
+  }
   
   $("#main-banner-request-button").on("click", function(){
     scrollToForm();
@@ -264,10 +265,6 @@
 <!-- Hero slider script -->
 <script>
 jQuery(document).ready(function($){
-  Raven.captureMessage("Hero slider initialization", {level: "info", tags: {userAgent: navigator.userAgent}});
-  
-  try{
-  
   var slidesWrapper = $('.cd-hero-slider');
 
   //check if a .cd-hero-slider exists in the DOM 
@@ -299,11 +296,6 @@ jQuery(document).ready(function($){
         updateNavigationMarker(navigationMarker, selectedPosition+1);
       }
     });
-  }
-  
-  }
-  catch(ex){
-    Raven.captureException(ex, {tags: {userAgent: navigator.userAgent}});
   }
 
   function nextSlide(visibleSlide, container, pagination, n){
