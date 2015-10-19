@@ -2,125 +2,12 @@
 
 	<!-- Main content -->
 	<div class = "project-content">
+		<!-- Project name -->
 		<p class="h1-like" ng-bind="project.name"></p>
-		<div class = "portfolio_menu"> 
-			<div id="filters" class="button-group mg_b_20 mg_t_50">  
-				<button class="button is-checked" data-filter=".description">Описание</button>
-				<button class="button" data-filter=".creating">Процесс создания</button>
-				<button class="button" data-filter=".other">Другая вкладка</button>
-
-				<span class = "activ_filter_point"></span>
-			</div>
-		</div>
-
-<!-- 		<div class="isotope">
-			<div class = "element-item description">
-			Описание проекта
-			</div>
-			<div class = "element-item creating">
-			Описание процесса создания
-			</div>
-			<div class = "element-item other">
-			Другая вкладка
-			</div>
-		</div> -->
-
-		
-		<div class="project-description" ng-bind-html="project.description">
-<!-- 			<p class="h2-like">Задача:</p>
-			<p>
-				У большинства так не бывает, но у нас слова «молодая», «эффективная» и «команда разработчиков» очетаются ультра-гармонично. Это потому, что мы амбициозные, работаем слаженно и используем новые прогрессивные технологии, что в совокупности даёт максимальный эффект. 
-			</p>
-			<img src="/assets/images/project/project1_1.jpg" alt="">
-			<p>
-				А молодая не потому, что студенты (средний возраст сотрудников – 27 лет), а потому, что в ногу со временем. Высоконагруженные проекты, объединяющие в себе сложный веб-портал, мобильное приложение, гаджет, связанный с Вашим продуктом, и качественное продвижение всего вышеперечисленного в сети – это к нам. 
-			</p>
-			<p class="h2-like">Второй заголовок</p>
-			<p>
-				Наш уровень профессионализма, опыт и используемые технологии дают уверенность в том, что проект будет работать хорошо. Эта уверенность передаётся и Вам!
-			</p>
-			<img src="/assets/images/project/project1_2.jpg" alt=""> -->
-		</div>
+		<!-- Project description -->
+		<div class="project-description" ng-bind-html="project.description"></div>
 	</div>
 
 	<!-- Client and team info -->
-	<div class="project-info" ng-bind-html="project.side_column">
-		<!-- Client -->
-<!-- 		<div class="project-client">
-			<p class="h2-like">Клиент:</p>
-			<img src="/assets/images/project/project1_client.jpg">
-			<p class="client">Жизнь будущего</p>
-			<img src="/assets/images/project/project1_review.jpg" alt="">
-		</div> -->
-
-		<!-- Team -->
-<!-- 		<div class="project-team">
-			<p class="h2-like">Над проектом работали:</p>
-			<p class="h3-like">Дизайн:</p><p>Сергей Панфилов</p>
-			<p class="h3-like">Верстка:</p><p>Дмитрий Ковылев, Александр Горожан</p>
-			<p class="h3-like">Код:</p><p>Сергей Малевич</p>
-			<p class="h3-like">Контент-менеджер:</p><p>Лариса Еременко</p>
-			<p class="h3-like">Менеджер проекта:</p><p>Федор Аристов</p>
-		</div> -->
-
-		<!-- Design -->
-<!-- 		<div class="project-design">
-			<p class="h3-like">Дизайн:</p>
-			<p>
-				Наш уровень профессионализма, опыт и используемые технологии дают уверенность в том, что проект будет работать хорошо.
-			</p>
-			<hr>
-			<img src="/assets/images/project/project1_small.jpg" alt="">
-		</div> -->
-
-<!-- 		<div class="project-promotion">
-			<p class="h3-like">Продвижение:</p>
-			<p>
-				Наш уровень профессионализма, опыт и используемые технологии дают уверенность в том, что проект будет работать хорошо. 
-			</p>
-		</div> -->
-		<hr>
-	</div>
+	<div class="project-info" ng-bind-html="project.side_column"><div>
 </div>
-
-<script>
-// 	// external js: isotope.pkgd.js
-// $( document ).ready( function() {
-	
-// 	button_position = $('#filters .is-checked').position().left;
-// 	button_width = $('#filters .is-checked').width();
-// 	point_width = $(".activ_filter_point").width;
-// 	point_left = button_position + button_width / 2 + 4;// + point_width / 2;
-	
-// 	$(".activ_filter_point").css({'left':point_left});
-	
-// 		var $container = $('.isotope');
-// 		$container.isotope();
-// 		// filter buttons
-// 		$('#filters button').click(function(){
-// 			var $this = $(this);
-// 			// don't proceed if already selected
-// 			if ( !$this.hasClass('is-checked') ) {
-// 				$this.parents('#filters').find('.is-checked').removeClass('is-checked');
-// 				$this.addClass('is-checked');
-// 			}
-// 			var selector = $this.attr('data-filter');
-// 			$container.isotope({  itemSelector: '.element-item', filter: selector });
-			
-			
-// 			button_position = $this.position().left;
-// 			button_width = $this.width();
-// 			point_width = $(".activ_filter_point").width;
-// 			point_left = button_position + button_width / 2 + 4;// + point_width / 2;
-			
-// 			$(".activ_filter_point").css({'left':point_left});
-// 			return false;
-			
-			
-// 		});    
-
-		
-// 		});
-	
-	
-	</script>
