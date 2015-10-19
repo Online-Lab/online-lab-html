@@ -19,6 +19,15 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
+  
+  <script src="https://cdn.ravenjs.com/1.1.19/jquery,native/raven.min.js"></script>
+  <script>
+    Raven.config('http://7cc5e1a2c5a64841998d955e8e06b85a@sentry.online-lab.ru/7', {}).install();
+    // setTimeout(function(){
+    //   Raven.captureMessage('OnlineLab: Hello!', {level: "info", tags: {userAgent: navigator.userAgent}});
+    // }, 0);
+  </script>
+  
   <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
