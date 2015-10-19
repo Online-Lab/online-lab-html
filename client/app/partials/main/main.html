@@ -5,7 +5,7 @@
     <p class="main-banner-text">Высоконагруженные проекты, объединяющие в себе сайт, мобильное приложение, гаджет, связанные с вашим продуктом, а также качественное продвижение всего этого в сети - это к нам</p>
     
     <div class="main-banner-request-button-border">
-      <a class="main-banner-request-button" onclick="scrollToForm()">Оставить заявку</a>
+      <a id="main-banner-request-button" class="main-banner-request-button">Оставить заявку</a>
     </div>
   </div>
 </div>
@@ -245,7 +245,7 @@
     return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
   };
   
-  //Scrolling to form
+  //Scrolling to form function
   var scrollToForm = function(){
     $(window).scrollTo($('#form-anchor'),{
       duration: 800,
@@ -255,6 +255,10 @@
       }
     });
   };
+  
+  $("#main-banner-request-button").on("click", function(){
+    scrollToForm();
+  });
 </script>
 
 <!-- Hero slider script -->
