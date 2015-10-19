@@ -9,27 +9,34 @@
     .main-font;
     margin: 0;
   }
-
+  
   .mobile-advantage{
-    .bold;
-    color: #000;
-    font-size: 20px;
-  }
-
-  .mobile-advantage-methods{
-    margin: 0;
-    padding: 0;
-    p{
+    & > p{
+      padding-left: 200px;
+    }
+    
+    .mobile-advantage-title{
       .bold;
       color: #000;
+      font-size: 20px;
     }
-    li{
-      background: url(/assets/images/mobile/list-marker.png) 0 center no-repeat;
-      color: @green-color;
-      font-size: 16px;
-      line-height: 30px;
-      list-style: none;
-      padding: 0 0 0 21px;
+
+    .mobile-advantage-methods{
+      margin: 0;
+      padding: 0 0 0 200px;
+      
+      p{
+        .bold;
+        color: #000;
+      }
+      li{
+        background: url(/assets/images/mobile/list-marker.png) 0 center no-repeat;
+        color: @green-color;
+        font-size: 16px;
+        line-height: 30px;
+        list-style: none;
+        padding: 0 0 0 21px;
+      }
     }
   }
 
