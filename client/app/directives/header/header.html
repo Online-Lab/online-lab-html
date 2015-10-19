@@ -66,12 +66,13 @@
 <div class="under-header-project" ng-show="state.current.name == 'project-details' && state.project_image">
 	<img ng-src="{{state.project_image}}" ng-show="state.project_image" alt="">
 </div>
+<!-- Header image for contact page -->
+<div class="under-header-contact" ng-show="state.current.name == 'contact'">
+</div>
 <!-- Header image -->
 <div ng-class="{'under-header-blogpost': state.current.name == 'blogpost',
-								'under-header-contact': state.current.name == 'contact',
 								'under-header-vacancies': state.current.name == 'vacancies'}" 
 		 ng-show="state.current.name == 'blogpost' || 
-		 					state.current.name == 'contact' || 
 		 					state.current.name == 'vacancies'">
 		 <div class="under-header-content">Заголовок записи</div>
  </div>
