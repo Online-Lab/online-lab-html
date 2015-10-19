@@ -30,8 +30,11 @@ angular.module('onlinelabApp')
       }
     ];
 
-    $scope.selectMark = function(mark){
+    $scope.showCityInfo = function(mark){
       $scope.selectedMark = mark;
-      console.log("Click:" + $scope.selectedMark.city);
+    }
+    
+    $scope.hideCityInfo = function(){
+      $scope.selectedMark = undefined;
     }
   });

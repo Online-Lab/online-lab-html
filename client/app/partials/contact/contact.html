@@ -21,11 +21,12 @@
   </div>
 
   <div class="contact-map column span-12 m-t-30">
-    <img src="/assets/images/contact/map.png" alt="">
+    <!-- Map -->
+    <img src="/assets/images/contact/map.png" alt="" ng-click="hideCityInfo()">
 
     <!-- Marks -->
     <div class="map-object" ng-repeat="mark in marks" ng-style="{left: mark.pos.x, top: mark.pos.y}" ng-class="{'map-object-selected': selectedMark == mark}"
-         ng-click="selectMark(mark)">
+         ng-click="showCityInfo(mark)">
       <img src="/assets/images/contact/ico-home.png" alt="">
     </div>
 
@@ -34,7 +35,7 @@
          ng-class="{'contact-tooltip-visible': selectedMark != undefined}"
          ng-style="{left: selectedMark.pos.x, top: selectedMark.pos.y}">
       <!-- Close btn -->
-      <a class="contact-tooltip-close-btn" ng-click="selectedMark = undefined">X</a>
+      <a class="contact-tooltip-close-btn" ng-click="hideCityInfo()">X</a>
       <!-- Info -->
       <table class="contact-tooltip-info">
         <tr>
