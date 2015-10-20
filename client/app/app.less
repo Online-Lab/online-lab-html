@@ -4,45 +4,6 @@
 
 @fa-font-path: '/bower_components/font-awesome/fonts';
 
-
-/**
- * App-wide Styles
- */
-.generate_margin_classes(100);
-.generate_margin_classes(@n, @i: 0) when (@i =< @n) {
-	.mg_l_@{i} {
-		margin-left: (1px * @i)!important;
-	}
-	.mg_r_@{i} {
-		margin-right: (1px * @i) !important;
-	}
-	.mg_t_@{i} {
-		margin-top: (1px * @i) !important;
-	}
-	.mg_b_@{i} {
-		margin-bottom: (1px * @i) !important;
-	}
-	.generate_margin_classes(@n, (@i + 5));
-}
-
-.generate_padding_classes(100);
-.generate_padding_classes(@n, @i: 0) when (@i =< @n) {
-	.pd_l_@{i} {
-		padding-left: (1px * @i)  !important;
-	}
-	.pd_r_@{i} {
-		padding-right: (1px * @i) !important;
-	}
-	.pd_t_@{i} {
-		padding-top: (1px * @i) !important;
-	}
-	.pd_b_@{i} {
-		padding-bottom: (1px * @i) !important;
-	}
-  .generate_padding_classes(@n, (@i + 5));
-}
-
-   
 /* Reset tags */
 @import '../assets/css/reset.less';
 /* Import fonts */
