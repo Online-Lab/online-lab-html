@@ -4,9 +4,13 @@ angular.module('onlinelabApp')
   .controller('MainCtrl', function ($scope, $http, Mailer, Project) {
 
     //Get portfolio
-    $scope.portfolioList = Project.query(function(){
+    Project.query(function(data){
       //Current item
+      $scope.portfolioList = data.data;
       $scope.currentPortfolioItem = $scope.portfolioList[0];
+    },
+    function(error){
+      
     });
     
     //Click project in portfolio slider
