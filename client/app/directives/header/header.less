@@ -135,6 +135,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
             }
           }
         }
+        
+        /* Submenu arrow styling */
+        li.top-menu-sub-development-sub-item > a{
+          position: relative;
+        }
+        li.top-menu-sub-development-sub-item > a:after{
+          color: #9b9b9b;
+          /*content: '▶';*/
+          content: '>';
+          display: block;
+          font-size: 16px;
+          line-height: 100%;
+          padding: 12px 45px 0 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
       }      
     }
 
