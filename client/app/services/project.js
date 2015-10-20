@@ -9,6 +9,7 @@ app.factory('Project', function($resource, $http){
       }).then(successCallback, errorCallback);
     },
     get: function(params, successCallback, errorCallback){
+      //doesn't work without last slash in url
       $http({
         method: 'GET',
         url: 'http://onlinelab-django.production-dokku-1.online-lab.ru/projects/' + params.projectId + "/"
