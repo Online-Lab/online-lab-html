@@ -83,12 +83,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         }
         
         /* Submenus */
+        li.top-menu-sub-development-sub-item,
+        li.top-menu-sub-marketing-sub-item{
+          position: relative;
+        }
         ul.top-menu-sub-development,
-        ul.top-menu-sub-development-sub-web{
+        ul.top-menu-sub-development-sub-web,
+        ul.top-menu-sub-marketing-sub-smm{
           background-color: #d9f0ec;
           display: none;
           list-style: none;
-          padding: 10px 0px 0 0;
+          padding: 0;
           position: absolute;
           text-align: left;
 
@@ -96,7 +101,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
             padding:0 20px 0 0;
           }
         }
-        ul.top-menu-sub-development-sub-web{
+        ul.top-menu-sub-development{
+          padding: 10px 0 0 0;
+        }
+        ul.top-menu-sub-development-sub-web,
+        ul.top-menu-sub-marketing-sub-smm{
           left: 100%;
           top: 0;
         }
@@ -134,14 +143,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
                 display: block;
               }
             }
+            li.top-menu-sub-marketing-sub-item:hover{
+              ul.top-menu-sub-marketing-sub-smm{
+                display: block;
+              }
+            }
           }
         }
         
         /* Submenu arrow styling */
-        li.top-menu-sub-development-sub-item > a{
+        li.top-menu-sub-development-sub-item > a,
+        li.top-menu-sub-marketing-sub-item > a{
           position: relative;
         }
-        li.top-menu-sub-development-sub-item > a:after{
+        li.top-menu-sub-development-sub-item > a:after,
+        li.top-menu-sub-marketing-sub-item > a:after{
           color: #9b9b9b;
           /*content: '▶';*/
           content: '>';
