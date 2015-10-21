@@ -181,16 +181,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
       .city-menu-wrap {
         overflow: hidden;
         margin-top: 3px;
-      }
-      .city-menu-wrap ul.city-items {
-        float: right;
-        list-style: none;
-        overflow: hidden;
+        
+        ul.city-items {
+          float: right;
+          list-style: none;
+          margin: 0;
+          overflow: hidden;
+        }
       }
 
       .city-menu-wrap ul.city-items li.city-item {
         float: left;
-        height: 28px;
         letter-spacing: -1px;
         margin-left: 20px;
         padding: 0;
@@ -207,25 +208,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
       }
       li.city-item.active a.item {
         background: #c22d2d;
-        color: #ffffff;
-        line-height: 24px;
+        color: #fff;
+        line-height: 100%;
         text-decoration:none;
-        padding: 0 6px;
+        padding: 4px 6px;
       }
       li.city-item.active {
         background-image: url("/assets/images/city_active.png");
         background-position:bottom center;
         background-repeat:no-repeat;
+        margin-top: 2px;
+        padding-bottom: 4px !important;
       }
-
-      div.phone-number{
-        font-family:"ProximaNovaRegular";
-        color: #000;
-        font-size:20px;
-        font-weight: 700;
-        line-height: 4px;
+      
+      /* Phone number*/
+      .header-phone-block{
         margin: 0;
-        text-align: right;
+        
+        p.header-phone-number{
+          color: #000;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 20px;
+          margin: 2px 0 0 0;
+          text-align: right;
+        }
+      }
+      div.phone-number{
+        
       }
       a.presentation{
         display: block;
