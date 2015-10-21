@@ -179,47 +179,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
       /* City menu */
       .city-menu-wrap {
-        overflow: hidden;
         margin-top: 3px;
+        overflow: hidden;
         
         ul.city-items {
           float: right;
           list-style: none;
           margin: 0;
           overflow: hidden;
+          
+          li.city-item {
+            float: left;
+            letter-spacing: -1px;
+            margin-left: 20px;
+            padding: 0;
+            
+            a.item {
+              color: #5c5c5c;
+              cursor: pointer;
+              display: block;
+              font-family: ProximaNovaRegular;
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 24px;
+              text-transform: uppercase;
+            }
+          }
+          li.city-item.active {
+            background-image: url("/assets/images/city_active.png");
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            margin-top: 2px;
+            padding-bottom: 4px !important;
+            
+            a.item {
+              background: #c22d2d;
+              color: #fff;
+              line-height: 100%;
+              padding: 4px 6px;
+            }
+          }
         }
       }
 
-      .city-menu-wrap ul.city-items li.city-item {
-        float: left;
-        letter-spacing: -1px;
-        margin-left: 20px;
-        padding: 0;
-      }
-      li.city-item a.item {
-        color: #5c5c5c;
-        cursor: pointer;
-        display: block;
-        font-family: ProximaNovaRegular;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 24px;
-        text-transform: uppercase;
-      }
-      li.city-item.active a.item {
-        background: #c22d2d;
-        color: #fff;
-        line-height: 100%;
-        text-decoration:none;
-        padding: 4px 6px;
-      }
-      li.city-item.active {
-        background-image: url("/assets/images/city_active.png");
-        background-position:bottom center;
-        background-repeat:no-repeat;
-        margin-top: 2px;
-        padding-bottom: 4px !important;
-      }
       
       /* Phone number*/
       .header-phone-block{
