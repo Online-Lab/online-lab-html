@@ -80,7 +80,10 @@ angular.module('onlinelabApp', [
         url: '/smm',
         templateUrl: 'app/partials/smm/smm.html',
         controller: 'SmmCtrl',
-        ncyBreadcrumb: { label: 'SMM' }
+        ncyBreadcrumb: { 
+          label: 'SMM',
+          parent: 'marketing'
+        }
       })
       .state('projects', {
         url: '/projects',
