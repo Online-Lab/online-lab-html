@@ -181,44 +181,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
       .city-menu-wrap {
         overflow: hidden;
         margin-top: 3px;
-        width: 100%;
       }
-      .city-menu-wrap .city-items {
+      .city-menu-wrap ul.city-items {
         float: right;
         list-style: none;
         overflow: hidden;
       }
 
-      .city-menu-wrap .city-items li.city-item {
-        margin-left: 5px;
-        padding: 0;
+      .city-menu-wrap ul.city-items li.city-item {
         float: left;
         height: 28px;
+        letter-spacing: -1px;
+        margin-left: 20px;
+        padding: 0;
       }
-      .city-item a.item {
-        font-family:"ProximaNovaRegular";
+      li.city-item a.item {
         color: #5c5c5c;
         cursor: pointer;
-        display:block;
-        font-size:13px;
-        font-weight: 700;
-        text-transform: uppercase;
+        display: block;
+        font-family: ProximaNovaRegular;
+        font-size: 13px;
+        font-weight: 600;
         line-height: 24px;
+        text-transform: uppercase;
       }
-      .city-item.active a.item {
+      li.city-item.active a.item {
         background: #c22d2d;
         color: #ffffff;
         line-height: 24px;
         text-decoration:none;
         padding: 0 6px;
       }
-      .city-item.active {
+      li.city-item.active {
         background-image: url("/assets/images/city_active.png");
         background-position:bottom center;
         background-repeat:no-repeat;
       }
 
-      .phone-number{
+      div.phone-number{
         font-family:"ProximaNovaRegular";
         color: #000;
         font-size:20px;
@@ -227,7 +227,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         margin: 0;
         text-align: right;
       }
-      .presentation{
+      a.presentation{
         display: block;
         color: #c22d2d;
         font-family: MyriadPro, Arial;
