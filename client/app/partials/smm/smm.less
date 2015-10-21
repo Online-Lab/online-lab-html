@@ -1,0 +1,124 @@
+/* Banner */
+.banner-smm{
+  background: url(/assets/images/smm/banner-smm.jpg) no-repeat;
+}
+
+/* Common styles */
+.container-smm-intro,
+.container-smm-we-do,
+.container-smm-result,
+.container-smm-last{
+  p{
+    .main-font;
+    margin: 0;
+  }
+
+  .h2-like{
+    .bold;
+    color: @green-color;
+    font-size: 30px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+/* Intro block */
+.container-smm-intro{
+  
+}
+
+/* We do block */
+.container-smm-we-do-wrapper{
+  background: #f8f8f8;
+}
+.container-smm-we-do{
+  /* List */
+  ul.smm-list-we-do{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    div.smm-list-we-do-item-marker{
+      float: left;
+    }
+    p.smm-list-we-do-item-title{
+      .bold;
+      font-size: 19px;
+      line-height: 20px;
+      margin-left: 70px;
+      margin-top: 3px;
+    }
+  }
+}
+
+/* Result block */
+.container-smm-result{
+  border-bottom: 2px solid #e4e4e4;
+  
+  /* List */
+  ul.smm-list-result{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    div.smm-list-result-item-marker{
+      float: left;
+    }
+    p.smm-list-result-item-title{
+      .bold;
+      font-size: 19px;
+      line-height: 20px;
+      margin-left: 70px;
+      margin-top: 6px;
+    }
+  }
+}
+
+/* Last projects block*/
+.container-smm-last{
+  .smm-proj-preview{
+    a{
+      cursor: pointer;
+      display: block;
+      
+      .smm-proj-preview-image{
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+                background-size: cover;
+        height: 191px;
+        margin: 2px;
+        
+        &:hover{
+          outline: 2px solid #e4e4e4;
+        }
+      }
+      
+      .smm-proj-preview-name{
+        color: @green-color;
+        font-size: 20px;
+        max-height: 60px;
+        overflow: hidden;
+        text-overflow:  ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  .smm-proj-preview:nth-of-type(3n){
+    .last;
+  }
+
+  .view-all-smm-projects-btn{
+    background: #fff;
+    border: 2px solid #20a493;
+    color: #888;
+    cursor: pointer;
+    display: block;
+    font-size: 20px !important;
+    height: 40px;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+    text-align: center;
+    width: 180px;
+  }
+}

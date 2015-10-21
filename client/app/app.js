@@ -76,6 +76,12 @@ angular.module('onlinelabApp', [
         title: 'Комплексный Интернет-маркетинг | Агентство  интернет-продвижения и маркетинга Online-lab',
         description: 'Услуги интернет-маркетинга: поисковое продвижение сайтов, маркетинговые исследования, управление репутацией. Сетевая лаборатория. Телефон: +7(499) 348-2443'
       })
+      .state('smm', {
+        url: '/smm',
+        templateUrl: 'app/partials/smm/smm.html',
+        controller: 'SmmCtrl',
+        ncyBreadcrumb: { label: 'SMM' }
+      })
       .state('projects', {
         url: '/projects',
         templateUrl: 'app/partials/projects/projects.html',
