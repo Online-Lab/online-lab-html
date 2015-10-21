@@ -14,29 +14,33 @@
 			</div>
 
 			<!-- Top menu -->
-			<ul class = "top-menu">
-				<li>
-					<a class = "item" ui-sref="development">Делаем</a>
-					<ul>
-						<li><a class = "item" ui-sref="development">Web-разработка</a></li>
-						<li><a class = "item" ui-sref="store">Интернет-магазины</a></li>
-						<li><a class = "item" ui-sref="resources">Интернет-ресурсы</a></li>
-						<li><a class = "item" ui-sref="mobile">Мобильные приложения</a></li>
-						<li><a class = "item" ui-sref="marketing">Интернет-маркетинг</a></li>
-						<li><a class = "item" ui-sref="electronics">Электроника</a></li>
+			<ul class="top-menu">
+				<li class="top-menu-sub-item">
+					<a class="item">Делаем</a>
+					<ul class="top-menu-sub-development">
+						<li class="top-menu-sub-development-sub-item">
+							<a class="item" ui-sref="development">Web-разработка</a>
+							<ul class="top-menu-sub-development-sub-web">
+								<li><a class="item" ui-sref="store">Интернет-магазины</a></li>
+								<li><a class="item" ui-sref="resources">Интернет-ресурсы</a></li>
+							</ul>
+						</li>
+						<li><a class="item" ui-sref="marketing">Интернет-маркетинг</a></li>
+						<li><a class="item" ui-sref="mobile">Мобильные приложения</a></li>
+						<li><a class="item" ui-sref="electronics">Электроника</a></li>
 					</ul>
 				</li>
 				<li>
-					<a class = "item" ui-sref="projects">Хвалимся</a>
+					<a class="item" ui-sref="projects">Хвалимся</a>
 				</li>
 				<li>
-					<a class = "item" ui-sref="team">Знакомимся</a>
+					<a class="item" ui-sref="team">Знакомимся</a>
 				</li>
 				<!-- <li>
-					<a class = "item" ui-sref="blog">Пишем</a>
+					<a class="item" ui-sref="blog">Пишем</a>
 				</li> -->
 				<li>
-					<a class = "item" ui-sref="contact">Контактируем</a>
+					<a class="item" ui-sref="contact">Контактируем</a>
 				</li>
 			</ul>
 		</div>

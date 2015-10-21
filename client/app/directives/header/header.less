@@ -61,62 +61,97 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
       /* Top menu styling */
       .top-menu{
-        list-style-type: none;
+        list-style: none;
         margin: 4px 0 0 8px;
         overflow: hidden;
         padding: 0;
         
+        /* Top level items */
         & > li{
           float: left;
+          
+          & > a.item{
+            text-transform: uppercase;
+          }
         }
-        ul{
-          background-color:#d9f0ec;
-          display:none;
-          list-style-type: none;
+        & > li:hover{
+          background-color: #20a493;
+          & > a.item{
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        
+        /* Submenus */
+        ul.top-menu-sub-development,
+        ul.top-menu-sub-development-sub-web{
+          background-color: #d9f0ec;
+          display: none;
+          list-style: none;
           padding: 10px 0px 0 0;
-          position:absolute;
-          text-align:left;
+          position: absolute;
+          text-align: left;
 
           li{
             padding:0 20px 0 0;
           }
         }
+        ul.top-menu-sub-development-sub-web{
+          left: 100%;
+          top: 0;
+        }
 
         /* Menu item styling */
         a.item {
           color: #20a493;
+          cursor: pointer;
           display:block;
           font-family: ProximaNovaRegular;
           font-size:14px;
           font-weight: 700;
           height:40px;
           line-height:40px;
-          outline: none;
           padding: 0 9px 0 9px;
           text-decoration: none;
-          text-transform: uppercase;
+          text-transform: none;
           white-space: nowrap;
         }
 
         /* Menu item hover state styling */
-        & > li:hover{
-          background-color:#20a493;
-          & > a{
-            color:#fff;
-            text-decoration: none;
-          }
-          & > ul{
-            display:block;
-            a{
-              text-decoration: none;
-              text-transform:none;
-            }
-          }
-        }
         ul{
           li:hover{
             background-color:#a0dbd1;
           }
+        }
+        
+        /* Submenu displaying */
+        li.top-menu-sub-item:hover{
+          ul.top-menu-sub-development{
+            display: block;
+            
+            li.top-menu-sub-development-sub-item:hover{
+              ul.top-menu-sub-development-sub-web{
+                display: block;
+              }
+            }
+          }
+        }
+        
+        /* Submenu arrow styling */
+        li.top-menu-sub-development-sub-item > a{
+          position: relative;
+        }
+        li.top-menu-sub-development-sub-item > a:after{
+          color: #9b9b9b;
+          /*content: '▶';*/
+          content: '>';
+          display: block;
+          font-size: 16px;
+          line-height: 100%;
+          padding: 12px 45px 0 0;
+          position: absolute;
+          right: 0;
+          top: 0;
         }
       }      
     }
