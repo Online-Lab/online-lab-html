@@ -177,3 +177,20 @@
     </li>
   </ul>
 </div>
+
+<!-- Last projects -->
+<div class="container container-smm-last p-b-30">
+  <p class="h2-like column span-12 m-t-30 m-b-10">Последние выполненные работы</p>
+  <div class="smm-proj-preview column span-4 m-t-20 m-b-20" ng-repeat="item in lastProjectsList | limitTo: lastProjectsDisplayCount">
+    <a ui-sref="project-details({projectId: item.id})">
+      <div class="smm-proj-preview-image m-b-20" style="background-image: url({{item.card_image}});">
+      </div>
+      <p class="smm-proj-preview-name" ng-bind="item.name"></p>
+    </a>
+  </div>
+
+  <!-- View all -->
+  <div class="column span-12 m-t-20 m-b-20">
+    <a class="view-all-smm-projects-btn" ng-click="showMoreProjects()" ng-show="lastProjectsList.length > 3" ng-bind="lastProjectsDisplayCount >= lastProjectsList.length ? 'Скрыть' : 'Посмотреть еще'"></a>
+  </div>
+</div>
