@@ -5,25 +5,41 @@
   
   <div id="side-menu-container">    
     <!-- Menu -->
-    <ul class="side-menu-list">
-      <li class="side-menu-list-item-home"><a ui-sref="main">Главная</a></li>
-      <li class="side-menu-list-item-development"><a ui-sref="development">Делаем</a>
-        <ul class="side-menu-sublist-1">
-          <li><a ui-sref="development">Web-разработка</a>
-            <ul class="side-menu-sublist-2">
-              <li><a ui-sref="store">Интернет-магазины</a></li>
-              <li><a ui-sref="resources">Интернет-ресурсы</a></li>
+    <ul class="side-menu">
+      <li class="side-menu-item-home"><a ui-sref="main">Главная</a></li>
+      <li class="side-menu-item-development"><a ui-sref="development">Делаем</a>
+        <ul class="side-menu-item-development-submenu">
+          <li>
+          <a ui-sref="development">Web-разработка</a>
+            <ul class="side-menu-item-development-submenu-item-web">
+              <li>
+                <a ui-sref="store">Интернет-магазины</a>
+              </li>
+              <li>
+                <a ui-sref="resources">Интернет-ресурсы</a>
+              </li>
             </ul>
           </li>
-          <li><a ui-sref="marketing">Интернет-маркетинг</a></li>
-          <li><a ui-sref="mobile">Мобильные приложения</a></li>
-          <li><a ui-sref="electronics">Электроника</a></li>
+          <li>
+            <a ui-sref="marketing">Интернет-маркетинг</a>
+            <ul class="side-menu-item-development-submenu-item-marketing">
+              <li>
+                <a ui-sref="smm">SMM</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a ui-sref="mobile">Мобильные приложения</a>
+          </li>
+          <li>
+            <a ui-sref="electronics">Электроника</a>
+          </li>
         </ul>
       </li>
-      <li class="side-menu-list-item-portfolio"><a ui-sref="projects">Хвалимся</a></li>
-      <li class="side-menu-list-item-team"><a ui-sref="team">Знакомимся</a></li>
-      <!-- <li class="side-menu-list-item-blog"><a ui-sref="blog">Пишем</a></li> -->
-      <li class="side-menu-list-item-contact"><a ui-sref="contact">Контактируем</a></li>
+      <li class="side-menu-item-portfolio"><a ui-sref="projects">Хвалимся</a></li>
+      <li class="side-menu-item-team"><a ui-sref="team">Знакомимся</a></li>
+      <!-- <li class="side-menu-item-blog"><a ui-sref="blog">Пишем</a></li> -->
+      <li class="side-menu-item-contact"><a ui-sref="contact">Контактируем</a></li>
     </ul>
   </div>
 </div>
