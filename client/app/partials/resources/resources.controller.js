@@ -8,10 +8,15 @@ angular.module('onlinelabApp')
     
     //Get last projects of type
     var lastProjectsFilter = 'resource';
-    $scope.lastProjectsList = Project.query({kind: lastProjectsFilter}, function(){
+    Project.filterByKind({kind: lastProjectsFilter}, function(responce){
+      $scope.lastProjectsList = responce.data;
+      
       //Correct count of projects to display
       if ($scope.lastProjectsList.length < 3)
         $scope.lastProjectsDisplayCount = $scope.lastProjectsList.length;
+    }, 
+    function(error){
+      
     });
         
     //Show more button logic
