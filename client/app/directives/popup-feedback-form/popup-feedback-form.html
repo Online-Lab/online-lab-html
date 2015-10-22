@@ -8,3 +8,11 @@
     <input type="submit" value="Отправить" class="popup-feedback-form-btn">
   </form>
 </div>
+
+<script>
+  //Hide form by clicking on overlay
+  $("#popup-feedback-form-overlay").on("click", function(event){
+    $("#popup-feedback-form-overlay").removeClass("popup-feedback-form-active");
+    $("#popup-feedback-form").removeClass("popup-feedback-form-active");
+  });
+</script>
