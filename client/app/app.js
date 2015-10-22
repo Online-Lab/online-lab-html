@@ -85,6 +85,15 @@ angular.module('onlinelabApp', [
           parent: 'marketing'
         }
       })
+      .state('traffic', {
+        url: '/traffic',
+        templateUrl: 'app/partials/traffic/traffic.html',
+        controller: 'TrafficCtrl',
+        ncyBreadcrumb: { 
+          label: 'SEO-трафик',
+          parent: 'marketing'
+        }
+      })
       .state('projects', {
         url: '/projects',
         templateUrl: 'app/partials/projects/projects.html',
