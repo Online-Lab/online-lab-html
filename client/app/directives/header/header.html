@@ -78,7 +78,7 @@
 				</div>
 								
 				<div class="header-phone-block">
-					<a class="header-order-btn">Заказать звонок</a>
+					<a class="header-order-btn" onclick="showPopupFeedbackForm()">Заказать звонок</a>
 					<p class="header-phone-number">{{city_phone}}</p>
 				</div>
 
@@ -106,3 +106,13 @@
 
 <!-- Breadcrumb -->
 <div ncy-breadcrumb ng-show="state.current.name != 'main'"></div>
+
+
+
+<script>
+  //Show popup feedback form
+  function showPopupFeedbackForm(){
+		$("#popup-feedback-form-overlay").addClass("popup-feedback-form-active");
+    $("#popup-feedback-form").addClass("popup-feedback-form-active");
+  }
+</script>
