@@ -94,6 +94,15 @@ angular.module('onlinelabApp', [
           parent: 'marketing'
         }
       })
+      .state('position', {
+        url: '/marketing/position',
+        templateUrl: 'app/partials/position/position.html',
+        controller: 'PositionCtrl',
+        ncyBreadcrumb: { 
+          label: 'SEO-позиции',
+          parent: 'marketing'
+        }
+      })
       .state('projects', {
         url: '/projects',
         templateUrl: 'app/partials/projects/projects.html',

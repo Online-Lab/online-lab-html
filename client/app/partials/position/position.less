@@ -1,0 +1,117 @@
+/* Common text styles */
+.container-position-intro,
+.container-position-advances,
+.container-position-tariffs{
+  p{
+    .main-font;
+    margin: 0;
+  }
+
+  .h2-like{
+    .bold;
+    color: @green-color;
+    font-size: 30px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+/* Intro banner*/
+.banner-position-intro{
+  background: url(/assets/images/position/banner-intro.jpg) no-repeat;
+}
+/* Intro block */
+.container-position-intro{
+  /* Table */
+  table.position-factors-table{
+    border-bottom: 1px solid #bce4de;
+    width: 100%;
+
+    th{
+      background: @green-color;
+      border: 1px solid #1c9081;
+      color: #fff;
+      font: 26px/20px ProximaNovaLight;
+      padding: 13px 0 17px 0;
+      text-align: center;
+      width: 30%;
+    }
+    tr:nth-child(2n+2){
+      background: #eaf6f4;
+    }
+    tr:nth-child(2n+1){
+      background: #dfedeb;
+    }
+    td{
+      background: url(/assets/images/list/green-point.png) 20px center no-repeat;
+      border-left: 1px solid #c7e0dc;
+      border-right: 1px solid #c7e0dc;
+      color: #6c6c6c;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 10px 10px 47px;
+      vertical-align: middle;
+    }
+    td:empty{
+      background: none;;
+    }
+  }
+}
+
+/* Banner advances */
+.banner-position-advances{
+  background: url(/assets/images/position/banner-advances.jpg) no-repeat;
+}
+/* Advances block */
+.container-position-advances{
+  /* List */
+  ul.position-advances-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li.position-advances-list-item{
+      div.position-advances-list-item-marker{
+        float: left;
+      }
+      p.position-advances-list-item-title{
+        .bold;
+        font-size: 19px;
+        line-height: 20px;
+        margin: 3px 0 10px 70px;
+      }
+      p.position-advances-list-item-desc{
+        line-height: 20px;
+        margin-left: 70px;
+      }
+    }
+  }
+}
+
+/* Tariffs block */
+.container-position-tariffs-wrapper{
+  background: #f8f8f8;
+}
+.container-position-tariffs{
+  .h2-like{
+    line-height: 40px;
+  }
+  
+  /* List */
+  ul.position-tariffs-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li{
+      background: #35ac9d;
+      border: 1px solid #48a599;
+      color:  #fff;
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 20px;
+      padding: 15px 0;
+      text-align: center;
+    }
+  }
+}
