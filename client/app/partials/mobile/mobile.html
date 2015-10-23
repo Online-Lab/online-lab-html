@@ -69,21 +69,7 @@
 
   <hr class="column span-12 m-t-20 m-b-20">
 
-  <!-- Last mobile apps -->
-  <p class="h2-like column span-12 m-t-30 m-b-10">Последние разработанные мобильные приложения</p>
-  <div class="mobile-app-preview column span-4 m-t-20 m-b-20" ng-repeat="item in lastProjectsList | limitTo: lastProjectsDisplayCount">
-    <a ui-sref="project-details({projectId: item.id})">
-      <div class="mobile-app-preview-image m-b-20" style="background-image: url({{item.card_image}});">
-      </div>
-      <p class="mobile-app-preview-name" ng-bind="item.name"></p>
-    </a>
-  </div>
-
-  <!-- View all -->
-  <div class="column span-12 m-t-20 m-b-20">
-    <a class="view-all-mobile-apps-btn" ng-click="showMoreProjects()" ng-show="lastProjectsList.length > 3" ng-bind="lastProjectsDisplayCount >= lastProjectsList.length ? 'Скрыть' : 'Посмотреть еще'"></a>
-  </div>
-  
-  <div class="container" app-last-projects title="Последние разработанные мобильные приложения" filter-by="mobile"></div>
+  <!-- Last projects -->
+  <div class="container" app-last-projects title="Последние разработанные мобильные приложения" filter-by="mobile_app"></div>
 
 </div>
