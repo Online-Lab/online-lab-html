@@ -6,7 +6,8 @@ angular.module('onlinelabApp')
       templateUrl: 'app/directives/last-projects/last-projects.html',
       restrict: 'A',
       scope:{
-        title: "@"
+        title: "@",
+        filterBy: "@"
       },
       link: function (scope, element, attrs) {
         

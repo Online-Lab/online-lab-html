@@ -1,1 +1,16 @@
-<div>{{title}}</div>
+<!-- Last last projects -->
+<div class="container-last-projects">
+  <p class="h2-like column span-12 m-t-30 m-b-10" ng-bind="title"></p>
+  <div class="last-projects-preview column span-4 m-t-20 m-b-20" ng-repeat="item in lastProjectsList | limitTo: lastProjectsDisplayCount">
+    <a ui-sref="project-details({projectId: item.id})">
+      <div class="last-projects-preview-image m-b-20" style="background-image: url({{item.card_image}});">
+      </div>
+      <p class="last-projects-preview-name" ng-bind="item.name"></p>
+    </a>
+  </div>
+  
+  <!-- View all -->
+  <div class="column span-12 m-t-20 m-b-20">
+    <a class="view-all-projects-btn" ng-click="showMoreProjects()" ng-show="lastProjectsList.length > 3" ng-bind="lastProjectsDisplayCount >= lastProjectsList.length ? 'Скрыть' : 'Посмотреть еще'"></a>
+  </div>
+</div>
