@@ -11,6 +11,9 @@ angular.module('onlinelabApp')
       },
       link: function (scope, element, attrs) {
 
+        //Count of projects to display
+        scope.lastProjectsDisplayCount = 3;
+        
         //Get last projects of type
         var lastProjectsFilter = scope.filterBy;
         Project.filterByKind({kind: lastProjectsFilter}, function(responce){
