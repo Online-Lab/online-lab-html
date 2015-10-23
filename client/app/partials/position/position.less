@@ -43,13 +43,13 @@
       background: #dfedeb;
     }
     td{
-      background: url(/assets/images/list/green-point.png) 30px center no-repeat;
+      background: url(/assets/images/list/green-point.png) 20px center no-repeat;
       border-left: 1px solid #c7e0dc;
       border-right: 1px solid #c7e0dc;
       color: #6c6c6c;
       font-size: 16px;
       line-height: 20px;
-      padding: 10px 10px 10px 60px;
+      padding: 10px 10px 10px 47px;
       vertical-align: middle;
     }
     td:empty{
@@ -72,13 +72,17 @@
     
     li.position-advances-list-item{
       div.position-advances-list-item-marker{
-        
+        float: left;
       }
       p.position-advances-list-item-title{
-        
+        .bold;
+        font-size: 19px;
+        line-height: 20px;
+        margin: 3px 0 10px 70px;
       }
       p.position-advances-list-item-desc{
-        
+        line-height: 20px;
+        margin-left: 70px;
       }
     }
   }
@@ -89,6 +93,10 @@
   background: #f8f8f8;
 }
 .container-position-tariffs{
+  .h2-like{
+    line-height: 40px;
+  }
+  
   /* List */
   ul.position-tariffs-list{
     list-style: none;
@@ -102,6 +110,7 @@
       font-size: 26px;
       font-weight: 300;
       line-height: 20px;
+      padding: 15px 0;
       text-align: center;
     }
   }
