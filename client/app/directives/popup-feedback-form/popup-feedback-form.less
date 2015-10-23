@@ -13,13 +13,15 @@
     background: #fff;
     border-top: 5px solid @green-color;
     display: none;
-    height: 370px;
     margin: -185px auto 0 auto;
+    min-height: 370px;
+    overflow: hidden;
     padding: 20px 30px 20px 30px;
     position: relative;
     top: 50%;
     width: 380px;
     
+    /* Title */
     p.popup-feedback-form-title{
       color:  #000;
       float: left;
@@ -30,6 +32,8 @@
       text-align: center;
       width: 320px;
     }
+    
+    /* Fields*/
     input.popup-feedback-form-name,
     input.popup-feedback-form-phone,
     input.popup-feedback-form-email{
@@ -46,6 +50,16 @@
       text-align: left;
       width: 320px;
     }
+    
+    /* Meggase box */
+    p.popup-feedback-form-msg{
+      float: left;
+      margin: 0;
+      padding: 10px 0;
+      width: 320px;
+    }
+    
+    /* Submit button */
     input.popup-feedback-form-btn{
       background: #fb4242;
       border: none;
@@ -59,10 +73,17 @@
       padding: 15px 27px;
       text-align: left;
     }
+    
+    /* Error states */
+    input.popup-feedback-form-name.error,
+    input.popup-feedback-form-phone.error,
+    input.popup-feedback-form-email.error{
+      border: 2px solid red;
+    }
   }
 }
 
-/* Active styles */
+/* Active form styles */
 #popup-feedback-form-overlay.popup-feedback-form-active{
   display: block;
   
