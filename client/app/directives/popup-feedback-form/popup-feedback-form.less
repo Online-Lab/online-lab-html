@@ -1,0 +1,105 @@
+/* Overlay */
+#popup-feedback-form-overlay{
+  background: rgba(0,0,0,0.5);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+  /* Form */
+  #popup-feedback-form{
+    background: #fff;
+    border-top: 5px solid @green-color;
+    display: none;
+    margin: -185px auto 0 auto;
+    min-height: 370px;
+    overflow: hidden;
+    padding: 20px 30px 20px 30px;
+    position: relative;
+    top: 50%;
+    width: 380px;
+    
+    /* Title */
+    p.popup-feedback-form-title{
+      color:  #000;
+      float: left;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 20px;
+      margin: 8px 0 18px 0;
+      text-align: center;
+      width: 320px;
+    }
+    
+    /* Fields*/
+    input.popup-feedback-form-name,
+    input.popup-feedback-form-phone,
+    input.popup-feedback-form-email{
+      background: transparent;
+      border: 2px solid #ccc;
+      color:  #747474;
+      display: block;
+      float: left;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 20px;
+      margin: 10px 0 10px 0;
+      padding: 10px 0 15px 18px;
+      text-align: left;
+      width: 320px;
+    }
+    
+    /* Meggase box */
+    p.popup-feedback-form-msg{
+      float: left;
+      margin: 0;
+      padding: 10px 0;
+      width: 320px;
+    }
+    
+    /* Submit button */
+    input.popup-feedback-form-btn{
+      background: #fb4242;
+      border: none;
+      color:  #fff;
+      display: block;
+      float: left;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 20px;
+      margin: 12px 0 10px 85px;
+      padding: 15px 27px;
+      text-align: left;
+      
+      &:hover{ background: #ff2b2b; }
+      &:active{ background: #c21b1b; }
+      &:disabled{ 
+        background: #bfbfbf; 
+        color: #979696;
+      }
+    }
+    
+    /* Error states */
+    input.popup-feedback-form-name.error,
+    input.popup-feedback-form-phone.error,
+    input.popup-feedback-form-email.error{
+      border: 2px solid red;
+    }
+  }
+}
+
+/* Active form styles */
+#popup-feedback-form-overlay.popup-feedback-form-active{
+  display: block;
+  
+  #popup-feedback-form.popup-feedback-form-active{
+    display: block;
+    
+    /* Meggase box */
+    p.popup-feedback-form-msg{
+      content: "";
+    }
+  }
+}

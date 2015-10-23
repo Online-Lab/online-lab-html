@@ -1,0 +1,13 @@
+<div id="popup-feedback-form-overlay">
+  <form id="popup-feedback-form" novalidate>
+    <p class="popup-feedback-form-title">Заказать услугу</p>
+    
+    <input type="text" placeholder="Ваше имя*" class="popup-feedback-form-name" required name="name">
+    <input type="text" placeholder="Телефон*" class="popup-feedback-form-phone" required name="phone">
+    <input type="email" placeholder="E-mail*" class="popup-feedback-form-email" required name="email">
+    
+    <p class="popup-feedback-form-msg"></p>
+    
+    <input type="submit" value="Отправить" class="popup-feedback-form-btn" ng-click="order()">
+  </form>
+</div>

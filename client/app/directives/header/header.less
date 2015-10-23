@@ -35,7 +35,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         font-family: ProximaNovaBold;
         font-size:40px;
         letter-spacing: -2px;
-        margin: 23px 0 0 0;
+        margin: 0;
         outline: none;
         text-decoration: none;
       }
@@ -62,13 +62,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
       /* Top menu styling */
       .top-menu{
         list-style: none;
-        margin: 4px 0 0 8px;
+        margin: 5px 0 0 39px;
         overflow: hidden;
         padding: 0;
         
         /* Top level items */
         & > li{
           float: left;
+          letter-spacing: -0.7px;
           
           & > a.item{
             text-transform: uppercase;
@@ -178,55 +179,85 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
       /* City menu */
       .city-menu-wrap {
-        overflow: hidden;
         margin-top: 3px;
-        width: 100%;
-      }
-      .city-menu-wrap .city-items {
-        float: right;
-        list-style: none;
         overflow: hidden;
+        
+        ul.city-items {
+          float: right;
+          list-style: none;
+          margin: 0;
+          overflow: hidden;
+          
+          li.city-item {
+            float: left;
+            letter-spacing: -1px;
+            margin-left: 20px;
+            padding: 0;
+            
+            a.item {
+              color: #5c5c5c;
+              cursor: pointer;
+              display: block;
+              font-family: ProximaNovaRegular;
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 24px;
+              text-transform: uppercase;
+            }
+          }
+          li.city-item.active {
+            background-image: url("/assets/images/city_active.png");
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            margin-top: 2px;
+            padding-bottom: 4px !important;
+            
+            a.item {
+              background: #c22d2d;
+              color: #fff;
+              line-height: 100%;
+              padding: 4px 6px;
+            }
+          }
+        }
       }
 
-      .city-menu-wrap .city-items li.city-item {
-        margin-left: 5px;
-        padding: 0;
-        float: left;
-        height: 28px;
-      }
-      .city-item a.item {
-        font-family:"ProximaNovaRegular";
-        color: #5c5c5c;
-        cursor: pointer;
-        display:block;
-        font-size:13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        line-height: 24px;
-      }
-      .city-item.active a.item {
-        background: #c22d2d;
-        color: #ffffff;
-        line-height: 24px;
-        text-decoration:none;
-        padding: 0 6px;
-      }
-      .city-item.active {
-        background-image: url("/assets/images/city_active.png");
-        background-position:bottom center;
-        background-repeat:no-repeat;
-      }
-
-      .phone-number{
-        font-family:"ProximaNovaRegular";
-        color: #000;
-        font-size:20px;
-        font-weight: 700;
-        line-height: 4px;
+      
+      /* Phone number*/
+      .header-phone-block{
         margin: 0;
-        text-align: right;
+        
+        a.header-order-btn{
+          background: url(/assets/images/header/phone.png) 8px 5px no-repeat;
+          border: 2px solid #20a493;
+          color:  #20a493;
+          cursor: pointer;
+          display: block;
+          float: left;
+          font-size: 13px;
+          font-weight: 600;
+          height: 31px;
+          letter-spacing: -0.7px;
+          line-height: 20px;
+          margin: 8px 0 0 0;
+          padding: 4px 0 0 26px;
+          text-transform: uppercase;
+          width: 162px;
+        }
+        
+        p.header-phone-number{
+          color: #000;
+          float: right;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 20px;
+          margin: 8px 0 0 0;
+          text-align: right;
+        }
       }
-      .presentation{
+      
+      /* Presentation */
+      a.presentation{
         display: block;
         color: #c22d2d;
         font-family: MyriadPro, Arial;
