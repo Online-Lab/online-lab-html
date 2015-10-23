@@ -9,6 +9,10 @@ angular.module('onlinelabApp')
         
       },
       link: function ($scope, elem, attrs) {
+        
+        //Form and Overlay
+        var formElement = $(elem).find('#popup-feedback-form'),
+            formOverlay = $(elem).find('#popup-feedback-form-overlay');
         //Form elements
         var nameField = $(elem).find('.popup-feedback-form-name'),
             phoneField = $(elem).find('.popup-feedback-form-phone'),
@@ -80,6 +84,30 @@ angular.module('onlinelabApp')
           orderBtn.prop('disabled', false);
           nameField.focus();
         };
+        
+        
+        //Hide form by clicking on overlay
+        formOverlay.on("click", function(event){
+          //If form was clicked, ignore event
+          if ( $(event.target).attr('id') != "popup-feedback-form-overlay" ) return;
+          
+          //Reset error classes
+          nameField.removeClass("error");
+          phoneField.removeClass("error");
+          emailField.removeClass("error");
+          //Reset fields values
+          nameField.val('');
+          phoneField.val('');
+          emailField.val('');
+          //Reset message box text
+          messageBlock.text("");
+          //Enable submit button
+          orderBtn.prop('disabled', false);
+          
+          //Hide form and overlay with css
+          formOverlay.removeClass("popup-feedback-form-active");
+          formElement.removeClass("popup-feedback-form-active");
+        });
       }
     };
   });
