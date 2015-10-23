@@ -22,7 +22,39 @@
 }
 /* Intro block */
 .container-position-intro{
-  
+  table.position-factors-table{
+    border-bottom: 1px solid #bce4de;
+    width: 100%;
+
+    th{
+      background: @green-color;
+      border: 1px solid #1c9081;
+      color: #fff;
+      font: 26px/20px ProximaNovaLight;
+      padding: 13px 0 17px 0;
+      text-align: center;
+      width: 30%;
+    }
+    tr:nth-child(2n+2){
+      background: #eaf6f4;
+    }
+    tr:nth-child(2n+1){
+      background: #dfedeb;
+    }
+    td{
+      background: url(/assets/images/list/green-point.png) 30px center no-repeat;
+      border-left: 1px solid #c7e0dc;
+      border-right: 1px solid #c7e0dc;
+      color: #6c6c6c;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 10px 10px 60px;
+      vertical-align: middle;
+    }
+    td:empty{
+      background: none;;
+    }
+  }
 }
 
 /* Banner advances */
