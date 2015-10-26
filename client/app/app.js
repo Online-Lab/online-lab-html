@@ -112,6 +112,15 @@ angular.module('onlinelabApp', [
           parent: 'marketing'
         }
       })
+      .state('advertising', {
+        url: '/marketing/advertising',
+        templateUrl: 'app/partials/advertising/advertising.html',
+        controller: 'AdvertisingCtrl',
+        ncyBreadcrumb: { 
+          label: 'Контекстная реклама',
+          parent: 'marketing'
+        }
+      })
       .state('projects', {
         url: '/projects',
         templateUrl: 'app/partials/projects/projects.html',
