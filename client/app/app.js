@@ -103,6 +103,15 @@ angular.module('onlinelabApp', [
           parent: 'marketing'
         }
       })
+      .state('serm', {
+        url: '/marketing/serm',
+        templateUrl: 'app/partials/serm/serm.html',
+        controller: 'SermCtrl',
+        ncyBreadcrumb: { 
+          label: 'SERM',
+          parent: 'marketing'
+        }
+      })
       .state('projects', {
         url: '/projects',
         templateUrl: 'app/partials/projects/projects.html',
