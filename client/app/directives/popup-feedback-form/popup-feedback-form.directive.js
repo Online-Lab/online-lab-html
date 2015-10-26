@@ -4,9 +4,9 @@ angular.module('onlinelabApp')
   .directive('appPopupFeedbackForm', function (Mailer) {
     return {
       templateUrl: 'app/directives/popup-feedback-form/popup-feedback-form.html',
-      restrict: 'EA',
+      restrict: 'A',
       scope: {
-        
+        isActive: "="
       },
       link: function ($scope, elem, attrs) {
         
@@ -23,7 +23,7 @@ angular.module('onlinelabApp')
         phoneField.inputmask("+7(999)999-99-99", {
           "clearIncomplete": true
         });
-        
+                
         //Get consultation
         $scope.order = function(){
 
@@ -76,21 +76,22 @@ angular.module('onlinelabApp')
           }
           
         };
-        
-        function clearForm() {
-          nameField.val('');
-          phoneField.val('');
-          emailField.val('');
-          orderBtn.prop('disabled', false);
-          nameField.focus();
-        };
-        
-        
+                
         //Hide form by clicking on overlay
         formOverlay.on("click", function(event){
           //If form was clicked, ignore event
           if ( $(event.target).attr('id') != "popup-feedback-form-overlay" ) return;
           
+          hideForm();
+        });
+        
+        function showForm(){
+          //Show form and overlay with css
+          formOverlay.addClass("popup-feedback-form-active");
+          formElement.addClass("popup-feedback-form-active");
+        }
+        
+        function hideForm(){
           //Reset error classes
           nameField.removeClass("error");
           phoneField.removeClass("error");
@@ -107,7 +108,23 @@ angular.module('onlinelabApp')
           //Hide form and overlay with css
           formOverlay.removeClass("popup-feedback-form-active");
           formElement.removeClass("popup-feedback-form-active");
+        }
+        
+        function clearForm() {
+          nameField.val('');
+          phoneField.val('');
+          emailField.val('');
+          orderBtn.prop('disabled', false);
+          nameField.focus();
+        };
+        
+        $scope.$watch("isActive", function(newValue, oldValue){
+          var isActive = $scope.isActive || false;
+          
+          if (isActive) showForm();
+          else hideForm();
         });
+        
       }
     };
   });
