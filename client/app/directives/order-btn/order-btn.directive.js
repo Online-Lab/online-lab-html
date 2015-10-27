@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('onlinelabApp')
-  .directive('orderBtn', function () {
+  .directive('appOrderBtn', function () {
     return {
       templateUrl: 'app/directives/order-btn/order-btn.html',
-      restrict: 'EA',
+      restrict: 'A',
       link: function (scope, element, attrs) {
       }
     };
