@@ -34,7 +34,7 @@
 
     <!-- Add your site or application content here -->
     <app-side-menu></app-side-menu>
-    <div app-popup-feedback-form></div>
+    <div app-popup-feedback-form ng-show="isActive"></div>
     <app-header></app-header>
 
       <div ui-view=""></div>
@@ -61,6 +61,7 @@
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/InteractionCtrl.js"></script>
           <script src="app/directives/feedback-form/feedback-form.directive.js"></script>
           <script src="app/directives/footer/footer.directive.js"></script>
           <script src="app/directives/header/header.directive.js"></script>
@@ -71,7 +72,6 @@
           <script src="app/directives/side-menu/side-menu.directive.js"></script>
           <script src="app/directives/team-gallery/team-gallery.directive.js"></script>
           <script src="app/factories/mailer.js"></script>
-          <script src="app/interactionCtrl.js"></script>
           <script src="app/partials/advertising/advertising.controller.js"></script>
           <script src="app/partials/blog/blog.controller.js"></script>
           <script src="app/partials/blogpost/blogpost.controller.js"></script>

@@ -1,31 +1,31 @@
 'use strict';
 
 angular.module('onlinelabApp')
-  .directive('appPopupFeedbackForm', function (Mailer) {
+  .directive('appPopupFeedbackForm', function ($rootScope, Mailer) {
     return {
       templateUrl: 'app/directives/popup-feedback-form/popup-feedback-form.html',
       restrict: 'A',
-      scope: {
-        isActive: "="
-      },
-      link: function ($scope, elem, attrs) {
+      link: function (scope, element, attrs) {
+        
+        scope.isActive = false;
         
         //Form and Overlay
-        var formElement = $(elem).find('#popup-feedback-form'),
-            formOverlay = $(elem).find('#popup-feedback-form-overlay');
-        //Form elements
-        var nameField = $(elem).find('.popup-feedback-form-name'),
-            phoneField = $(elem).find('.popup-feedback-form-phone'),
-            emailField = $(elem).find('.popup-feedback-form-email'),
-            orderBtn = $(elem).find('.popup-feedback-form-btn'),
-            messageBlock = $(elem).find('.popup-feedback-form-msg');
+        var formElementent = $(element).find('#popup-feedback-form'),
+            formOverlay = $(element).find('#popup-feedback-form-overlay');
+        //Form elementents
+        var nameField = $(element).find('.popup-feedback-form-name'),
+            phoneField = $(element).find('.popup-feedback-form-phone'),
+            emailField = $(element).find('.popup-feedback-form-email'),
+            orderBtn = $(element).find('.popup-feedback-form-btn'),
+            messageBlock = $(element).find('.popup-feedback-form-msg');
             
+        // Phone mask
         phoneField.inputmask("+7(999)999-99-99", {
           "clearIncomplete": true
         });
-                
+        
         //Get consultation
-        $scope.order = function(){
+        scope.order = function(){
 
           var patternEmail = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
           //reset error classes
@@ -66,64 +66,51 @@ angular.module('onlinelabApp')
               
             /*setTimeout(function(){
               messageBlock.text("Ваша заявка принята!");
-              clearForm();
+              resetForm();
             }, 3000);*/
             
             Mailer.sendEmail(msg).success(function(){
               messageBlock.text("Ваша заявка принята");
-              clearForm();
+              resetForm();
             });
           }
           
         };
-                
+
         //Hide form by clicking on overlay
-        formOverlay.on("click", function(event){
+        element.on("click", function(event){
+          
           //If form was clicked, ignore event
           if ( $(event.target).attr('id') != "popup-feedback-form-overlay" ) return;
           
-          hideForm();
+          scope.$apply(function(){
+            $rootScope.$emit("popupFeedbackForm.close");
+          });
         });
         
-        function showForm(){
-          //Show form and overlay with css
-          formOverlay.addClass("popup-feedback-form-active");
-          formElement.addClass("popup-feedback-form-active");
-        }
-        
-        function hideForm(){
-          //Reset error classes
-          nameField.removeClass("error");
-          phoneField.removeClass("error");
-          emailField.removeClass("error");
-          //Reset fields values
-          nameField.val('');
-          phoneField.val('');
-          emailField.val('');
-          //Reset message box text
-          messageBlock.text("");
-          //Enable submit button
-          orderBtn.prop('disabled', false);
+        // Listen to "popupFeedbackForm.show" event on $rootScope
+        $rootScope.$on("popupFeedbackForm.show", function(event){
           
-          //Hide form and overlay with css
-          formOverlay.removeClass("popup-feedback-form-active");
-          formElement.removeClass("popup-feedback-form-active");
-        }
+          scope.isActive = true;
+          
+        });
         
-        function clearForm() {
+        // Listen to "popupFeedbackForm.close" event on $rootScope
+        $rootScope.$on("popupFeedbackForm.close", function(event){
+          
+          scope.isActive = false;
+          
+        });
+        
+
+        // Reset form elements
+        function resetForm() {
           nameField.val('');
           phoneField.val('');
           emailField.val('');
           orderBtn.prop('disabled', false);
           nameField.focus();
         };
-        
-        $scope.$watch("isActive", function(newValue, oldValue){
-          var isActive = $scope.isActive || false;
-          
-          if (isActive) showForm();
-          else hideForm();
-        });
         
       }
     };

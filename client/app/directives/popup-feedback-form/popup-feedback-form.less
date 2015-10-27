@@ -1,7 +1,7 @@
 /* Overlay */
 #popup-feedback-form-overlay{
   background: rgba(0,0,0,0.5);
-  display: none;
+  display: block;
   height: 100%;
   left: 0;
   position: fixed;
@@ -12,7 +12,7 @@
   #popup-feedback-form{
     background: #fff;
     border-top: 5px solid @green-color;
-    display: none;
+    display: block;
     margin: -185px auto 0 auto;
     min-height: 370px;
     overflow: hidden;
@@ -86,20 +86,6 @@
     input.popup-feedback-form-phone.error,
     input.popup-feedback-form-email.error{
       border: 2px solid red;
-    }
-  }
-}
-
-/* Active form styles */
-#popup-feedback-form-overlay.popup-feedback-form-active{
-  display: block;
-  
-  #popup-feedback-form.popup-feedback-form-active{
-    display: block;
-    
-    /* Meggase box */
-    p.popup-feedback-form-msg{
-      content: "";
     }
   }
 }
