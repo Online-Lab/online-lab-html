@@ -97,7 +97,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
           li{
             padding:0 20px 0 0;
-            transition: background-color 0.1s;
+            
+            -webkit-transition: background-color 0.1s;
+               -moz-transition: background-color 0.1s;
+                 -o-transition: background-color 0.1s;
+                    transition: background-color 0.1s;
           }
         }
         ul.top-menu-sub-development{
