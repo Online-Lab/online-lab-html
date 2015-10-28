@@ -154,30 +154,34 @@
     }
   }
   .main-description-question{
-    color:#fff;
+    color: #fff;
     background-color: #fb4242;
-    font-size:22px;
+    font-size: 22px;
     font-weight: 400;
-    line-height:40px;
-    margin:0 auto;
-    position:relative;
-    text-align:center;
+    line-height: 40px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
     width: 470px;
+    z-index: 1;
+    
     &:before{
       background: url(/assets/images/main/red_hexagon_left.png) no-repeat;
-      content:"";
-      height:40px;
-      left:-20px;
-      position:absolute;
-      width:20px;
+      content: "";
+      height: 40px;
+      left: -20px;
+      position: absolute;
+      width: 20px;
+      z-index: 2;
     }
     &:after{
       background: url(/assets/images/main/red_hexagon_right.png) no-repeat;
-      content:"";
-      height:40px;
-      position:absolute;
-      right:-20px;
-      width:20px;
+      content: "";
+      height: 40px;
+      position: absolute;
+      right: -20px;
+      width: 20px;
+      z-index: 2;
     }
   }
 }
@@ -200,6 +204,7 @@
     .main-portfolio-slider-container{
       .cd-hero-slider{
         position: relative;
+        z-index: 1;
         
         /* Title */
         .main-portfolio-slider-title{
@@ -224,6 +229,7 @@
           padding: 6px 0 0 0;
           position: absolute;
           width: 262px;
+          z-index: 2;
           &:hover{ background-color: rgba(100,100,100,0.5); }
           
           .main-portfolio-slider-button{
@@ -308,6 +314,7 @@
           transition-property: opacity;
           transition-duration: 0.1s;
           width: 100%;
+          z-index: 1;
           
           .main-products-slide-title{
             background: #28a797;
@@ -332,6 +339,7 @@
             position: absolute;
             top: 50%;
             width: 60px;
+            z-index: 2;
           }
           
           /* Hover state */
@@ -346,24 +354,6 @@
       }
     }
   }
-}
-
-.green-prev, .green-next{
-  background: url(/assets/images/next-prev.png) 0 0 no-repeat;
-  border:none;
-  height: 40px;
-  margin-top: -20px;
-  position: absolute;
-  outline: none;
-  top: 50%;
-  width: 40px;
-}
-.green-prev{
-  left: -40px;
-}
-.green-next{
-  background-position: -40px 0;
-  right: -40px;
 }
 
 
