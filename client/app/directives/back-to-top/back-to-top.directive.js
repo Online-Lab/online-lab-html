@@ -7,8 +7,6 @@ angular.module('onlinelabApp')
       restrict: 'A',
       link: function (scope, element, attrs) {
         
-        console.log("back-to-top");
-        
         // browser window scroll (in pixels) after which the "back to top" link is shown
         var offset = 100,
           //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
