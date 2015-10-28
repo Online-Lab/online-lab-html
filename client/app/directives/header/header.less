@@ -70,6 +70,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         & > li{
           float: left;
           letter-spacing: -0.7px;
+          transition: background-color 0.1s;
           
           & > a.item{
             text-transform: uppercase;
@@ -84,10 +85,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         }
         
         /* Submenus */
-        li.top-menu-sub-development-sub-item,
-        li.top-menu-sub-marketing-sub-item{
-          position: relative;
-        }
         ul.top-menu-sub-development,
         ul.top-menu-sub-development-sub-web,
         ul.top-menu-sub-marketing-sub-smm{
@@ -100,6 +97,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
           li{
             padding:0 20px 0 0;
+            transition: background-color 0.1s;
           }
         }
         ul.top-menu-sub-development{
@@ -109,6 +107,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         ul.top-menu-sub-marketing-sub-smm{
           left: 100%;
           top: 0;
+        }
+        li.top-menu-sub-development-sub-item,
+        li.top-menu-sub-marketing-sub-item{
+          position: relative;
         }
 
         /* Menu item styling */
