@@ -7,6 +7,7 @@ angular.module('onlinelabApp')
       restrict: 'A',
       link: function (scope, element, attrs) {
         
+        //Is the form active
         scope.isActive = false;
         
         //User data
@@ -15,6 +16,8 @@ angular.module('onlinelabApp')
           phone: "",
           email: ""
         };
+        // Phone mask
+        scope.phoneMask = "+7(999)999-99-99";
         
         //Form and Overlay
         var formElementent = $(element).find('#popup-feedback-form'),
@@ -26,10 +29,6 @@ angular.module('onlinelabApp')
             orderBtn = $(element).find('.popup-feedback-form-btn'),
             messageBlock = $(element).find('.popup-feedback-form-msg');
             
-        // Phone mask
-        phoneField.inputmask("+7(999)999-99-99", {
-          "clearIncomplete": true
-        });
         
         //Get consultation
         scope.order = function(){
