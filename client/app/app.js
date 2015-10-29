@@ -49,7 +49,8 @@ angular.module('onlinelabApp', [
           templateUrl: 'app/partials/resources/resources.html',
           controller: 'ResourcesCtrl',
           ncyBreadcrumb: { 
-            label: 'Интернет-ресурсы'
+            label: 'Интернет-ресурсы',
+            parent: 'development'
           }
         })
       .state('mobile', {
