@@ -106,9 +106,11 @@ angular.module('onlinelabApp')
 
         // Reset form elements
         function resetForm() {
-          nameField.val('');
-          phoneField.val('');
-          emailField.val('');
+          scope.$apply(function(){
+            scope.newOrderData.name = "";
+            scope.newOrderData.phone = "";
+            scope.newOrderData.email = "";
+          });
           orderBtn.prop('disabled', false);
           nameField.focus();
         };
