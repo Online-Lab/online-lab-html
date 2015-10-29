@@ -68,6 +68,8 @@ angular.module('onlinelabApp')
             Mailer.sendEmail(msg).success(function(){
               messageBlock.text("Ваша заявка принята");
               resetForm();
+              //Yandex Counter
+              yaCounter25463036.reachGoal('otpravka2');
             });
           }
           
