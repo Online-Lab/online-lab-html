@@ -9,6 +9,13 @@ angular.module('onlinelabApp')
         
         scope.isActive = false;
         
+        //User data
+        scope.newOrderData = {
+          name: "",
+          phone: "",
+          email: ""
+        };
+        
         //Form and Overlay
         var formElementent = $(element).find('#popup-feedback-form'),
             formOverlay = $(element).find('#popup-feedback-form-overlay');
@@ -33,17 +40,17 @@ angular.module('onlinelabApp')
           phoneField.removeClass("error");
           emailField.removeClass("error");
           
-          if (nameField.val() == ''){
+          if (scope.newOrderData.name == ''){
             messageBlock.text("Введите имя");
             nameField.addClass("error");
             nameField.focus();
           }
-          else if (phoneField.val() == ''){
+          else if (scope.newOrderData.phone == ''){
             messageBlock.text("Введите номер телефона");
             phoneField.addClass('error');
             phoneField.focus();
           }
-          else if (emailField.val() == '' ||  !patternEmail.test(emailField.val())){
+          else if (scope.newOrderData.emaill == '' ||  !patternEmail.test(scope.newOrderData.email)){
             messageBlock.text("Введите корректный e-mail адрес");
             emailField.addClass("error");
             emailField.focus();
@@ -52,27 +59,22 @@ angular.module('onlinelabApp')
             messageBlock.text("Подождите...");
             orderBtn.prop('disabled', true);
             
-            //User data
-            var newOrderData = {
-              name: nameField.val(),
-              phone: phoneField.val(),
-              email: emailField.val()
-            };
             //Sending email
             var msg = "Была добавлена новая заявка. Информация о клиенте: <br><br>" + 
-              (newOrderData.name ? "Имя: " + newOrderData.name + "<br>" : '') + 
-              (newOrderData.email ? "E-mail: " + newOrderData.email + "<br>" : '') + 
-              (newOrderData.phone ? "Тел.: " + newOrderData.phone + "<br>" : '');
+              (scope.newOrderData.name ? "Имя: " + scope.newOrderData.name + "<br>" : '') + 
+              (scope.newOrderData.email ? "E-mail: " + scope.newOrderData.email + "<br>" : '') + 
+              (scope.newOrderData.phone ? "Тел.: " + scope.newOrderData.phone + "<br>" : '');
               
-            /*setTimeout(function(){
+            setTimeout(function(){
               messageBlock.text("Ваша заявка принята!");
+              alert(msg);
               resetForm();
-            }, 3000);*/
+            }, 3000);
             
-            Mailer.sendEmail(msg).success(function(){
+            /*Mailer.sendEmail(msg).success(function(){
               messageBlock.text("Ваша заявка принята");
               resetForm();
-            });
+            });*/
           }
           
         };
