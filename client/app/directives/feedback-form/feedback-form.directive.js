@@ -59,26 +59,24 @@ angular.module('onlinelabApp')
               (scope.newOrderData.email ? "E-mail: " + scope.newOrderData.email + "<br>" : '') + 
               (scope.newOrderData.phone ? "Тел.: " + scope.newOrderData.phone + "<br>" : '');
               
-            setTimeout(function(){
+            /*setTimeout(function(){
               messageBlock.text("Ваша заявка принята");
               alert(msg);
               resetForm();
-            }, 3000);
+            }, 3000);*/
 
-            /*Mailer.sendEmail(msg).success(function(){
+            Mailer.sendEmail(msg).success(function(){
               messageBlock.text("Ваша заявка принята");
               resetForm();
-            });*/
+            });
           }
           
         };
         
         var resetForm = function(){
-          scope.$apply(function(){
-            scope.newOrderData.name = "";
-            scope.newOrderData.phone = "";
-            scope.newOrderData.email = "";
-          });
+          scope.newOrderData.name = "";
+          scope.newOrderData.phone = "";
+          scope.newOrderData.email = "";
           orderBtn.prop('disabled', false);
           nameField.focus();
         };
