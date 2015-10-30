@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('onlinelabApp')
-  .directive('appPopupFeedbackForm', function ($rootScope, Mailer) {
+  .directive('appPopupFeedbackForm', function ($rootScope, $state, Mailer) {
     return {
       templateUrl: 'app/directives/popup-feedback-form/popup-feedback-form.html',
       restrict: 'A',
@@ -73,8 +73,25 @@ angular.module('onlinelabApp')
             Mailer.sendEmail(msg).success(function(){
               messageBlock.text("Ваша заявка принята");
               resetForm();
+              
               //Yandex Counter
-              yaCounter25463036.reachGoal('otpravka');
+              var targetPages = [
+                "development",
+                "store",
+                "resources",
+                "marketing",
+                "position",
+                "traffic",
+                "serm",
+                "smm",
+                "advertising",
+                "mobile",
+                "electronics"
+              ];
+              if (targetPages.indexOf($state.current.name) != -1){
+                yaCounter25463036.reachGoal($state.current.name);
+                yaCounter25463036.reachGoal('otpravka');
+              }
             });
           }
           
@@ -100,6 +117,13 @@ angular.module('onlinelabApp')
         
         // Listen to "popupFeedbackForm.close" event on $rootScope
         $rootScope.$on("popupFeedbackForm.close", function(event){
+          
+          scope.isActive = false;
+          
+        });
+        
+        // Listen to "$viewContentLoaded" event on $rootScope in order to hide form wher refresh page or change location
+        $rootScope.$on("$viewContentLoaded", function(event){
           
           scope.isActive = false;
           
