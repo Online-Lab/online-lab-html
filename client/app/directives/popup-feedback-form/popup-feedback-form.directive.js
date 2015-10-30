@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('onlinelabApp')
-  .directive('appPopupFeedbackForm', function ($rootScope, $state, Mailer) {
+  .directive('appPopupFeedbackForm', function ($rootScope, Mailer) {
     return {
       templateUrl: 'app/directives/popup-feedback-form/popup-feedback-form.html',
       restrict: 'A',
       link: function (scope, element, attrs) {
-        
+                
         //Is the form active
         scope.isActive = false;
         
@@ -32,7 +32,7 @@ angular.module('onlinelabApp')
         
         //Get consultation
         scope.order = function(){
-
+          
           var patternEmail = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
           //reset error classes
           nameField.removeClass("error");
@@ -75,23 +75,7 @@ angular.module('onlinelabApp')
               resetForm();
               
               //Yandex Counter
-              var targetPages = [
-                "development",
-                "store",
-                "resources",
-                "marketing",
-                "position",
-                "traffic",
-                "serm",
-                "smm",
-                "advertising",
-                "mobile",
-                "electronics"
-              ];
-              if (targetPages.indexOf($state.current.name) != -1){
-                yaCounter25463036.reachGoal($state.current.name);
-                yaCounter25463036.reachGoal('otpravka');
-              }
+              yaCounter25463036.reachGoal('otpravka');
             });
           }
           
