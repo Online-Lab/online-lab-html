@@ -92,9 +92,25 @@ angular.module('onlinelabApp')
           });
         });
         
+        // Reset error classes when empty fields lost focus
+        nameField.on("blur", onFielbBlur);
+        phoneField.on("blur", onFielbBlur);
+        emailField.on("blur", onFielbBlur);
+        function onFielbBlur(event){
+          
+          if (scope.newOrderData.name == "")
+            nameField.removeClass("error");
+          if (scope.newOrderData.phone == "")
+            phoneField.removeClass("error");
+          if (scope.newOrderData.email == "")
+            emailField.removeClass("error");
+          
+        }
+        
         // Listen to "popupFeedbackForm.show" event on $rootScope
         $rootScope.$on("popupFeedbackForm.show", function(event){
           
+          initForm();
           scope.isActive = true;
           
         });
@@ -114,11 +130,28 @@ angular.module('onlinelabApp')
         });
         
 
+        // Init form
+        function initForm(){
+          
+          //Order data
+          scope.newOrderData.name = "";
+          scope.newOrderData.phone = "";
+          scope.newOrderData.email = "";
+          //Reset error classes
+          nameField.removeClass("error");
+          phoneField.removeClass("error");
+          emailField.removeClass("error");
+          //Message
+          messageBlock.text("");
+          
+        }
+
         // Reset form elements
         function resetForm() {
           scope.newOrderData.name = "";
           scope.newOrderData.phone = "";
           scope.newOrderData.email = "";
+          
           orderBtn.prop('disabled', false);
           nameField.focus();
         };
