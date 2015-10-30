@@ -5,7 +5,7 @@
     <p>Организация разработки проектов важнее всего. Наша забота о клиентах проявляется в том, что заказчик видит, как мы работаем и может вносить<br> рекомендации в любое время, что не повлияет на сроки и сложность работ. Это первое, что притягивает к нам клиентов.</p>
     
     <p class="h2-like">Применяем</p>
-    <ul class="methods">
+    <ul class="methods wow fadeInUp" data-wow-delay="0s">
       <li class="li-agile">Agile</li>
       <span>&</span>
       <li class="li-scrum">Scrum</li>
@@ -13,7 +13,7 @@
 
     <p>Это методы, которыми руководствуются современные успешные команды разработчиков во всём мире. Работа распределяется между несколькими<br> профессионалами и выполняется короткими циклами, что позволяет работать над проектами быстро, гибко и выдавать высокую функциональность.</p>
 
-    <div class="lifecycle-list-wrapper">
+    <div class="lifecycle-list-wrapper wow fadeInUp" data-wow-delay="0.5s">
       <img class="arrow-next1" src="/assets/images/development/next-arrow-top.png">
       <img class="arrow-next2" src="/assets/images/development/next-arrow-bottom.png">
       <img class="arrow-next3" src="/assets/images/development/next-arrow-top.png">
@@ -58,7 +58,7 @@
     <p>Такой подход требует от нас постоянного развития и изучения новых технологий, что мы с радостью и делаем. </p>
 
     <p class="h2-like">Излюбленные языки программирования, платформы и технологии</p>
-    <ul class="tech-list">
+    <ul class="tech-list wow flipInX" data-wow-offset="100" data-wow-delay="0.1s">
       <li><img src="/assets/images/development/tech-js.png">JavaScript</li>
       <li><img src="/assets/images/development/tech-node-js.png">Node.js</li>
       <li><img src="/assets/images/development/tech-angular.png">AngularJS</li>
@@ -75,7 +75,7 @@
   <div class="content">
 
     <ul class="workflow-list">
-      <li ng-repeat="li in workflow">
+      <li ng-repeat="li in workflow" class="wow fadeInUp" data-wow-offset="50" data-wow-delay="0.2s">
           <table>
             <tr>
               <td><img ng-src="{{li.ico}}" alt=""></td>
@@ -98,3 +98,10 @@
     <div app-order-btn ya-goal="development" class="column span-12 m-t-20"></div>
   </div>
 </div>
+
+<!-- Animation with WOW.js -->
+<script>
+  new WOW({
+    mobile: false
+  }).init();
+</script>
