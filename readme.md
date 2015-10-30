@@ -39,3 +39,12 @@ See all generators here: https://github.com/DaftMonk/generator-angular-fullstack
 - popup feedback form level: 100-109
 ```
 
+## Animations
+
+- Lists on inner pages are animated with Animate.css (http://daneden.github.io/animate.css/). 
+
+- Animations reveal when user scroll (see WOW.js: http://mynameismatthieu.com/WOW/index.html)
+
+- Order buttons on inner pages have a hover effect due to Hover.css (see http://ianlunn.github.io/Hover/)
+
+- See [Microsoft Stories]http://news.microsoft.com/stories/garage/index.html for inspiration
