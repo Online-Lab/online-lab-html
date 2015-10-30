@@ -17,7 +17,6 @@ angular.module('onlinelabApp')
           //Yandex Counter
           if (scope.yaGoal){
             yaCounter25463036.reachGoal(scope.yaGoal);
-            console.log(scope.yaGoal);
           }
           
         });
