@@ -52,6 +52,8 @@ angular.module('onlinelabApp', [
             label: 'Интернет-ресурсы',
             parent: 'development'
           }
+          title: 'Разработка сайтов | Создание сайтов под ключ',
+        description: 'Услуги создания сайтов, разработка сайтов под ключ, . Сетевая лаборатория, тел: +7 (499) 348-24-43'
         })
       .state('mobile', {
         url: '/mobile',
@@ -85,6 +87,8 @@ angular.module('onlinelabApp', [
           label: 'SMM',
           parent: 'marketing'
         }
+        title: 'SMM | Продвижение в социальных сетях',
+        description: 'Услуги по продвижению в социальных сетях (SMM): Вконтакте, facebook, twitter, Google+. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
       .state('traffic', {
         url: '/marketing/traffic',
@@ -94,6 +98,8 @@ angular.module('onlinelabApp', [
           label: 'SEO-трафик',
           parent: 'marketing'
         }
+        title: 'Продвижение по трафику | Наращивание трафика на сайт',
+        description: 'Услуги по наращиванию трафика для сайта. Продвижение по трафику порталов и интернет-магазинов. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
       .state('position', {
         url: '/marketing/position',
@@ -103,6 +109,8 @@ angular.module('onlinelabApp', [
           label: 'SEO-позиции',
           parent: 'marketing'
         }
+        title: 'Продвижение по запросам | Оптимизация сайта по ключевым словам',
+        description: 'Услуги продвижения сайтов по позициям ключевых слов. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
       .state('serm', {
         url: '/marketing/serm',
@@ -112,6 +120,8 @@ angular.module('onlinelabApp', [
           label: 'SERM',
           parent: 'marketing'
         }
+        title: 'SERM | Управление репутацией компании в интернете',
+        description: 'Услуги по Serm – управлению репутацией в интернете компании или бренда. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
       .state('advertising', {
         url: '/marketing/advertising',
@@ -121,6 +131,8 @@ angular.module('onlinelabApp', [
           label: 'Контекстная реклама',
           parent: 'marketing'
         }
+        title: 'Контекстная реклама | Создание и настройка кампаний Яндекс-Директ и Google Adwords',
+        description: 'Услуги по созданию и ведению контекстной рекламы в Яндекс-Директ и Google Adwords. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
       .state('projects', {
         url: '/projects',
