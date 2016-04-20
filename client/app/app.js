@@ -31,7 +31,7 @@ angular.module('onlinelabApp', [
         controller: 'DevelopmentCtrl',
         ncyBreadcrumb: { label: 'Web-разработка' },
         title: 'Создание сайтов | Разработка интернет-проектов – Online-lab',
-        description: 'Сетевая лаборатория – создание интернет-сайтов в Москве, разработка веб-проектов различной сложности. Телефон: +7(499) 348-2443'
+        description: 'Сетевая лаборатория – создание интернет-сайтов в Москве, разработка веб-проектов различной сложности. Телефон: +7(499) 112-49-66'
       })
         .state('store', {
           url: '/development/store',
@@ -42,7 +42,7 @@ angular.module('onlinelabApp', [
             parent: 'development'
           },
           title: 'Разработка интернет-магазина | Создание сайта интернет-магазина под ключ',
-          description: 'Услуги по созданию сложных интернет-магазинов под ключ в Москве. Сетевая лаборатория. Телефон: +7(499) 348-2443'
+          description: 'Услуги по созданию сложных интернет-магазинов под ключ в Москве. Сетевая лаборатория. Телефон: +7(499) 112-49-66'
         })
         .state('resources', {
           url: '/development/resources',
@@ -51,9 +51,9 @@ angular.module('onlinelabApp', [
           ncyBreadcrumb: { 
             label: 'Интернет-ресурсы',
             parent: 'development'
-          }
+          },
           title: 'Разработка сайтов | Создание сайтов под ключ',
-        description: 'Услуги создания сайтов, разработка сайтов под ключ, . Сетевая лаборатория, тел: +7 (499) 348-24-43'
+          description: 'Услуги создания сайтов, разработка сайтов под ключ, . Сетевая лаборатория, тел: +7 (499) 348-24-43'
         })
       .state('mobile', {
         url: '/mobile',
@@ -61,7 +61,7 @@ angular.module('onlinelabApp', [
         controller: 'MobileCtrl',
         ncyBreadcrumb: { label: 'Мобильные приложения' },
         title: 'Создание мобильных приложений | разработка мобильных приложений для IOS и Android',
-        description: 'Разработка мобильных приложений под платформы Ios и Android. Сетевая лаборатория. Телефон: +7(499) 348-2443'
+        description: 'Разработка мобильных приложений под платформы Ios и Android. Сетевая лаборатория. Телефон: +7(499) 112-49-66'
       })
       .state('electronics', { 
         url: '/electronics',
@@ -69,7 +69,7 @@ angular.module('onlinelabApp', [
         controller: 'ElectronicsCtrl',
         ncyBreadcrumb: { label: 'Электроника' },
         title: 'Разработка электронных устройств | Создание электронных устройств на заказ',
-        description: 'Разработка электронных устройств под заказ в Москве. Сетевая лаборатория. Телефон: +7(499) 348-2443'
+        description: 'Разработка электронных устройств под заказ в Москве. Сетевая лаборатория. Телефон: +7(499) 112-49-66'
       })
       .state('marketing', {
         url: '/marketing',
@@ -77,7 +77,7 @@ angular.module('onlinelabApp', [
         controller: 'MarketingCtrl',
         ncyBreadcrumb: { label: 'Интернет-маркетинг' },
         title: 'Комплексный Интернет-маркетинг | Агентство  интернет-продвижения и маркетинга Online-lab',
-        description: 'Услуги интернет-маркетинга: поисковое продвижение сайтов, маркетинговые исследования, управление репутацией. Сетевая лаборатория. Телефон: +7(499) 348-2443'
+        description: 'Услуги интернет-маркетинга: поисковое продвижение сайтов, маркетинговые исследования, управление репутацией. Сетевая лаборатория. Телефон: +7(499) 112-49-66'
       })
       .state('smm', {
         url: '/marketing/smm',
@@ -86,7 +86,7 @@ angular.module('onlinelabApp', [
         ncyBreadcrumb: { 
           label: 'SMM',
           parent: 'marketing'
-        }
+        },
         title: 'SMM | Продвижение в социальных сетях',
         description: 'Услуги по продвижению в социальных сетях (SMM): Вконтакте, facebook, twitter, Google+. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
@@ -97,7 +97,7 @@ angular.module('onlinelabApp', [
         ncyBreadcrumb: { 
           label: 'SEO-трафик',
           parent: 'marketing'
-        }
+        },
         title: 'Продвижение по трафику | Наращивание трафика на сайт',
         description: 'Услуги по наращиванию трафика для сайта. Продвижение по трафику порталов и интернет-магазинов. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
@@ -108,7 +108,7 @@ angular.module('onlinelabApp', [
         ncyBreadcrumb: { 
           label: 'SEO-позиции',
           parent: 'marketing'
-        }
+        },
         title: 'Продвижение по запросам | Оптимизация сайта по ключевым словам',
         description: 'Услуги продвижения сайтов по позициям ключевых слов. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
@@ -119,7 +119,7 @@ angular.module('onlinelabApp', [
         ncyBreadcrumb: { 
           label: 'SERM',
           parent: 'marketing'
-        }
+        },
         title: 'SERM | Управление репутацией компании в интернете',
         description: 'Услуги по Serm – управлению репутацией в интернете компании или бренда. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
@@ -130,7 +130,7 @@ angular.module('onlinelabApp', [
         ncyBreadcrumb: { 
           label: 'Контекстная реклама',
           parent: 'marketing'
-        }
+        },
         title: 'Контекстная реклама | Создание и настройка кампаний Яндекс-Директ и Google Adwords',
         description: 'Услуги по созданию и ведению контекстной рекламы в Яндекс-Директ и Google Adwords. Сетевая лаборатория, тел: +7 (499) 348-24-43'
       })
@@ -140,7 +140,7 @@ angular.module('onlinelabApp', [
         controller: 'ProjectsCtrl',
         ncyBreadcrumb: { label: 'Портфолио' },
         title: 'Портфолио – Сетевая Лаборатория',
-        description: 'Наше портфолио. Сетевая лаборатория. Телефон: +7(499) 348-2443'
+        description: 'Наше портфолио. Сетевая лаборатория. Телефон: +7(499) 112-49-66'
       })
         .state('project-details', {
           url: '/projects/:projectId',
@@ -171,7 +171,7 @@ angular.module('onlinelabApp', [
         controller: 'TeamCtrl',
         ncyBreadcrumb: { label: 'О нас' },
         title: 'О нас – Сетевая Лаборатория',
-        description: 'О компании. Сетевая лаборатория. Телефон: +7(499) 348-2443'
+        description: 'О компании. Сетевая лаборатория. Телефон: +7(499) 112-49-66'
       })
       .state('contact', {
         url: '/contact',
@@ -179,7 +179,7 @@ angular.module('onlinelabApp', [
         controller: 'ContactCtrl',
         ncyBreadcrumb: { label: 'Контакты' },
         title: 'Контакты – Сетевая Лаборатория',
-        description: 'Контакты. Сетевая лаборатория. Телефон: +7(499) 348-2443'
+        description: 'Контакты. Сетевая лаборатория. Телефон: +7(499) 112-49-66'
       })
       .state('vacancies', {
         url: '/vacancies',
