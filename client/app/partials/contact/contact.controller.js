@@ -7,7 +7,7 @@ angular.module('onlinelabApp')
       {
         city: "New York",
         address: "54 W 40th St New York, NY 10018",
-        phone: " +1 (347) 681 244",
+        phone: " +1 (646) 893 0977",
         pos: {x: 319, y: 294}
       },
       {
@@ -19,7 +19,7 @@ angular.module('onlinelabApp')
       {
         city: "Москва",
         address: "Ленинский пр-т, д.30",
-        phone: "+7 (499) 348-24-43",
+        phone: "+7 (499) 112-49-66",
         pos: {x: 665, y: 218}
       },
       {

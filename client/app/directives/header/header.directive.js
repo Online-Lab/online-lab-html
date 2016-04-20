@@ -8,9 +8,9 @@ angular.module('onlinelabApp')
             restrict: 'E',
             link: function (scope) {      			
       				scope.cities = [
-        				{ name:'Москва',	phone: '+7 (499) 348-24-43' },
+        				{ name:'Москва',	phone: '+7 (499) 112-49-66' },
         				{ name:'Тамбов',	phone: '+7 (4752) 341-341' },
-        				{ name:'Нью-Йорк',	phone: '+1 (347) 681 244' }
+        				{ name:'Нью-Йорк',	phone: '+1 (646) 893-09-77' }
       				];
 
               scope.currentCity = scope.cities[0];
