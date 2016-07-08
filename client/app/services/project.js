@@ -5,20 +5,20 @@ app.factory('Project', function($resource, $http){
     query: function(successCallback, errorCallback){
       $http({
         method: 'GET',
-        url: 'http://onlinelab-django.production-dokku-1.online-lab.ru/projects/'
+        url: 'http://onlinelab-backend.dokkurapp.com/projects/'
       }).then(successCallback, errorCallback);
     },
     get: function(params, successCallback, errorCallback){
       //doesn't work without last slash in url
       $http({
         method: 'GET',
-        url: 'http://onlinelab-django.production-dokku-1.online-lab.ru/projects/' + params.projectId + "/"
+        url: 'http://onlinelab-backend.dokkurapp.com/projects/' + params.projectId + "/"
       }).then(successCallback, errorCallback);
     },
     filterByKind: function(params, successCallback, errorCallback){
       $http({
         method: 'GET',
-        url: 'http://onlinelab-django.production-dokku-1.online-lab.ru/projects/?kind=' + params.kind
+        url: 'http://onlinelab-backend.dokkurapp.com/projects/?kind=' + params.kind
       }).then(successCallback, errorCallback);
     }
     
